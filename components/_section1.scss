@@ -1,0 +1,30 @@
+.section1{
+    height: 120px;
+    background-color: $background-local;
+    table{
+        width: 45%;
+        margin: auto;
+        margin-top: 11px;
+        padding-top: 25px;
+    }
+}
+.localisation{
+    &__periscope{
+        background-image: url('periscope.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 35px;
+        width: 60px;
+        height: 50px;
+        
+    }
+    &__barre input{
+        border: none;
+        background-color: $background-local;
+        font-size: 40px;
+        width: 345px;
+        padding-left: 25px;
+        font-weight: bold;
+    
+    }
+}

@@ -1,0 +1,54 @@
+.section4{
+    margin-top: 300px;
+    a{
+        width: 90%;
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.carte{
+    //border: 1px solid black;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 90%;
+    //height: 650px;
+    margin: auto;
+    margin-bottom: 100px;
+    box-shadow: 5px 10px 30px rgb(212, 210, 210);
+    border-radius: 50px;
+    &__image{
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50px 50px 0px 0px;
+        height: 450px;
+    }
+    &__desc{
+        margin: 10px 0px 10px 50px;
+        font-size: 45px;
+    }
+    &__coeur{
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        right:75px;
+        bottom: 85px;
+    }
+    &__nouveau{
+        display: flex;
+        position: absolute;
+        font-size: 35px;
+        background-color: $couleur-tertiaire;
+        border-radius: 6px;
+        width: 200px;
+        height: 80px;
+        right: 40px;
+        top: 50px;
+        justify-content: center;
+        align-items: center;
+        color: rgb(121, 134, 121);
+        font-family: $police-gras;
+    }
+}
+ 

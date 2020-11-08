@@ -1,0 +1,36 @@
+footer{
+    display: flex;
+    position: relative;    
+    background: rgb(58, 58, 58);
+    border: 5px solid rgb(58, 58, 58);
+    
+}
+.footer{
+    color: white;
+    margin: 55px 0px 100px 50px;
+    font-size: 40px;
+    p{       
+        margin: 0px 0px 20px 0px;
+    }
+    &__logo{
+        font-size: 48px;
+        padding-bottom: 35px;
+        letter-spacing: 3px;;
+    }
+    &__paragraphe{
+        padding-left: 65px;
+    }
+    &__image{
+        display: flex;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        left: 50px;
+        &-position1{
+            top: 168px;
+        }
+        &-position2{
+            top: 238px;
+        }
+    }
+}

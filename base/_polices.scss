@@ -1,0 +1,22 @@
+@font-face{
+    font-family: 'shrikhand';
+    src: url('Shrikhand.otf')
+}
+
+@font-face{
+    font-family: 'roboto';
+    src: url('Roboto-Regular.ttf')
+}
+
+@font-face{
+    font-family: 'roboto-bold';
+    src: url('Roboto-Bold.ttf')
+}
+body{
+    font-family: $police;
+    margin: 0px;
+}
+
+.footer__logo{
+    font-family: shrikhand;
+}
