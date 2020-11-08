@@ -1,12 +1,8 @@
-.section2{
-    h1, p{
-
-        margin: auto;
-        text-align: center;
-        width: 70%;
-        padding-top: 90px;
-    }
-    .description{
+.section2 {
+    
+    
+    &__description {
+        border: 1px solid black;
         font-size: 16px;
         width: 90%;
         padding-top: 35px;
@@ -14,7 +10,7 @@
     }
 }
 
-.btn_menu{
+.btn_menu {
     background:linear-gradient($couleur-secondaire, $couleur-primaire);
     width: 60%;
     margin: auto;
@@ -22,9 +18,16 @@
     border-radius: 60px;
     margin-top: 100px;
     box-shadow: 5px 15px 30px rgb(196, 192, 192);
-    p{
+    &__texte {
         color: white;
         font-size: 37px;
         padding-top: 35px;
     }
 }
+
+h1{
+        margin: auto;
+        text-align: center;
+        width: 70%;
+        padding-top: 90px;
+    }
