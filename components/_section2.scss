@@ -1,5 +1,7 @@
 .section2 {
     &__description {
+        display: flex;
+        flex-direction: column;
         margin: auto;
         text-align: center;
         color: grey;
