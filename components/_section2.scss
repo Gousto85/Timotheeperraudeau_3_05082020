@@ -12,14 +12,18 @@
     }
 }
 
-.btn_menu {
+.btn_menu{
     background:linear-gradient($couleur-secondaire, $couleur-primaire);
     width: 60%;
     margin: auto;
     height: 120px;
     border-radius: 60px;
     margin-top: 100px;
-    box-shadow: 5px 15px 30px rgb(196, 192, 192);
+    box-shadow: 5px 15px 30px $btn-shadow;
+    &:hover{
+        background: linear-gradient($couleur-secondaire-lighten, $couleur-primaire-lighten);
+        box-shadow: 5px 15px 30px $btn-shadow-darken;
+    }
     &__texte {
         color: white;
         font-size: 37px;
@@ -27,3 +31,4 @@
         text-align: center;
     }
 }
+

@@ -1,0 +1,55 @@
+.section2-2{
+    z-index: 3;
+    background: white;
+    position: absolute;
+    width: 100%;
+    border-radius: 100px 100px 0px 0px;
+    top: 580px;
+}
+
+.fonct{
+    &__menu{
+        width: 90%;
+    }
+    &__intitulé{
+        font-family: $police-gras;
+        font-size: 45px;
+        top: 10px;
+        left: 10px;
+    }
+    &__accompagnement{
+        font-size: 40px;
+        top: 75px;
+        left: 10px;
+    }
+    &__prix{
+        font-size: 40px;
+        font-family: $police-gras;
+        color: rgb(77, 75, 75);
+        right: 50px;
+        top: 75px;
+    }
+    
+}
+.btn_position{
+    margin-top: 150px;
+        }
+
+.global{ 
+    height: 100%;
+    + footer{
+    top: 3550px;
+        }
+    + .footer-enchantee{
+        top: 3750px;
+    }
+
+}
+    
+
+
+
+
+    
+    
+    

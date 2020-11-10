@@ -4,11 +4,12 @@
         width: 90%;
         text-decoration: none;
         color: black;
+        
     }
 }
 
 .carte{
-    border: 1px solid black;
+    z-index: 1;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -29,11 +30,30 @@
         font-size: 45px;
     }
     &__coeur{
+        display: flex;
+        z-index: 2;
         position: absolute;
-        width: 70px;
-        height: 70px;
-        right:75px;
-        bottom: 85px;
+        width: 60px;
+        height: 60px;
+            
+        &-dimension{
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            right: 100px;
+        }
+        &-position1{
+            top: 2870px;
+        }
+        &-position2{
+            top: 3585px;
+        }
+        &-position3{
+            top: 4300px;
+        }
+        &-position4{
+            top: 5015px;
+        }
     }
     &__nouveau{
         display: flex;
