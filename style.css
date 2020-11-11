@@ -76,7 +76,7 @@ body {
   margin-top: 100px;
   box-shadow: 5px 15px 30px #c4c0c0;
 }
-.btn_menu:active {
+.btn_menu:focus {
   background: linear-gradient(#ff93e1, #a16be0);
   box-shadow: 5px 15px 30px #9f9898;
 }
