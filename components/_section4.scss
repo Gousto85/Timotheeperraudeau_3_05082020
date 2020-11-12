@@ -31,7 +31,7 @@
     }
     &__coeur{
         @include coeurs;
-            &:active +.carte__coeur-plein{
+            &:hover +.carte__coeur-plein{
                 transform: scale(1);
                 animation: progress-coeur 1s;
                 animation-fill-mode: both;
