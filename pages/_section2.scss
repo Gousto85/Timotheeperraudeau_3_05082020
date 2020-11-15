@@ -1,0 +1,31 @@
+.section2{
+    
+    width: 100%;
+    margin: auto;
+    margin-bottom: 300px;
+    h1{
+        font-size: 60px;
+        font-family: $police-gras;
+        text-align: center;
+        width: 650px;
+        margin: auto;
+        //border: 1px solid black;
+        margin-top: 100px;
+    }
+    &__description{
+        display: flex;
+        width: 850px;
+        margin: auto;
+        //border: 1px solid black;
+        font-size: 45px;
+        color: grey;
+        font-family: $police;
+        justify-content: center;
+        margin-top: 50px;
+        text-align: center;
+    }
+    .btn__menu{
+        margin: auto;
+        margin-top: 80px;
+    }
+}

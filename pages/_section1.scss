@@ -1,16 +1,16 @@
 .section1{
-    height: 120px;
+    margin-top: 11px;
+    padding-top: 20px;
+    height: 100px;
     background-color: $background-local;
     table{
         width: 45%;
         margin: auto;
-        margin-top: 11px;
-        padding-top: 25px;
     }
 }
-.localisation{
-    &__periscope{
-        background-image: url('periscope.svg');
+.localisation{ 
+    &__marker{
+        background-image: url('card-marker.svg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: 35px;
@@ -19,6 +19,7 @@
         
     }
     &__barre input{
+        padding-top: 15px;
         border: none;
         background-color: $background-local;
         font-size: 40px;

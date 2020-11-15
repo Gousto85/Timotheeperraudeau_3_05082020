@@ -1,0 +1,18 @@
+.btn{
+    display: flex;
+    font-family: $police;
+    background:linear-gradient($couleur-secondaire, $couleur-primaire);
+    width: 550px;
+    height: 120px;
+    border-radius: 60px;
+    box-shadow: 5px 15px 30px $btn-shadow;
+    color: white;
+    font-size: 40px;
+    //padding-top: 35px;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        background: linear-gradient($couleur-secondaire-lighten, $couleur-primaire-lighten);
+        box-shadow: 5px 15px 30px $btn-shadow-darken;
+    }
+}

@@ -6,3 +6,22 @@
         tranform: scale(1);
     }
 }
+
+@keyframes apparition-block{
+    0%{
+        transform: translateY(9999px);
+        opacity: 0;
+    }
+
+    40%{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    70%{
+        opacity: .4;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

@@ -1,11 +1,11 @@
 {
-  "name": "projet_3",
+  "name": "projet_3_v2",
   "version": "1.0.0",
-  "description": "Projet 3 ohmyfood openclassrooms",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./main.scss:style.css"
   },
-  "author": "Timothé Perraudeau",
+  "author": "",
   "license": "ISC"
 }

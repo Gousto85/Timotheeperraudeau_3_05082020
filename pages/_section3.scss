@@ -2,21 +2,26 @@
     margin-top: 250px;
     h2{
     margin-bottom: 150px;
-}
+    margin-left: 50px;
+    font-size: 60px;
+    font-family: $police-gras;
+    }
 }
 
 
 
 .fonct{
-    position: relative;
-    display: flex;
-    width: 85%;
-    height: 155px;
-    border-radius: 50px;
-    margin: auto;
-    align-items: center;
-    margin-bottom: 60px;
-    box-shadow: 5px 10px 30px rgb(212, 210, 210);
+    &__menu{
+        margin:auto;
+        margin-bottom: 60px;
+        width: 850px;
+        height: 155px;
+        border-radius: 50px;
+        & > div{
+            display: flex;
+            position: absolute;
+        }
+    }
     &__num{
         font-size: 40px;
         color: white;
@@ -27,6 +32,7 @@
         height: 60px;
         border-radius: 40px;
         left: -30px;
+        
     }
     &__logo{
         left: 100px;
@@ -48,9 +54,5 @@
         left: 250px;
         font-size: 40px;
         font-family: $police-gras;
-    }
-    & div{
-        display: flex;
-        position: absolute;
     }
 }
