@@ -1,0 +1,548 @@
+@charset "UTF-8";
+@keyframes progress-coeur {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    tranform: scale(1);
+  }
+}
+@keyframes apparition-block {
+  0% {
+    transform: translateY(9999px);
+    opacity: 0;
+  }
+  40% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+header {
+  box-shadow: 0px 12px 12px #d6d3d3;
+}
+header + div {
+  display: flex;
+}
+
+.logo {
+  margin: auto;
+  width: 45%;
+  padding-top: 50px;
+  padding-bottom: 35px;
+}
+.logo img {
+  width: 100%;
+}
+
+.fleche {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 65px;
+  left: 50px;
+}
+
+footer > div {
+  width: 100%;
+  background: #3a3a3a;
+  color: white;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  font-size: 50px;
+  padding-bottom: 75px;
+}
+
+.footer__logo {
+  font-size: 48px;
+  padding-bottom: 35px;
+  letter-spacing: 3px;
+  font-family: "shrikhand";
+  margin-top: 75px;
+  margin-left: 65px;
+}
+.footer__paragraphe {
+  padding-left: 115px;
+}
+.footer__paragraphe p {
+  padding-bottom: 15px;
+}
+.footer__paragraphe ~ p {
+  margin-left: 65px;
+  padding-bottom: 15px;
+}
+.footer__icone {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 65px;
+}
+.footer__icone-position1 {
+  top: 160px;
+}
+.footer__icone-position2 {
+  top: 230px;
+}
+
+h1, h2, h3 {
+  font-family: "roboto-bold";
+}
+
+body.global {
+  font-family: "arial";
+}
+body.global h1, body.global h2, body.global h3 {
+  font-family: "roboto-bold";
+}
+
+@font-face {
+  font-family: "shrikhand";
+  src: url("Shrikhand.otf");
+}
+@font-face {
+  font-family: "roboto";
+  src: url("Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "roboto-bold";
+  src: url("Roboto-Bold.ttf");
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, section, header, footer {
+  width: 100%;
+}
+
+.btn {
+  display: flex;
+  font-family: "roboto";
+  background: linear-gradient(#ff79da, #9356dc);
+  width: 550px;
+  height: 120px;
+  border-radius: 60px;
+  box-shadow: 5px 15px 30px #c4c0c0;
+  color: white;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.btn:hover {
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 5px 15px 30px #9f9898;
+}
+
+.block {
+  position: relative;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  box-shadow: 5px 10px 30px #d4d2d2;
+}
+
+.section1 {
+  margin-top: 11px;
+  padding-top: 20px;
+  height: 100px;
+  background-color: #ebe5e5;
+}
+.section1 table {
+  width: 45%;
+  margin: auto;
+}
+
+.localisation__marker {
+  background-image: url("card-marker.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35px;
+  width: 60px;
+  height: 50px;
+}
+.localisation__barre input {
+  padding-top: 15px;
+  border: none;
+  background-color: #ebe5e5;
+  font-size: 40px;
+  width: 345px;
+  padding-left: 25px;
+  font-weight: bold;
+}
+
+.section2 {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 300px;
+}
+.section2 h1 {
+  font-size: 60px;
+  font-family: "roboto-bold";
+  text-align: center;
+  width: 650px;
+  margin: auto;
+  margin-top: 100px;
+}
+.section2__description {
+  display: flex;
+  width: 850px;
+  margin: auto;
+  font-size: 45px;
+  color: grey;
+  font-family: "roboto";
+  justify-content: center;
+  margin-top: 50px;
+  text-align: center;
+}
+.section2 .btn__menu {
+  margin: auto;
+  margin-top: 80px;
+}
+
+.section3 {
+  margin-top: 250px;
+}
+.section3 h2 {
+  margin-bottom: 150px;
+  margin-left: 50px;
+  font-size: 60px;
+  font-family: "roboto-bold";
+}
+
+.fonct__menu {
+  margin: auto;
+  margin-bottom: 60px;
+  width: 850px;
+  height: 155px;
+  border-radius: 50px;
+}
+.fonct__menu > div {
+  display: flex;
+  position: absolute;
+}
+.fonct__num {
+  font-size: 40px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356dc;
+  width: 60px;
+  height: 60px;
+  border-radius: 40px;
+  left: -30px;
+}
+.fonct__logo {
+  left: 100px;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.fonct__logo-mob {
+  background-image: url("mobile.svg");
+}
+.fonct__logo-list {
+  background-image: url("list.svg");
+}
+.fonct__logo-rest {
+  background-image: url("store.svg");
+}
+.fonct__text {
+  left: 250px;
+  font-size: 40px;
+  font-family: "roboto-bold";
+}
+
+.section4 {
+  margin-top: 300px;
+}
+.section4 a {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+.section4 h2, .section4 h3 {
+  font-size: 60px;
+  font-family: "roboto-bold";
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+.section4 h3 {
+  font-size: 50px;
+  margin-bottom: 0px;
+  margin-top: 50px;
+}
+
+.carte {
+  font-family: "roboto";
+  z-index: 1;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 100px;
+  box-shadow: 5px 10px 30px #d4d2d2;
+  border-radius: 50px;
+}
+.carte__image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50px 50px 0px 0px;
+  height: 450px;
+}
+.carte__desc {
+  margin: 10px 0px 50px 50px;
+  font-size: 45px;
+}
+.carte__coeur {
+  position: absolute;
+  right: 50px;
+  top: 510px;
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+}
+.carte__coeur:hover + .carte__coeur-plein {
+  transform: scale(1);
+  animation: progress-coeur 1s;
+  animation-fill-mode: both;
+}
+.carte__coeur-plein {
+  transform: scale(0);
+}
+.carte__nouveau {
+  display: flex;
+  position: absolute;
+  font-size: 35px;
+  background-color: #99e2d0;
+  border-radius: 6px;
+  width: 200px;
+  height: 80px;
+  right: 40px;
+  top: 50px;
+  justify-content: center;
+  align-items: center;
+  color: #798679;
+  font-family: "roboto-bold";
+}
+
+.section1_2 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.section1_2 h1 {
+  font-family: "shrikhand";
+  font-size: 70px;
+  margin-left: 50px;
+}
+.section1_2 h2 {
+  font-family: "roboto";
+  font-size: 45px;
+  margin-top: 100px;
+  margin-left: 50px;
+}
+.section1_2 h2 span {
+  border-bottom: 10px solid #99e2d0;
+}
+
+.image-rest {
+  width: 100%;
+  height: 650px;
+}
+.image-rest img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.languette {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  border-radius: 100px 100px 0px 0px;
+  background: white;
+  width: 100%;
+  height: 102px;
+  top: 550px;
+}
+.languette + div {
+  padding-bottom: 30px;
+}
+
+.fonct {
+  display: flex;
+  position: relative;
+  box-shadow: 5px 10px 30px #d4d2d2;
+  width: 900px;
+  height: 165px;
+  margin: auto;
+  margin-top: 75px;
+  border-radius: 50px;
+  animation: apparition-block 1000ms;
+  animation-fill-mode: both;
+}
+.fonct--1 {
+  animation-delay: 200ms;
+}
+.fonct--2 {
+  animation-delay: 400ms;
+}
+.fonct--3 {
+  animation-delay: 600ms;
+}
+.fonct--4 {
+  animation-delay: 800ms;
+}
+.fonct--5 {
+  animation-delay: 1000ms;
+}
+.fonct--6 {
+  animation-delay: 1200ms;
+}
+.fonct--7 {
+  animation-delay: 1400ms;
+}
+.fonct--8 {
+  animation-delay: 1600ms;
+}
+.fonct--9 {
+  animation-delay: 1800ms;
+}
+.fonct--10 {
+  animation-delay: 2000ms;
+}
+.fonct:hover .fonct__intitulé {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.fonct:hover .fonct__accompagnement {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.fonct__plat {
+  width: 580px;
+  margin-right: 100px;
+  padding-left: 30px;
+  border-radius: 50px 0px 0px 50px;
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: visible;
+}
+.fonct__plat:hover {
+  cursor: pointer;
+}
+.fonct__plat:hover + .fonct__prix {
+  transform: translate(-200px, 0px);
+}
+.fonct__plat:hover + .fonct__prix + .fonct__anim-val {
+  transform: scaleX(1);
+}
+.fonct__plat:hover + .fonct__prix + .fonct__anim-val .fonct__anim-val-logo {
+  transform: rotate(360deg);
+}
+.fonct__intitulé {
+  font-family: "roboto-bold";
+  font-size: 45px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 650px;
+}
+.fonct__accompagnement {
+  font-family: "roboto";
+  font-size: 40px;
+}
+.fonct__prix {
+  position: absolute;
+  width: 40px;
+  font-size: 40px;
+  font-family: "roboto-bold";
+  color: #4d4b4b;
+  top: 90px;
+  right: 25px;
+  padding-right: 20px;
+  transition: transform 600ms;
+}
+.fonct__anim-val {
+  transform: scaleX(0);
+  transform-origin: right 50%;
+  transition: transform 600ms;
+  display: flex;
+  width: 200px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: #99e2d0;
+  border-radius: 0px 50px 50px 0px;
+}
+.fonct__anim-val-logo {
+  width: 55px;
+  height: 55px;
+  transition: transform 500ms 100ms;
+}
+
+.btn__plat {
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 150px;
+  width: 450px;
+}
+
+/*# sourceMappingURL=style.css.map */
