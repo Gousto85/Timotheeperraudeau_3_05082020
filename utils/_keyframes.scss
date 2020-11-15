@@ -1,9 +1,9 @@
 @keyframes progress-coeur{
     0%{
-        transform: scale(0);
+        opacity: 0;
     }
     100%{
-        tranform: scale(1);
+        opacity: 1;
     }
 }
 

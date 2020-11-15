@@ -1,10 +1,10 @@
 @charset "UTF-8";
 @keyframes progress-coeur {
   0% {
-    transform: scale(0);
+    opacity: 0;
   }
   100% {
-    tranform: scale(1);
+    opacity: 1;
   }
 }
 @keyframes apparition-block {
@@ -352,17 +352,15 @@ body, section, header, footer {
   position: absolute;
   right: 50px;
   top: 510px;
-  z-index: 2;
   width: 60px;
   height: 60px;
 }
-.carte__coeur:hover + .carte__coeur-plein {
-  transform: scale(1);
-  animation: progress-coeur 1s;
-  animation-fill-mode: both;
-}
 .carte__coeur-plein {
-  transform: scale(0);
+  opacity: 0;
+}
+.carte__coeur-plein:hover {
+  animation: progress-coeur 1000ms;
+  animation-fill-mode: both;
 }
 .carte__nouveau {
   display: flex;
