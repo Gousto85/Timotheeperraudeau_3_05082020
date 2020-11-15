@@ -11,7 +11,7 @@
     //padding-top: 35px;
     justify-content: center;
     align-items: center;
-    &:hover{
+    &:active{
         background: linear-gradient($couleur-secondaire-lighten, $couleur-primaire-lighten);
         box-shadow: 5px 15px 30px $btn-shadow-darken;
     }
