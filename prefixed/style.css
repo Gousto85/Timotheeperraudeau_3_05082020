@@ -181,7 +181,7 @@ body, section, header, footer {
   justify-content: center;
   align-items: center;
 }
-.btn:hover {
+.btn:active {
   background: linear-gradient(#ff93e1, #a16be0);
   box-shadow: 5px 15px 30px #9f9898;
 }
