@@ -285,12 +285,13 @@ body, section, header, footer {
   height: 50px;
 }
 .localisation__barre input {
+  padding-top: 15px;
   border: none;
   background-color: #ebe5e5;
   font-size: 40px;
   width: 345px;
+  padding-left: 25px;
   font-weight: bold;
-  border: 1px solid black;
 }
 
 .section2 {
