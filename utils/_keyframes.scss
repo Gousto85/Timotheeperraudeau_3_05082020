@@ -72,11 +72,14 @@
     }
 }
 @keyframes rotate-check-logo-not{
-    from{
+    0%{
         width: 55px;
     }
-    to{
+    80%{
         width: 55px;
+    }
+    100%{
+        width: 0px;
     }
 }
 @keyframes translate-prix{
