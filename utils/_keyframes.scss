@@ -25,3 +25,73 @@
         opacity: 1;
     }
 }
+
+@keyframes width-plat{
+    from{
+        width: 900px;
+    }
+    to{
+        width: 580px;
+    }
+}
+@keyframes width-plat-not{
+    from{
+        width: 580px;
+    }
+    to{
+        width: 900px;
+    }
+}
+@keyframes progress-check{
+    from{
+        width: 0px;
+    }
+    to{
+        width: 180px;
+    }
+}
+@keyframes progress-check-not{
+    from{
+        width: 180px;
+    }
+    to{
+        width: 0px;
+    }
+}
+@keyframes rotate-check-logo{
+    0%{
+        transform: rotate(0deg);
+        width: 0px;
+    }
+    20%{
+        width: 55px;
+    }
+    100%{
+        transform: rotate(360deg);
+        width: 55px;
+    }
+}
+@keyframes rotate-check-logo-not{
+    from{
+        width: 55px;
+    }
+    to{
+        width: 55px;
+    }
+}
+@keyframes translate-prix{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-180px);
+    }
+}
+@keyframes translate-prix-not{
+    from{
+        transform: translateX(-180px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}

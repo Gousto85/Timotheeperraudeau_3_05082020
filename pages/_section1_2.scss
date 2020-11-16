@@ -51,45 +51,50 @@
     height: 165px;
     margin: auto;
     margin-top: 75px;
-    border-radius: 50px;
+    border-radius: 50px;   
     animation: apparition-block 1000ms;
     animation-fill-mode: both;
     @for $i from 1 through 10{
         &--#{$i} {
             animation-delay: 200ms*$i;
         }
-    }
-    &:hover .fonct__intitulé{
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
-            }
-    &:hover .fonct__accompagnement{
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
-    }          
-    
+        &:hover .fonct__anim-val{
+            animation: progress-check 600ms;
+            animation-fill-mode: both;
+        }
+        &:not(:hover) .fonct__anim-val{
+            animation: progress-check-not 600ms;
+        }
+        &:hover .fonct__anim-val-logo img{
+            animation: rotate-check-logo 500ms 100ms;
+            animation-fill-mode: forwards;
+        }
+        &:not(:hover) .fonct__anim-val-logo img{
+            animation: rotate-check-logo-not 600ms;
+        }
+        &:hover .fonct__prix{
+            animation: translate-prix 600ms;
+            animation-fill-mode: both;
+        }
+        &:not(:hover) .fonct__prix{
+            animation: translate-prix-not 600ms;
+        }
+    }       
     &__plat{
-        width: 580px;
+        width: 900px;
         margin-right: 100px;
         padding-left: 30px;
-        border-radius: 50px 0px 0px 50px;
-        text-overflow: clip;
+        border-radius: 50px 0px 0px 50px;        
         white-space: nowrap;
-        overflow: visible;
+        overflow: hidden;
+        text-overflow: ellipsis;
         &:hover{
             cursor: pointer;
-            & + .fonct__prix{
-            transform: translate(-200px, 0px);
-            & + .fonct__anim-val{
-                transform: scaleX(1);
-                & .fonct__anim-val-logo{
-                    transform: rotate(360deg);
-                    }
-                }
-            }
-                       
+            animation: width-plat 600ms;
+            animation-fill-mode: both;
+        }
+        &:not(:hover){
+            animation: width-plat-not 600ms;
         }
     }
     &__intitulé{
@@ -97,30 +102,36 @@
         font-size: 45px;
         margin-top: 20px;
         margin-bottom: 20px;
-        width: 650px;  
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;  
          
     }
     &__accompagnement{
+        z-index: 1;
         font-family: $police;
         font-size: 40px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     &__prix{
+        z-index: 2;
         position: absolute;
         width: 40px;
         font-size: 40px;
         font-family: $police-gras;
         color: rgb(77, 75, 75);
         top: 90px;
-        right: 25px;
+        right: 35px;
         padding-right: 20px;
         transition: transform 600ms;
     }
     &__anim-val{
-        transform: scaleX(0);
-        transform-origin: right 50%;
-        transition: transform 600ms;
+        position: absolute;
+        right: 0px;
         display: flex;
-        width: 200px;
+        width: 0px;
         height: 100%;
         align-items: center;
         justify-content: center;
@@ -129,7 +140,10 @@
         &-logo{
             width: 55px;
             height: 55px;
-            transition: transform 500ms 100ms;
+            & img{
+                width: 55px;
+                height: 55px;
+            }
         }
             
     }
