@@ -7,13 +7,13 @@
         font-size: 60px;
         font-family: $police-gras;
         text-align: center;
-        width: 650px;
+        width: 60%;
         margin: auto;
         margin-top: 100px;
     }
     &__description{
         display: flex;
-        width: 850px;
+        width: 80%;
         margin: auto;
         font-size: 45px;
         color: grey;
@@ -25,5 +25,6 @@
     .btn__menu{
         margin: auto;
         margin-top: 80px;
+        width: 60%;
     }
 }
