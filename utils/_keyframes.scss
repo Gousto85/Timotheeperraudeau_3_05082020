@@ -63,7 +63,7 @@
         transform: rotate(0deg);
         width: 0px;
     }
-    20%{
+    10%{
         width: 55px;
     }
     100%{
@@ -71,17 +71,19 @@
         width: 55px;
     }
 }
+
 @keyframes rotate-check-logo-not{
     0%{
         width: 55px;
     }
-    80%{
+    90%{
         width: 55px;
     }
     100%{
         width: 0px;
     }
 }
+
 @keyframes translate-prix{
     from{
         transform: translateX(0px);

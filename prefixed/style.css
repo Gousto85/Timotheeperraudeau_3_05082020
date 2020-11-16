@@ -1,10 +1,10 @@
 @charset "UTF-8";
 @keyframes progress-coeur {
   0% {
-    opacity: 0;
+    transform: scale(0);
   }
   100% {
-    opacity: 1;
+    transform: scale(1);
   }
 }
 @keyframes apparition-block {
@@ -22,6 +22,78 @@
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+@keyframes width-plat {
+  from {
+    width: 900px;
+  }
+  to {
+    width: 580px;
+  }
+}
+@keyframes width-plat-not {
+  from {
+    width: 580px;
+  }
+  to {
+    width: 900px;
+  }
+}
+@keyframes progress-check {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 180px;
+  }
+}
+@keyframes progress-check-not {
+  from {
+    width: 180px;
+  }
+  to {
+    width: 0px;
+  }
+}
+@keyframes rotate-check-logo {
+  0% {
+    transform: rotate(0deg);
+    width: 0px;
+  }
+  10% {
+    width: 55px;
+  }
+  100% {
+    transform: rotate(360deg);
+    width: 55px;
+  }
+}
+@keyframes rotate-check-logo-not {
+  0% {
+    width: 55px;
+  }
+  90% {
+    width: 55px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+@keyframes translate-prix {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-180px);
+  }
+}
+@keyframes translate-prix-not {
+  from {
+    transform: translateX(-180px);
+  }
+  to {
+    transform: translateX(0px);
   }
 }
 header {
@@ -181,7 +253,7 @@ body, section, header, footer {
   justify-content: center;
   align-items: center;
 }
-.btn:active {
+.btn:hover {
   background: linear-gradient(#ff93e1, #a16be0);
   box-shadow: 5px 15px 30px #9f9898;
 }
@@ -355,12 +427,13 @@ body, section, header, footer {
   width: 60px;
   height: 60px;
 }
-.carte__coeur-plein {
-  opacity: 0;
-}
-.carte__coeur-plein:hover {
-  animation: progress-coeur 1000ms;
+.carte__coeur:hover + .carte__coeur-plein {
+  transform: scale(1);
+  animation: progress-coeur 1s;
   animation-fill-mode: both;
+}
+.carte__coeur-plein {
+  transform: scale(0);
 }
 .carte__nouveau {
   display: flex;
@@ -438,92 +511,294 @@ body, section, header, footer {
 .fonct--1 {
   animation-delay: 200ms;
 }
+.fonct:hover .fonct__anim-val {
+  animation: progress-check 600ms;
+  animation-fill-mode: both;
+}
+.fonct:not(:hover) .fonct__anim-val {
+  animation: progress-check-not 600ms;
+}
+.fonct:hover .fonct__anim-val-logo {
+  animation: rotate-check-logo 500ms 100ms;
+  animation-fill-mode: forwards;
+}
+.fonct:not(:hover) .fonct__anim-val-logo {
+  animation: rotate-check-logo-not 600ms;
+}
+.fonct:hover .fonct__prix {
+  animation: translate-prix 600ms;
+  animation-fill-mode: both;
+}
+.fonct:not(:hover) .fonct__prix {
+  animation: translate-prix-not 600ms;
+}
 .fonct--2 {
   animation-delay: 400ms;
+}
+.fonct:hover .fonct__anim-val {
+  animation: progress-check 600ms;
+  animation-fill-mode: both;
+}
+.fonct:not(:hover) .fonct__anim-val {
+  animation: progress-check-not 600ms;
+}
+.fonct:hover .fonct__anim-val-logo {
+  animation: rotate-check-logo 500ms 100ms;
+  animation-fill-mode: forwards;
+}
+.fonct:not(:hover) .fonct__anim-val-logo {
+  animation: rotate-check-logo-not 600ms;
+}
+.fonct:hover .fonct__prix {
+  animation: translate-prix 600ms;
+  animation-fill-mode: both;
+}
+.fonct:not(:hover) .fonct__prix {
+  animation: translate-prix-not 600ms;
 }
 .fonct--3 {
   animation-delay: 600ms;
 }
+.fonct:hover .fonct__anim-val {
+  animation: progress-check 600ms;
+  animation-fill-mode: both;
+}
+.fonct:not(:hover) .fonct__anim-val {
+  animation: progress-check-not 600ms;
+}
+.fonct:hover .fonct__anim-val-logo {
+  animation: rotate-check-logo 500ms 100ms;
+  animation-fill-mode: forwards;
+}
+.fonct:not(:hover) .fonct__anim-val-logo {
+  animation: rotate-check-logo-not 600ms;
+}
+.fonct:hover .fonct__prix {
+  animation: translate-prix 600ms;
+  animation-fill-mode: both;
+}
+.fonct:not(:hover) .fonct__prix {
+  animation: translate-prix-not 600ms;
+}
 .fonct--4 {
   animation-delay: 800ms;
+}
+.fonct:hover .fonct__anim-val {
+  animation: progress-check 600ms;
+  animation-fill-mode: both;
+}
+.fonct:not(:hover) .fonct__anim-val {
+  animation: progress-check-not 600ms;
+}
+.fonct:hover .fonct__anim-val-logo {
+  animation: rotate-check-logo 500ms 100ms;
+  animation-fill-mode: forwards;
+}
+.fonct:not(:hover) .fonct__anim-val-logo {
+  animation: rotate-check-logo-not 600ms;
+}
+.fonct:hover .fonct__prix {
+  animation: translate-prix 600ms;
+  animation-fill-mode: both;
+}
+.fonct:not(:hover) .fonct__prix {
+  animation: translate-prix-not 600ms;
 }
 .fonct--5 {
   animation-delay: 1000ms;
 }
+.fonct:hover .fonct__anim-val {
+  animation: progress-check 600ms;
+  animation-fill-mode: both;
+}
+.fonct:not(:hover) .fonct__anim-val {
+  animation: progress-check-not 600ms;
+}
+.fonct:hover .fonct__anim-val-logo {
+  animation: rotate-check-logo 500ms 100ms;
+  animation-fill-mode: forwards;
+}
+.fonct:not(:hover) .fonct__anim-val-logo {
+  animation: rotate-check-logo-not 600ms;
+}
+.fonct:hover .fonct__prix {
+  animation: translate-prix 600ms;
+  animation-fill-mode: both;
+}
+.fonct:not(:hover) .fonct__prix {
+  animation: translate-prix-not 600ms;
+}
 .fonct--6 {
   animation-delay: 1200ms;
+}
+.fonct:hover .fonct__anim-val {
+  animation: progress-check 600ms;
+  animation-fill-mode: both;
+}
+.fonct:not(:hover) .fonct__anim-val {
+  animation: progress-check-not 600ms;
+}
+.fonct:hover .fonct__anim-val-logo {
+  animation: rotate-check-logo 500ms 100ms;
+  animation-fill-mode: forwards;
+}
+.fonct:not(:hover) .fonct__anim-val-logo {
+  animation: rotate-check-logo-not 600ms;
+}
+.fonct:hover .fonct__prix {
+  animation: translate-prix 600ms;
+  animation-fill-mode: both;
+}
+.fonct:not(:hover) .fonct__prix {
+  animation: translate-prix-not 600ms;
 }
 .fonct--7 {
   animation-delay: 1400ms;
 }
+.fonct:hover .fonct__anim-val {
+  animation: progress-check 600ms;
+  animation-fill-mode: both;
+}
+.fonct:not(:hover) .fonct__anim-val {
+  animation: progress-check-not 600ms;
+}
+.fonct:hover .fonct__anim-val-logo {
+  animation: rotate-check-logo 500ms 100ms;
+  animation-fill-mode: forwards;
+}
+.fonct:not(:hover) .fonct__anim-val-logo {
+  animation: rotate-check-logo-not 600ms;
+}
+.fonct:hover .fonct__prix {
+  animation: translate-prix 600ms;
+  animation-fill-mode: both;
+}
+.fonct:not(:hover) .fonct__prix {
+  animation: translate-prix-not 600ms;
+}
 .fonct--8 {
   animation-delay: 1600ms;
+}
+.fonct:hover .fonct__anim-val {
+  animation: progress-check 600ms;
+  animation-fill-mode: both;
+}
+.fonct:not(:hover) .fonct__anim-val {
+  animation: progress-check-not 600ms;
+}
+.fonct:hover .fonct__anim-val-logo {
+  animation: rotate-check-logo 500ms 100ms;
+  animation-fill-mode: forwards;
+}
+.fonct:not(:hover) .fonct__anim-val-logo {
+  animation: rotate-check-logo-not 600ms;
+}
+.fonct:hover .fonct__prix {
+  animation: translate-prix 600ms;
+  animation-fill-mode: both;
+}
+.fonct:not(:hover) .fonct__prix {
+  animation: translate-prix-not 600ms;
 }
 .fonct--9 {
   animation-delay: 1800ms;
 }
+.fonct:hover .fonct__anim-val {
+  animation: progress-check 600ms;
+  animation-fill-mode: both;
+}
+.fonct:not(:hover) .fonct__anim-val {
+  animation: progress-check-not 600ms;
+}
+.fonct:hover .fonct__anim-val-logo {
+  animation: rotate-check-logo 500ms 100ms;
+  animation-fill-mode: forwards;
+}
+.fonct:not(:hover) .fonct__anim-val-logo {
+  animation: rotate-check-logo-not 600ms;
+}
+.fonct:hover .fonct__prix {
+  animation: translate-prix 600ms;
+  animation-fill-mode: both;
+}
+.fonct:not(:hover) .fonct__prix {
+  animation: translate-prix-not 600ms;
+}
 .fonct--10 {
   animation-delay: 2000ms;
 }
-.fonct:hover .fonct__intitulé {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+.fonct:hover .fonct__anim-val {
+  animation: progress-check 600ms;
+  animation-fill-mode: both;
 }
-.fonct:hover .fonct__accompagnement {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+.fonct:not(:hover) .fonct__anim-val {
+  animation: progress-check-not 600ms;
+}
+.fonct:hover .fonct__anim-val-logo {
+  animation: rotate-check-logo 500ms 100ms;
+  animation-fill-mode: forwards;
+}
+.fonct:not(:hover) .fonct__anim-val-logo {
+  animation: rotate-check-logo-not 600ms;
+}
+.fonct:hover .fonct__prix {
+  animation: translate-prix 600ms;
+  animation-fill-mode: both;
+}
+.fonct:not(:hover) .fonct__prix {
+  animation: translate-prix-not 600ms;
 }
 .fonct__plat {
-  width: 580px;
+  width: 900px;
   margin-right: 100px;
   padding-left: 30px;
   border-radius: 50px 0px 0px 50px;
-  text-overflow: clip;
   white-space: nowrap;
-  overflow: visible;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .fonct__plat:hover {
   cursor: pointer;
+  animation: width-plat 600ms;
+  animation-fill-mode: both;
 }
-.fonct__plat:hover + .fonct__prix {
-  transform: translate(-200px, 0px);
-}
-.fonct__plat:hover + .fonct__prix + .fonct__anim-val {
-  transform: scaleX(1);
-}
-.fonct__plat:hover + .fonct__prix + .fonct__anim-val .fonct__anim-val-logo {
-  transform: rotate(360deg);
+.fonct__plat:not(:hover) {
+  animation: width-plat-not 600ms;
 }
 .fonct__intitulé {
   font-family: "roboto-bold";
   font-size: 45px;
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 650px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .fonct__accompagnement {
+  z-index: 1;
   font-family: "roboto";
   font-size: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .fonct__prix {
+  z-index: 2;
   position: absolute;
   width: 40px;
   font-size: 40px;
   font-family: "roboto-bold";
   color: #4d4b4b;
   top: 90px;
-  right: 25px;
+  right: 35px;
   padding-right: 20px;
   transition: transform 600ms;
 }
 .fonct__anim-val {
-  transform: scaleX(0);
-  transform-origin: right 50%;
-  transition: transform 600ms;
+  position: absolute;
+  right: 0px;
   display: flex;
-  width: 200px;
+  width: 0px;
   height: 100%;
   align-items: center;
   justify-content: center;
@@ -533,7 +808,6 @@ body, section, header, footer {
 .fonct__anim-val-logo {
   width: 55px;
   height: 55px;
-  transition: transform 500ms 100ms;
 }
 
 .btn__plat {
@@ -541,6 +815,11 @@ body, section, header, footer {
   margin-top: 100px;
   margin-bottom: 150px;
   width: 450px;
+}
+
+.carte__coeur-position {
+  top: 810px;
+  right: 110px;
 }
 
 /*# sourceMappingURL=style.css.map */
