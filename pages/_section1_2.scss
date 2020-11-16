@@ -52,7 +52,6 @@
     margin: auto;
     margin-top: 75px;
     border-radius: 50px;
-    //transform: translateY(-9999px);
     animation: apparition-block 1000ms;
     animation-fill-mode: both;
     @for $i from 1 through 10{
@@ -142,3 +141,8 @@
         margin-bottom: 150px;
         width: 450px;
     }
+
+.carte__coeur-position{
+    top: 810px;
+    right: 110px;
+}
