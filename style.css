@@ -26,7 +26,7 @@
 }
 @keyframes width-plat {
   from {
-    width: 900px;
+    width: 100%;
   }
   to {
     width: 580px;
@@ -37,7 +37,7 @@
     width: 580px;
   }
   to {
-    width: 900px;
+    width: 100%;
   }
 }
 @keyframes progress-check {
@@ -429,7 +429,7 @@ body, section, header, footer {
 }
 .carte__coeur:hover + .carte__coeur-plein {
   transform: scale(1);
-  animation: progress-coeur 1s;
+  animation: progress-coeur 200ms;
   animation-fill-mode: both;
 }
 .carte__coeur-plein {
@@ -500,7 +500,7 @@ body, section, header, footer {
   display: flex;
   position: relative;
   box-shadow: 5px 10px 30px #d4d2d2;
-  width: 900px;
+  width: 95%;
   height: 165px;
   margin: auto;
   margin-top: 75px;
@@ -749,7 +749,7 @@ body, section, header, footer {
   animation: translate-prix-not 600ms;
 }
 .fonct__plat {
-  width: 80%;
+  width: 100%;
   margin-right: 100px;
   padding-left: 30px;
   border-radius: 50px 0px 0px 50px;
