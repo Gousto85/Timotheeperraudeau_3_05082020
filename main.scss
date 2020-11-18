@@ -1,6 +1,7 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./utils/keyframes";
+@import "./utils/keyframes-loader";
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./layouts/titres";
@@ -9,7 +10,8 @@
 @import "./base/reset-css";
 @import "./base/bloc-size";
 @import "./components/bouton";
-@import "./components/block-fonct-et-plats.scss";
+@import "./components/block-fonct-et-plats";
+@import "./components/loader";
 @import "./pages/section1";
 @import "./pages/section2";
 @import "./pages/section3";
