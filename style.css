@@ -256,8 +256,31 @@ body, section, header, footer {
   width: 100%;
 }
 
-.btn {
+.btn1 {
   display: flex;
+  position: absolute;
+  z-index: 2;
+  font-family: "roboto";
+  background: linear-gradient(#ff93e1, #a16be0);
+  height: 120px;
+  border-radius: 60px;
+  box-shadow: 5px 15px 30px #9f9898;
+  color: white;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.btn1:hover {
+  opacity: 1;
+}
+
+.btn2 {
+  display: flex;
+  position: absolute;
+  z-index: 1;
   font-family: "roboto";
   background: linear-gradient(#ff79da, #9356dc);
   height: 120px;
@@ -267,10 +290,8 @@ body, section, header, footer {
   font-size: 40px;
   justify-content: center;
   align-items: center;
-}
-.btn:hover {
-  background: linear-gradient(#ff93e1, #a16be0);
-  box-shadow: 5px 15px 30px #9f9898;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .block {
@@ -388,7 +409,7 @@ section, header, footer {
 .section2 .btn__menu {
   margin: auto;
   margin-top: 80px;
-  width: 60%;
+  width: 52%;
 }
 
 .section3 {
@@ -881,7 +902,7 @@ section, header, footer {
   margin: auto;
   margin-top: 100px;
   margin-bottom: 150px;
-  width: 50%;
+  width: 31%;
 }
 
 .carte__coeur-position {
