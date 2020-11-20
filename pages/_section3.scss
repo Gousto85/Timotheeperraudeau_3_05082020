@@ -5,18 +5,32 @@
     margin-left: 50px;
     font-size: 60px;
     font-family: $police-gras;
+    @include tablette{
+        font-size: 40px;
+        margin-bottom: 100px;
+        }
     }
 }
 
-
+.fonctionnement{
+    @include tablette{
+        display: flex;
+        margin:auto;
+        max-width: 1000px;
+    }
+}
 
 .fonct{
     &__menu{
         margin:auto;
         margin-bottom: 60px;
         width: 80%;
-        height: 155px;
+        height: 150px;
         border-radius: 50px;
+        @include tablette{
+            width: 28%;
+            height: 80px;
+        }
         & > div{
             display: flex;
             position: absolute;
@@ -32,6 +46,12 @@
         height: 60px;
         border-radius: 40px;
         left: -30px;
+        @include tablette{
+            font-size: 20px;
+            width: 40px;
+            height: 40px;
+            left: -20px;
+        }
         
     }
     &__logo{
@@ -40,6 +60,11 @@
         height: 50px;
         background-repeat: no-repeat;
         background-position: center;
+        @include tablette{
+            left: 30px;
+            width: 30px;
+            height: 30px;
+        }
         &-mob{
             background-image: url('mobile.svg');
         }
@@ -54,5 +79,10 @@
         left: 250px;
         font-size: 40px;
         font-family: $police-gras;
+        @include tablette{
+            left: 50px;
+            font-size: 25px;
+            text-align: center;
+        }
     }
 }

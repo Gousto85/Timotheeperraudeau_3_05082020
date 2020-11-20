@@ -32,9 +32,25 @@
     width: 580px;
   }
 }
+@keyframes width-plat-tablette {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 270px;
+  }
+}
 @keyframes width-plat-not {
   from {
     width: 580px;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes width-plat-not-tablette {
+  from {
+    width: 270px;
   }
   to {
     width: 100%;
@@ -69,12 +85,36 @@
     width: 55px;
   }
 }
+@keyframes rotate-check-logo-tablette {
+  0% {
+    transform: rotate(0deg);
+    width: 0px;
+  }
+  10% {
+    width: 30px;
+  }
+  100% {
+    transform: rotate(360deg);
+    width: 30px;
+  }
+}
 @keyframes rotate-check-logo-not {
   0% {
     width: 55px;
   }
   90% {
     width: 55px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+@keyframes rotate-check-logo-not-tablette {
+  0% {
+    width: 30px;
+  }
+  90% {
+    width: 30px;
   }
   100% {
     width: 0px;
@@ -88,9 +128,25 @@
     transform: translateX(-180px);
   }
 }
+@keyframes translate-prix-tablette {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-110px);
+  }
+}
 @keyframes translate-prix-not {
   from {
     transform: translateX(-180px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes translate-prix-not-tablette {
+  from {
+    transform: translateX(-110px);
   }
   to {
     transform: translateX(0px);
@@ -125,11 +181,11 @@ header + div {
   padding-top: 50px;
   padding-bottom: 35px;
 }
-@media (min-width: 480px) {
+@media all and (min-device-width: 480px) {
   .logo {
-    width: 30%;
-    padding-top: 40px;
-    padding-bottom: 25px;
+    width: 25%;
+    padding-top: 30px;
+    padding-bottom: 15px;
   }
 }
 .logo img {
@@ -143,6 +199,13 @@ header + div {
   top: 65px;
   left: 50px;
 }
+@media all and (min-device-width: 480px) {
+  .fleche {
+    width: 30px;
+    height: 30px;
+    top: 30px;
+  }
+}
 
 footer > div {
   width: 100%;
@@ -154,6 +217,12 @@ footer > div {
   font-size: 50px;
   padding-bottom: 75px;
 }
+@media all and (min-device-width: 480px) {
+  footer > div {
+    font-size: 30px;
+    padding-bottom: 50px;
+  }
+}
 
 .footer__logo {
   font-size: 48px;
@@ -163,14 +232,27 @@ footer > div {
   margin-top: 75px;
   margin-left: 65px;
 }
+@media all and (min-device-width: 480px) {
+  .footer__logo {
+    font-size: 35px;
+    padding-bottom: 20px;
+    margin-left: 40px;
+    margin-top: 45px;
+  }
+}
 .footer__paragraphe {
   padding-left: 115px;
+}
+@media all and (min-device-width: 480px) {
+  .footer__paragraphe {
+    padding-left: 80px;
+  }
 }
 .footer__paragraphe p {
   padding-bottom: 15px;
 }
 .footer__paragraphe ~ p {
-  margin-left: 65px;
+  margin-left: 40px;
   padding-bottom: 15px;
 }
 .footer__icone {
@@ -179,11 +261,28 @@ footer > div {
   height: 40px;
   left: 65px;
 }
+@media all and (min-device-width: 480px) {
+  .footer__icone {
+    width: 25px;
+    height: 25px;
+    left: 40px;
+  }
+}
 .footer__icone-position1 {
   top: 160px;
 }
+@media all and (min-device-width: 480px) {
+  .footer__icone-position1 {
+    top: 100px;
+  }
+}
 .footer__icone-position2 {
   top: 230px;
+}
+@media all and (min-device-width: 480px) {
+  .footer__icone-position2 {
+    top: 145px;
+  }
 }
 
 h1, h2, h3 {
@@ -263,42 +362,40 @@ body, section, header, footer {
   width: 100%;
 }
 
-.btn1 {
+.btn {
   display: flex;
   position: absolute;
-  z-index: 2;
   font-family: "roboto";
-  background: linear-gradient(#ff93e1, #a16be0);
   height: 120px;
   border-radius: 60px;
-  box-shadow: 5px 15px 30px #9f9898;
   color: white;
   font-size: 40px;
   justify-content: center;
   align-items: center;
-  opacity: 0;
   padding-left: 40px;
   padding-right: 40px;
+}
+@media all and (min-device-width: 480px) {
+  .btn {
+    font-size: 25px;
+    height: 80px;
+  }
+}
+
+.btn1 {
+  z-index: 2;
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 5px 15px 30px #9f9898;
+  opacity: 0;
 }
 .btn1:hover {
   opacity: 1;
 }
 
 .btn2 {
-  display: flex;
-  position: absolute;
   z-index: 1;
-  font-family: "roboto";
   background: linear-gradient(#ff79da, #9356dc);
-  height: 120px;
-  border-radius: 60px;
   box-shadow: 5px 15px 30px #c4c0c0;
-  color: white;
-  font-size: 40px;
-  justify-content: center;
-  align-items: center;
-  padding-left: 40px;
-  padding-right: 40px;
 }
 
 .block {
@@ -366,17 +463,19 @@ section, header, footer {
   height: 100px;
   background-color: #e9e0e0;
 }
-@media (min-width: 480px) {
+@media all and (min-device-width: 480px) {
   .section1 {
-    padding-top: 0px;
     height: 60px;
-    background-color: white;
+    padding-top: 5px;
   }
 }
 .section1 table {
-  width: 315px;
   margin: auto;
-  border: 1px solid black;
+}
+@media all and (min-device-width: 480px) {
+  .section1 table {
+    height: 40px;
+  }
 }
 
 .localisation__marker {
@@ -387,11 +486,12 @@ section, header, footer {
   width: 50px;
   height: 50px;
 }
-@media (min-width: 480px) {
+@media all and (min-device-width: 480px) {
   .localisation__marker {
-    background-size: 25px;
-    width: 50px;
-    border: 1px solid black;
+    width: 30px;
+    height: 35px;
+    background-size: 28px;
+    padding-top: 5px;
   }
 }
 .localisation__barre input {
@@ -403,20 +503,22 @@ section, header, footer {
   padding-left: 25px;
   font-weight: bold;
 }
-@media (min-width: 480px) {
+@media all and (min-device-width: 480px) {
   .localisation__barre input {
-    background-color: white;
     font-size: 30px;
-    width: 260px;
-    padding-left: 0px;
-    border: 1px solid black;
+    width: 270px;
   }
 }
 
 .section2 {
   width: 100%;
-  margin: auto;
   margin-bottom: 300px;
+}
+@media all and (min-device-width: 480px) {
+  .section2 {
+    max-width: 680px;
+    margin: auto;
+  }
 }
 .section2 h1 {
   font-size: 60px;
@@ -425,6 +527,11 @@ section, header, footer {
   width: 60%;
   margin: auto;
   margin-top: 100px;
+}
+@media all and (min-device-width: 480px) {
+  .section2 h1 {
+    font-size: 40px;
+  }
 }
 .section2__description {
   display: flex;
@@ -436,6 +543,11 @@ section, header, footer {
   justify-content: center;
   margin-top: 50px;
   text-align: center;
+}
+@media all and (min-device-width: 480px) {
+  .section2__description {
+    font-size: 30px;
+  }
 }
 .section2 .btn__menu {
   margin: auto;
@@ -452,13 +564,33 @@ section, header, footer {
   font-size: 60px;
   font-family: "roboto-bold";
 }
+@media all and (min-device-width: 480px) {
+  .section3 h2 {
+    font-size: 40px;
+    margin-bottom: 100px;
+  }
+}
+
+@media all and (min-device-width: 480px) {
+  .fonctionnement {
+    display: flex;
+    margin: auto;
+    max-width: 1000px;
+  }
+}
 
 .fonct__menu {
   margin: auto;
   margin-bottom: 60px;
   width: 80%;
-  height: 155px;
+  height: 150px;
   border-radius: 50px;
+}
+@media all and (min-device-width: 480px) {
+  .fonct__menu {
+    width: 28%;
+    height: 80px;
+  }
 }
 .fonct__menu > div {
   display: flex;
@@ -475,12 +607,27 @@ section, header, footer {
   border-radius: 40px;
   left: -30px;
 }
+@media all and (min-device-width: 480px) {
+  .fonct__num {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    left: -20px;
+  }
+}
 .fonct__logo {
   left: 100px;
   width: 50px;
   height: 50px;
   background-repeat: no-repeat;
   background-position: center;
+}
+@media all and (min-device-width: 480px) {
+  .fonct__logo {
+    left: 30px;
+    width: 30px;
+    height: 30px;
+  }
 }
 .fonct__logo-mob {
   background-image: url("mobile.svg");
@@ -496,9 +643,21 @@ section, header, footer {
   font-size: 40px;
   font-family: "roboto-bold";
 }
+@media all and (min-device-width: 480px) {
+  .fonct__text {
+    left: 50px;
+    font-size: 25px;
+    text-align: center;
+  }
+}
 
 .section4 {
   margin-top: 300px;
+}
+@media all and (min-device-width: 480px) {
+  .section4 {
+    margin-top: 100px;
+  }
 }
 .section4 a {
   width: 100%;
@@ -511,10 +670,37 @@ section, header, footer {
   margin-left: 50px;
   margin-bottom: 100px;
 }
+@media all and (min-device-width: 480px) {
+  .section4 h2, .section4 h3 {
+    font-size: 40px;
+  }
+}
 .section4 h3 {
   font-size: 50px;
   margin-bottom: 0px;
   margin-top: 50px;
+}
+@media all and (min-device-width: 480px) {
+  .section4 h3 {
+    font-size: 35px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
+
+@media all and (min-device-width: 480px) {
+  .restaurant1 {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media all and (min-device-width: 480px) {
+  .restaurant2 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+  }
 }
 
 .carte {
@@ -529,15 +715,32 @@ section, header, footer {
   box-shadow: 5px 10px 30px #d4d2d2;
   border-radius: 50px;
 }
+@media all and (min-device-width: 480px) {
+  .carte {
+    width: 42%;
+    margin-bottom: 50px;
+  }
+}
 .carte__image {
   width: 100%;
   object-fit: cover;
   border-radius: 50px 50px 0px 0px;
   height: 450px;
 }
+@media all and (min-device-width: 480px) {
+  .carte__image {
+    height: 250px;
+  }
+}
 .carte__desc {
   margin: 10px 0px 50px 50px;
   font-size: 45px;
+}
+@media all and (min-device-width: 480px) {
+  .carte__desc {
+    font-size: 25px;
+    margin-left: 20px;
+  }
 }
 .carte__coeur {
   position: absolute;
@@ -545,6 +748,18 @@ section, header, footer {
   top: 510px;
   width: 60px;
   height: 60px;
+}
+@media all and (min-device-width: 480px) {
+  .carte__coeur {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media all and (min-device-width: 480px) {
+  .carte__coeur {
+    top: 330px;
+    right: 30px;
+  }
 }
 .carte__coeur:hover + .carte__coeur-plein {
   transform: scale(1);
@@ -569,6 +784,13 @@ section, header, footer {
   color: #798679;
   font-family: "roboto-bold";
 }
+@media all and (min-device-width: 480px) {
+  .carte__nouveau {
+    font-size: 25px;
+    width: 150px;
+    height: 50px;
+  }
+}
 
 .section1_2 {
   width: 100%;
@@ -576,10 +798,22 @@ section, header, footer {
   position: relative;
   flex-direction: column;
 }
+@media all and (min-device-width: 480px) {
+  .section1_2 {
+    text-align: center;
+  }
+}
 .section1_2 h1 {
   font-family: "shrikhand";
   font-size: 70px;
   margin-left: 50px;
+}
+@media all and (min-device-width: 480px) {
+  .section1_2 h1 {
+    font-size: 40px;
+    margin-bottom: 330px;
+    margin-top: 80px;
+  }
 }
 .section1_2 h2 {
   font-family: "roboto";
@@ -587,18 +821,49 @@ section, header, footer {
   margin-top: 100px;
   margin-left: 50px;
 }
+@media all and (min-device-width: 480px) {
+  .section1_2 h2 {
+    font-size: 20px;
+    margin-left: 0px;
+    border-bottom: 2px solid #99e2d0;
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    padding-bottom: 30px;
+  }
+}
 .section1_2 h2 span {
   border-bottom: 10px solid #99e2d0;
+}
+@media all and (min-device-width: 480px) {
+  .section1_2 h2 span {
+    border-bottom: 1px solid white;
+  }
 }
 
 .image-rest {
   width: 100%;
   height: 650px;
 }
+@media all and (min-device-width: 480px) {
+  .image-rest {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    border-radius: 125px;
+  }
+}
 .image-rest img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media all and (min-device-width: 480px) {
+  .image-rest img {
+    border-radius: 125px;
+  }
 }
 
 .languette {
@@ -610,6 +875,11 @@ section, header, footer {
   width: 100%;
   height: 102px;
   top: 550px;
+}
+@media all and (min-device-width: 480px) {
+  .languette {
+    display: none;
+  }
 }
 .languette + div {
   padding-bottom: 30px;
@@ -627,12 +897,24 @@ section, header, footer {
   animation: apparition-block 1000ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct {
+    width: 60%;
+    height: 110px;
+    text-align: left;
+  }
+}
 .fonct--1 {
   animation-delay: 200ms;
 }
 .fonct:hover .fonct__anim-val {
   animation: progress-check 600ms;
   animation-fill-mode: both;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
 }
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
@@ -641,15 +923,36 @@ section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
 }
 .fonct--2 {
   animation-delay: 400ms;
@@ -658,6 +961,11 @@ section, header, footer {
   animation: progress-check 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
 }
@@ -665,15 +973,36 @@ section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
 }
 .fonct--3 {
   animation-delay: 600ms;
@@ -682,6 +1011,11 @@ section, header, footer {
   animation: progress-check 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
 }
@@ -689,15 +1023,36 @@ section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
 }
 .fonct--4 {
   animation-delay: 800ms;
@@ -706,6 +1061,11 @@ section, header, footer {
   animation: progress-check 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
 }
@@ -713,15 +1073,36 @@ section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
 }
 .fonct--5 {
   animation-delay: 1000ms;
@@ -730,6 +1111,11 @@ section, header, footer {
   animation: progress-check 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
 }
@@ -737,15 +1123,36 @@ section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
 }
 .fonct--6 {
   animation-delay: 1200ms;
@@ -754,6 +1161,11 @@ section, header, footer {
   animation: progress-check 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
 }
@@ -761,15 +1173,36 @@ section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
 }
 .fonct--7 {
   animation-delay: 1400ms;
@@ -778,6 +1211,11 @@ section, header, footer {
   animation: progress-check 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
 }
@@ -785,15 +1223,36 @@ section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
 }
 .fonct--8 {
   animation-delay: 1600ms;
@@ -802,6 +1261,11 @@ section, header, footer {
   animation: progress-check 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
 }
@@ -809,15 +1273,36 @@ section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
 }
 .fonct--9 {
   animation-delay: 1800ms;
@@ -826,6 +1311,11 @@ section, header, footer {
   animation: progress-check 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
 }
@@ -833,15 +1323,36 @@ section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
 }
 .fonct--10 {
   animation-delay: 2000ms;
@@ -850,6 +1361,11 @@ section, header, footer {
   animation: progress-check 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
 }
@@ -857,15 +1373,36 @@ section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
 }
 .fonct__plat {
   width: 100%;
@@ -881,8 +1418,19 @@ section, header, footer {
   animation: width-plat 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct__plat:hover {
+    animation: width-plat-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct__plat:not(:hover) {
   animation: width-plat-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct__plat:not(:hover) {
+    animation: width-plat-not-tablette 600ms;
+  }
 }
 .fonct__intitulé {
   font-family: "roboto-bold";
@@ -893,6 +1441,11 @@ section, header, footer {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media all and (min-device-width: 480px) {
+  .fonct__intitulé {
+    font-size: 25px;
+  }
+}
 .fonct__accompagnement {
   z-index: 1;
   font-family: "roboto";
@@ -900,6 +1453,11 @@ section, header, footer {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media all and (min-device-width: 480px) {
+  .fonct__accompagnement {
+    font-size: 20px;
+  }
 }
 .fonct__prix {
   z-index: 2;
@@ -913,7 +1471,15 @@ section, header, footer {
   padding-right: 20px;
   transition: transform 600ms;
 }
+@media all and (min-device-width: 480px) {
+  .fonct__prix {
+    width: 25px;
+    font-size: 25px;
+    top: 70px;
+  }
+}
 .fonct__anim-val {
+  transform-origin: right;
   position: absolute;
   right: 0px;
   display: flex;
@@ -924,9 +1490,26 @@ section, header, footer {
   background: #99e2d0;
   border-radius: 0px 50px 50px 0px;
 }
+@media all and (min-device-width: 480px) {
+  .fonct__anim-val {
+    max-width: 110px;
+  }
+}
 .fonct__anim-val-logo {
   width: 55px;
   height: 55px;
+}
+@media all and (min-device-width: 480px) {
+  .fonct__anim-val-logo {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media all and (min-device-width: 480px) {
+  .fonct__anim-val-logo img {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .btn__plat {
@@ -935,10 +1518,21 @@ section, header, footer {
   margin-bottom: 250px;
   width: 31%;
 }
+@media all and (min-device-width: 480px) {
+  .btn__plat {
+    width: 22%;
+  }
+}
 
 .carte__coeur-position {
   top: 810px;
   right: 110px;
+}
+@media all and (min-device-width: 480px) {
+  .carte__coeur-position {
+    top: 120px;
+    right: 40px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

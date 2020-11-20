@@ -34,9 +34,25 @@
         width: 580px;
     }
 }
+@keyframes width-plat-tablette{
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 270px;
+    }
+}
 @keyframes width-plat-not{
     from{
         width: 580px;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes width-plat-not-tablette{
+    from{
+        width: 270px;
     }
     to{
         width: 100%;
@@ -50,6 +66,7 @@
         width: 180px;
     }
 }
+
 @keyframes progress-check-not{
     from{
         width: 180px;
@@ -72,6 +89,19 @@
     }
 }
 
+@keyframes rotate-check-logo-tablette{
+    0%{
+        transform: rotate(0deg);
+        width: 0px;
+    }
+    10%{
+        width: 30px;
+    }
+    100%{
+        transform: rotate(360deg);
+        width: 30px;
+    }
+}
 @keyframes rotate-check-logo-not{
     0%{
         width: 55px;
@@ -84,6 +114,17 @@
     }
 }
 
+@keyframes rotate-check-logo-not-tablette{
+    0%{
+        width: 30px;
+    }
+    90%{
+        width: 30px;
+    }
+    100%{
+        width: 0px;
+    }
+}
 @keyframes translate-prix{
     from{
         transform: translateX(0px);
@@ -92,9 +133,25 @@
         transform: translateX(-180px);
     }
 }
+@keyframes translate-prix-tablette{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-110px)
+    }
+}
 @keyframes translate-prix-not{
     from{
         transform: translateX(-180px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+@keyframes translate-prix-not-tablette{
+    from{
+        transform: translateX(-110px);
     }
     to{
         transform: translateX(0px);

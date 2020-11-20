@@ -7,6 +7,10 @@ footer > div{
     flex-direction: column;
     font-size: 50px;
     padding-bottom: 75px;
+    @include tablette{
+        font-size: 30px;
+        padding-bottom: 50px;
+    }
 }
 
 .footer{
@@ -17,14 +21,23 @@ footer > div{
         font-family: $police-logo;
         margin-top: 75px;
         margin-left: 65px;
+        @include tablette{
+            font-size: 35px;
+            padding-bottom: 20px;
+            margin-left: 40px;
+            margin-top: 45px;
+        }
     }
     &__paragraphe{
         padding-left: 115px;
+        @include tablette{
+            padding-left: 80px;
+        }
         & p{
             padding-bottom: 15px;
         }
         & ~ p{
-            margin-left: 65px;
+            margin-left: 40px;
             padding-bottom: 15px;
         }        
     }
@@ -33,11 +46,22 @@ footer > div{
         width: 40px;
         height: 40px;
         left: 65px;
+        @include tablette{
+            width: 25px;
+            height: 25px;
+            left: 40px;
+        }
         &-position1{
             top: 160px;
+            @include tablette{
+                top: 100px;
+            }
         }
         &-position2{
             top: 230px;
+            @include tablette{
+                top: 145px;
+            }
         }
     }
 }

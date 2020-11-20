@@ -1,4 +1,20 @@
 @mixin coeurs{
         width: 60px;
         height: 60px;
+        @include tablette{
+                width: 40px;
+                height: 40px;
+        }
+}
+
+@mixin tablette{
+        @media all and (min-device-width: map-get($breakpoints, tablette )){
+                @content;
+        }
+}
+
+@mixin bureau{
+        @media all and (min-device-width: map-get($breakpoints, bureau )){
+                @content;
+        }
 }

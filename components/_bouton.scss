@@ -1,36 +1,33 @@
-.btn1{
+.btn{
     display: flex;
     position: absolute;
-    z-index: 2;
     font-family: $police;
-    background:linear-gradient($couleur-secondaire-lighten, $couleur-primaire-lighten);
     height: 120px;
     border-radius: 60px;
-    box-shadow: 5px 15px 30px $btn-shadow-darken;
     color: white;
     font-size: 40px;
     justify-content: center;
     align-items: center;
-    opacity: 0;
     padding-left: 40px;
     padding-right: 40px;
+    @include tablette{
+        font-size: 25px;
+        height: 80px;
+    }
+}
+
+.btn1{
+    z-index: 2;
+    background:linear-gradient($couleur-secondaire-lighten, $couleur-primaire-lighten);
+    box-shadow: 5px 15px 30px $btn-shadow-darken;
+    opacity: 0;
     &:hover{
         opacity: 1;
     }
 }
 .btn2{
-    display: flex;
-    position: absolute;
-    z-index: 1;
-    font-family: $police;    
-    background:linear-gradient($couleur-secondaire, $couleur-primaire);
-    height: 120px;
-    border-radius: 60px;    
+    z-index: 1; 
+    background:linear-gradient($couleur-secondaire, $couleur-primaire);    
     box-shadow: 5px 15px 30px $btn-shadow;
-    color: white;
-    font-size: 40px;
-    justify-content: center;
-    align-items: center;
-    padding-left: 40px;
-    padding-right: 40px;
+
 }
