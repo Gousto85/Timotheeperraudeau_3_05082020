@@ -6,6 +6,9 @@
         max-width: 680px;
         margin: auto;
     }
+    @include bureau{
+        min-width: 100%;
+    }
     h1{
         font-size: 60px;
         font-family: $police-gras;
@@ -15,6 +18,11 @@
         margin-top: 100px;
         @include tablette{
             font-size: 40px;
+        }
+        @include bureau{
+            font-size: 25px;
+            margin-left: 20px;
+            text-align: left;
         }
     }
     &__description{
@@ -30,10 +38,19 @@
         @include tablette{
             font-size: 30px;
         }
+        @include bureau{
+            font-size: 18px;
+            margin-left: 20px;
+            justify-content: left;
+            margin-top: 15px;
+        }
     }
     .btn__menu{
         margin: auto;
         margin-top: 80px;
         width: 52%;
+        @include bureau{
+            width: 20%;
+        }
     }
 }

@@ -14,7 +14,10 @@
             font-size: 40px;
             margin-bottom: 330px;
             margin-top: 80px;
-            
+            @include bureau{
+                font-size: 30px;
+                margin-bottom: 100px;
+            }
         }
     }
     h2{
@@ -31,6 +34,11 @@
             margin-top: 50px;
             padding-bottom: 30px;
             //text-align: center;
+            @include bureau{
+                font-size: 15px;
+                width: 55%;
+                margin-right: 100px;
+            }
         }
         span{
             border-bottom: 10px solid $couleur-tertiaire;
@@ -51,12 +59,21 @@
         left: 30px;
         border-radius: 125px;
     }    
+    @include bureau{
+        border-radius: 0px;
+        width: 350px;
+        height: 400px;
+        top: 250px;
+    }
     img{
         width: 100%;   
         height: 100%;
         object-fit: cover;
         @include tablette{
             border-radius: 125px;
+        }
+        @include bureau{
+            border-radius: 0px;
         }
     }
 }
@@ -91,9 +108,13 @@
     animation: apparition-block 1000ms;
     animation-fill-mode: both;
     @include tablette{
-        width: 60%;
+        width: 500px;
         height: 110px;
         text-align: left;
+    }
+    @include bureau{
+        margin-right: 175px;
+        margin-top: 30px;
     }
     @for $i from 1 through 10{
         &--#{$i} {
@@ -243,6 +264,9 @@
         @include tablette{
             width: 22%;
         }
+        @include bureau{
+            margin-bottom: 150px;
+        }
     }
 
 .carte__coeur-position{
@@ -251,5 +275,8 @@
     @include tablette{
         top: 120px;
         right: 40px;
+    }
+    @include bureau{
+        top: 50px;
     }
 }

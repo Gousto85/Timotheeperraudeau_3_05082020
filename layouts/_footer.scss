@@ -11,6 +11,11 @@ footer > div{
         font-size: 30px;
         padding-bottom: 50px;
     }
+    @include bureau{
+        flex-direction: row;
+        font-size: 18px;
+        padding-bottom: 20px;
+    }
 }
 
 .footer{
@@ -27,18 +32,37 @@ footer > div{
             margin-left: 40px;
             margin-top: 45px;
         }
+        @include bureau{
+            font-size: 25px;
+            margin-top: 10px;
+        }
     }
     &__paragraphe{
         padding-left: 115px;
         @include tablette{
             padding-left: 80px;
         }
+        @include bureau{
+            margin-top: 50px;
+            padding-left: 60px;
+        }
         & p{
             padding-bottom: 15px;
+            @include bureau{
+                padding-bottom: 3px;
+            }
         }
         & ~ p{
             margin-left: 40px;
             padding-bottom: 15px;
+            & a{
+                text-decoration: none;
+                color: white;
+            }
+            @include bureau{
+                margin-top: 50px;
+                margin-left: 120px;
+            }
         }        
     }
     &__icone{
@@ -51,16 +75,28 @@ footer > div{
             height: 25px;
             left: 40px;
         }
+        @include bureau{
+            width: 15px;
+            height: 15px;
+        }
         &-position1{
             top: 160px;
             @include tablette{
                 top: 100px;
+            }
+            @include bureau{
+                top: 50px;
+                left: 240px;
             }
         }
         &-position2{
             top: 230px;
             @include tablette{
                 top: 145px;
+            }
+            @include bureau{
+                top: 73px;
+                left: 240px;
             }
         }
     }

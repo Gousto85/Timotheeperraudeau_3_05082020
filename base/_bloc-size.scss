@@ -1,3 +1,13 @@
-body, section, header, footer{
+body, section, header, footer, .global{
     width: 100%;
+    @include bureau{
+        width: 1180px;
+        position: relative,
+    }
+}
+@include bureau{
+    body{
+        margin: auto;
+        border: 1px solid black;
+    }
 }

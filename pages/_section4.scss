@@ -17,6 +17,10 @@
         @include tablette{
             font-size: 40px;
         }
+        @include bureau{
+            font-size: 25px;
+            margin-left: 20px;
+        }
     }
     h3{
         font-size: 50px;
@@ -26,6 +30,9 @@
             font-size: 35px;
             margin-top: 20px;
             margin-left: 20px;
+        }
+        @include bureau{
+            font-size: 20px;
         }
     }
 }
@@ -59,6 +66,16 @@
         width: 42%;
         margin-bottom: 50px;
     }
+    @include bureau{
+        height: 150px;
+        border-radius: 30px;
+    }
+    &__flex{
+        @include bureau{
+            display: flex;
+            border-radius: 30px;
+        }
+     }
     &__image{
         width: 100%;
         object-fit: cover;
@@ -67,7 +84,12 @@
         @include tablette{
             height: 250px;
         }
+        @include bureau{
+            border-radius: 30px 0px 0px 30px;
+            width: 150px;
+            height: 150px;
         }
+    }
     &__desc{
         margin: 10px 0px 50px 50px;
         font-size: 45px;
@@ -84,6 +106,9 @@
         @include tablette{
             top: 330px;
             right: 30px;
+        }
+        @include bureau{
+            top: 20px;
         }
         &:hover +.carte__coeur-plein{
             transform: scale(1);
@@ -112,6 +137,13 @@
             font-size: 25px;
             width: 150px;
             height: 50px;
+        }
+        @include bureau{
+            font-size: 10px;
+            width: 50px;
+            height: 20px;
+            left: 90px;
+            top: 15px;
         }
     }
 }

@@ -8,7 +8,6 @@
             padding-top: 5px;
         }
     table{
-        //border: 1px solid black;
         margin: auto;
         @include tablette{
             height: 40px;
@@ -29,6 +28,11 @@
                 background-size: 28px;
                 padding-top: 5px;
             }
+            @include bureau{
+                width: 30px;
+                height: 30px;
+                background-size: 20px;
+            }
     }
     &__barre input{
         padding-top: 15px;
@@ -41,6 +45,10 @@
             @include tablette{
                 font-size: 30px;
                 width: 270px;
+            }
+            @include bureau{
+                font-size: 20px;
+                width: 200px;
             }
     }
 }

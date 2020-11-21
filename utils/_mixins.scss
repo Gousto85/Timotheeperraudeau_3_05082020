@@ -5,6 +5,10 @@
                 width: 40px;
                 height: 40px;
         }
+        @include bureau{
+                width: 30px;
+                height: 30px;
+        }
 }
 
 @mixin tablette{
