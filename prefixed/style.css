@@ -26,10 +26,18 @@
 }
 @keyframes width-plat {
   from {
-    width: 900px;
+    width: 100%;
   }
   to {
     width: 580px;
+  }
+}
+@keyframes width-plat-tablette {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 270px;
   }
 }
 @keyframes width-plat-not {
@@ -37,7 +45,15 @@
     width: 580px;
   }
   to {
-    width: 900px;
+    width: 100%;
+  }
+}
+@keyframes width-plat-not-tablette {
+  from {
+    width: 270px;
+  }
+  to {
+    width: 100%;
   }
 }
 @keyframes progress-check {
@@ -69,12 +85,36 @@
     width: 55px;
   }
 }
+@keyframes rotate-check-logo-tablette {
+  0% {
+    transform: rotate(0deg);
+    width: 0px;
+  }
+  10% {
+    width: 30px;
+  }
+  100% {
+    transform: rotate(360deg);
+    width: 30px;
+  }
+}
 @keyframes rotate-check-logo-not {
   0% {
     width: 55px;
   }
   90% {
     width: 55px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+@keyframes rotate-check-logo-not-tablette {
+  0% {
+    width: 30px;
+  }
+  90% {
+    width: 30px;
   }
   100% {
     width: 0px;
@@ -88,6 +128,14 @@
     transform: translateX(-180px);
   }
 }
+@keyframes translate-prix-tablette {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-110px);
+  }
+}
 @keyframes translate-prix-not {
   from {
     transform: translateX(-180px);
@@ -96,11 +144,41 @@
     transform: translateX(0px);
   }
 }
+@keyframes translate-prix-not-tablette {
+  from {
+    transform: translateX(-110px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-apparition {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-9999px);
+  }
+}
 header {
-  box-shadow: 0px 12px 12px #d6d3d3;
+  position: relative;
+  box-shadow: 0px 11px 15px #d6d3d3;
 }
 header + div {
   display: flex;
+}
+@media all and (min-device-width: 1180px) {
+  header {
+    box-shadow: 0px 0px 0px white;
+  }
 }
 
 .logo {
@@ -108,6 +186,20 @@ header + div {
   width: 45%;
   padding-top: 50px;
   padding-bottom: 35px;
+}
+@media all and (min-device-width: 480px) {
+  .logo {
+    width: 25%;
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .logo {
+    width: 10%;
+    padding-top: 15px;
+    padding-bottom: 0px;
+  }
 }
 .logo img {
   width: 100%;
@@ -120,6 +212,20 @@ header + div {
   top: 65px;
   left: 50px;
 }
+@media all and (min-device-width: 480px) {
+  .fleche {
+    width: 30px;
+    height: 30px;
+    top: 30px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .fleche {
+    width: 20px;
+    height: 20px;
+    top: 10px;
+  }
+}
 
 footer > div {
   width: 100%;
@@ -131,6 +237,19 @@ footer > div {
   font-size: 50px;
   padding-bottom: 75px;
 }
+@media all and (min-device-width: 480px) {
+  footer > div {
+    font-size: 30px;
+    padding-bottom: 50px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  footer > div {
+    flex-direction: row;
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+}
 
 .footer__logo {
   font-size: 48px;
@@ -140,15 +259,55 @@ footer > div {
   margin-top: 75px;
   margin-left: 65px;
 }
+@media all and (min-device-width: 480px) {
+  .footer__logo {
+    font-size: 35px;
+    padding-bottom: 20px;
+    margin-left: 40px;
+    margin-top: 45px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .footer__logo {
+    font-size: 25px;
+    margin-top: 10px;
+  }
+}
 .footer__paragraphe {
   padding-left: 115px;
+}
+@media all and (min-device-width: 480px) {
+  .footer__paragraphe {
+    padding-left: 80px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .footer__paragraphe {
+    margin-top: 50px;
+    padding-left: 60px;
+  }
 }
 .footer__paragraphe p {
   padding-bottom: 15px;
 }
+@media all and (min-device-width: 1180px) {
+  .footer__paragraphe p {
+    padding-bottom: 3px;
+  }
+}
 .footer__paragraphe ~ p {
-  margin-left: 65px;
+  margin-left: 40px;
   padding-bottom: 15px;
+}
+.footer__paragraphe ~ p a {
+  text-decoration: none;
+  color: white;
+}
+@media all and (min-device-width: 1180px) {
+  .footer__paragraphe ~ p {
+    margin-top: 50px;
+    margin-left: 120px;
+  }
 }
 .footer__icone {
   position: absolute;
@@ -156,11 +315,46 @@ footer > div {
   height: 40px;
   left: 65px;
 }
+@media all and (min-device-width: 480px) {
+  .footer__icone {
+    width: 25px;
+    height: 25px;
+    left: 40px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .footer__icone {
+    width: 15px;
+    height: 15px;
+  }
+}
 .footer__icone-position1 {
   top: 160px;
 }
+@media all and (min-device-width: 480px) {
+  .footer__icone-position1 {
+    top: 100px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .footer__icone-position1 {
+    top: 50px;
+    left: 240px;
+  }
+}
 .footer__icone-position2 {
   top: 230px;
+}
+@media all and (min-device-width: 480px) {
+  .footer__icone-position2 {
+    top: 145px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .footer__icone-position2 {
+    top: 73px;
+    left: 240px;
+  }
 }
 
 h1, h2, h3 {
@@ -236,26 +430,62 @@ table {
   border-spacing: 0;
 }
 
-body, section, header, footer {
+body, section, header, footer, .global {
   width: 100%;
 }
+@media all and (min-device-width: 1180px) {
+  body, section, header, footer, .global {
+    width: 1180px;
+    position: relative;
+  }
+}
 
+@media all and (min-device-width: 1180px) {
+  body {
+    margin: auto;
+    border: 1px solid black;
+  }
+}
 .btn {
   display: flex;
+  position: absolute;
   font-family: "roboto";
-  background: linear-gradient(#ff79da, #9356dc);
-  width: 550px;
   height: 120px;
   border-radius: 60px;
-  box-shadow: 5px 15px 30px #c4c0c0;
   color: white;
   font-size: 40px;
   justify-content: center;
   align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
 }
-.btn:hover {
+@media all and (min-device-width: 480px) {
+  .btn {
+    font-size: 25px;
+    height: 80px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .btn {
+    font-size: 15px;
+    height: 50px;
+  }
+}
+
+.btn1 {
+  z-index: 2;
   background: linear-gradient(#ff93e1, #a16be0);
   box-shadow: 5px 15px 30px #9f9898;
+  opacity: 0;
+}
+.btn1:hover {
+  opacity: 1;
+}
+
+.btn2 {
+  z-index: 1;
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 5px 15px 30px #c4c0c0;
 }
 
 .block {
@@ -266,15 +496,76 @@ body, section, header, footer {
   box-shadow: 5px 10px 30px #d4d2d2;
 }
 
+section, header, footer {
+  z-index: 1;
+}
+
+.loader {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.loader div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  margin: 8px;
+  border: 20px solid #9356dc;
+  border-radius: 50%;
+  animation: loader 1200ms cubic-bezier(0.5, 0, 0.5, 1) 2;
+  border-color: #9356dc transparent transparent transparent;
+}
+
+.loader div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.loader div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.loader div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+.loader-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
+  animation: loader-apparition;
+  animation-delay: 2400ms;
+  animation-fill-mode: forwards;
+  top: 0px;
+  background: rgba(10, 10, 10, 0.8);
+}
+
 .section1 {
-  margin-top: 11px;
+  margin-top: 12px;
   padding-top: 20px;
   height: 100px;
-  background-color: #ebe5e5;
+  background-color: #e9e0e0;
+}
+@media all and (min-device-width: 480px) {
+  .section1 {
+    height: 60px;
+    padding-top: 5px;
+  }
 }
 .section1 table {
-  width: 45%;
   margin: auto;
+}
+@media all and (min-device-width: 480px) {
+  .section1 table {
+    height: 40px;
+  }
 }
 
 .localisation__marker {
@@ -282,35 +573,84 @@ body, section, header, footer {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 35px;
-  width: 60px;
+  width: 50px;
   height: 50px;
+}
+@media all and (min-device-width: 480px) {
+  .localisation__marker {
+    width: 30px;
+    height: 35px;
+    background-size: 28px;
+    padding-top: 5px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .localisation__marker {
+    width: 30px;
+    height: 30px;
+    background-size: 20px;
+  }
 }
 .localisation__barre input {
   padding-top: 15px;
   border: none;
-  background-color: #ebe5e5;
+  background-color: #e9e0e0;
   font-size: 40px;
   width: 345px;
   padding-left: 25px;
   font-weight: bold;
 }
+@media all and (min-device-width: 480px) {
+  .localisation__barre input {
+    font-size: 30px;
+    width: 270px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .localisation__barre input {
+    font-size: 20px;
+    width: 200px;
+  }
+}
 
 .section2 {
   width: 100%;
-  margin: auto;
   margin-bottom: 300px;
+}
+@media all and (min-device-width: 480px) {
+  .section2 {
+    max-width: 680px;
+    margin: auto;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .section2 {
+    min-width: 100%;
+  }
 }
 .section2 h1 {
   font-size: 60px;
   font-family: "roboto-bold";
   text-align: center;
-  width: 650px;
+  width: 60%;
   margin: auto;
   margin-top: 100px;
 }
+@media all and (min-device-width: 480px) {
+  .section2 h1 {
+    font-size: 40px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .section2 h1 {
+    font-size: 25px;
+    margin-left: 20px;
+    text-align: left;
+  }
+}
 .section2__description {
   display: flex;
-  width: 850px;
+  width: 80%;
   margin: auto;
   font-size: 45px;
   color: grey;
@@ -319,9 +659,28 @@ body, section, header, footer {
   margin-top: 50px;
   text-align: center;
 }
+@media all and (min-device-width: 480px) {
+  .section2__description {
+    font-size: 30px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .section2__description {
+    font-size: 18px;
+    margin-left: 20px;
+    justify-content: left;
+    margin-top: 15px;
+  }
+}
 .section2 .btn__menu {
   margin: auto;
   margin-top: 80px;
+  width: 52%;
+}
+@media all and (min-device-width: 1180px) {
+  .section2 .btn__menu {
+    width: 20%;
+  }
 }
 
 .section3 {
@@ -333,13 +692,44 @@ body, section, header, footer {
   font-size: 60px;
   font-family: "roboto-bold";
 }
+@media all and (min-device-width: 480px) {
+  .section3 h2 {
+    font-size: 40px;
+    margin-bottom: 100px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .section3 h2 {
+    font-size: 25px;
+    margin-left: 20px;
+  }
+}
+
+@media all and (min-device-width: 480px) {
+  .fonctionnement {
+    display: flex;
+    margin: auto;
+    max-width: 1000px;
+  }
+}
 
 .fonct__menu {
   margin: auto;
   margin-bottom: 60px;
-  width: 850px;
-  height: 155px;
+  width: 80%;
+  height: 150px;
   border-radius: 50px;
+}
+@media all and (min-device-width: 480px) {
+  .fonct__menu {
+    width: 28%;
+    height: 80px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .fonct__menu {
+    width: 30%;
+  }
 }
 .fonct__menu > div {
   display: flex;
@@ -356,12 +746,42 @@ body, section, header, footer {
   border-radius: 40px;
   left: -30px;
 }
+@media all and (min-device-width: 480px) {
+  .fonct__num {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    left: -20px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .fonct__num {
+    font-size: 15px;
+    width: 26px;
+    height: 26px;
+    left: -15px;
+  }
+}
 .fonct__logo {
   left: 100px;
   width: 50px;
   height: 50px;
   background-repeat: no-repeat;
   background-position: center;
+}
+@media all and (min-device-width: 480px) {
+  .fonct__logo {
+    left: 30px;
+    width: 30px;
+    height: 30px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .fonct__logo {
+    left: 30px;
+    width: 20px;
+    height: 20px;
+  }
 }
 .fonct__logo-mob {
   background-image: url("mobile.svg");
@@ -377,9 +797,27 @@ body, section, header, footer {
   font-size: 40px;
   font-family: "roboto-bold";
 }
+@media all and (min-device-width: 480px) {
+  .fonct__text {
+    left: 50px;
+    font-size: 25px;
+    text-align: center;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .fonct__text {
+    left: 70px;
+    font-size: 18px;
+  }
+}
 
 .section4 {
   margin-top: 300px;
+}
+@media all and (min-device-width: 480px) {
+  .section4 {
+    margin-top: 100px;
+  }
 }
 .section4 a {
   width: 100%;
@@ -392,10 +830,48 @@ body, section, header, footer {
   margin-left: 50px;
   margin-bottom: 100px;
 }
+@media all and (min-device-width: 480px) {
+  .section4 h2, .section4 h3 {
+    font-size: 40px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .section4 h2, .section4 h3 {
+    font-size: 25px;
+    margin-left: 20px;
+  }
+}
 .section4 h3 {
   font-size: 50px;
   margin-bottom: 0px;
   margin-top: 50px;
+}
+@media all and (min-device-width: 480px) {
+  .section4 h3 {
+    font-size: 35px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .section4 h3 {
+    font-size: 20px;
+  }
+}
+
+@media all and (min-device-width: 480px) {
+  .restaurant1 {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media all and (min-device-width: 480px) {
+  .restaurant2 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+  }
 }
 
 .carte {
@@ -410,15 +886,51 @@ body, section, header, footer {
   box-shadow: 5px 10px 30px #d4d2d2;
   border-radius: 50px;
 }
+@media all and (min-device-width: 480px) {
+  .carte {
+    width: 42%;
+    margin-bottom: 50px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .carte {
+    height: 150px;
+    border-radius: 30px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .carte__flex {
+    display: flex;
+    border-radius: 30px;
+  }
+}
 .carte__image {
   width: 100%;
   object-fit: cover;
   border-radius: 50px 50px 0px 0px;
   height: 450px;
 }
+@media all and (min-device-width: 480px) {
+  .carte__image {
+    height: 250px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .carte__image {
+    border-radius: 30px 0px 0px 30px;
+    width: 150px;
+    height: 150px;
+  }
+}
 .carte__desc {
   margin: 10px 0px 50px 50px;
   font-size: 45px;
+}
+@media all and (min-device-width: 480px) {
+  .carte__desc {
+    font-size: 25px;
+    margin-left: 20px;
+  }
 }
 .carte__coeur {
   position: absolute;
@@ -427,9 +939,32 @@ body, section, header, footer {
   width: 60px;
   height: 60px;
 }
+@media all and (min-device-width: 480px) {
+  .carte__coeur {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .carte__coeur {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media all and (min-device-width: 480px) {
+  .carte__coeur {
+    top: 330px;
+    right: 30px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .carte__coeur {
+    top: 20px;
+  }
+}
 .carte__coeur:hover + .carte__coeur-plein {
   transform: scale(1);
-  animation: progress-coeur 1s;
+  animation: progress-coeur 200ms;
   animation-fill-mode: both;
 }
 .carte__coeur-plein {
@@ -450,6 +985,22 @@ body, section, header, footer {
   color: #798679;
   font-family: "roboto-bold";
 }
+@media all and (min-device-width: 480px) {
+  .carte__nouveau {
+    font-size: 25px;
+    width: 150px;
+    height: 50px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .carte__nouveau {
+    font-size: 10px;
+    width: 50px;
+    height: 20px;
+    left: 90px;
+    top: 15px;
+  }
+}
 
 .section1_2 {
   width: 100%;
@@ -457,10 +1008,28 @@ body, section, header, footer {
   position: relative;
   flex-direction: column;
 }
+@media all and (min-device-width: 480px) {
+  .section1_2 {
+    text-align: center;
+  }
+}
 .section1_2 h1 {
   font-family: "shrikhand";
   font-size: 70px;
   margin-left: 50px;
+}
+@media all and (min-device-width: 480px) {
+  .section1_2 h1 {
+    font-size: 40px;
+    margin-bottom: 330px;
+    margin-top: 80px;
+  }
+}
+@media all and (min-device-width: 480px) and (min-device-width: 1180px) {
+  .section1_2 h1 {
+    font-size: 30px;
+    margin-bottom: 100px;
+  }
 }
 .section1_2 h2 {
   font-family: "roboto";
@@ -468,18 +1037,69 @@ body, section, header, footer {
   margin-top: 100px;
   margin-left: 50px;
 }
+@media all and (min-device-width: 480px) {
+  .section1_2 h2 {
+    font-size: 20px;
+    margin-left: 0px;
+    border-bottom: 2px solid #99e2d0;
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    padding-bottom: 30px;
+  }
+}
+@media all and (min-device-width: 480px) and (min-device-width: 1180px) {
+  .section1_2 h2 {
+    font-size: 15px;
+    width: 55%;
+    margin-right: 100px;
+  }
+}
 .section1_2 h2 span {
   border-bottom: 10px solid #99e2d0;
+}
+@media all and (min-device-width: 480px) {
+  .section1_2 h2 span {
+    border-bottom: 1px solid white;
+  }
 }
 
 .image-rest {
   width: 100%;
   height: 650px;
 }
+@media all and (min-device-width: 480px) {
+  .image-rest {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    border-radius: 125px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .image-rest {
+    border-radius: 0px;
+    width: 350px;
+    height: 400px;
+    top: 250px;
+  }
+}
 .image-rest img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media all and (min-device-width: 480px) {
+  .image-rest img {
+    border-radius: 125px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .image-rest img {
+    border-radius: 0px;
+  }
 }
 
 .languette {
@@ -492,6 +1112,11 @@ body, section, header, footer {
   height: 102px;
   top: 550px;
 }
+@media all and (min-device-width: 480px) {
+  .languette {
+    display: none;
+  }
+}
 .languette + div {
   padding-bottom: 30px;
 }
@@ -500,13 +1125,26 @@ body, section, header, footer {
   display: flex;
   position: relative;
   box-shadow: 5px 10px 30px #d4d2d2;
-  width: 900px;
+  width: 95%;
   height: 165px;
   margin: auto;
   margin-top: 75px;
   border-radius: 50px;
   animation: apparition-block 1000ms;
   animation-fill-mode: both;
+}
+@media all and (min-device-width: 480px) {
+  .fonct {
+    width: 500px;
+    height: 110px;
+    text-align: left;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .fonct {
+    margin-right: 175px;
+    margin-top: 30px;
+  }
 }
 .fonct--1 {
   animation-delay: 200ms;
@@ -515,6 +1153,11 @@ body, section, header, footer {
   animation: progress-check 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
 }
@@ -522,15 +1165,36 @@ body, section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
 }
 .fonct--2 {
   animation-delay: 400ms;
@@ -539,6 +1203,11 @@ body, section, header, footer {
   animation: progress-check 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
 }
@@ -546,15 +1215,36 @@ body, section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
 }
 .fonct--3 {
   animation-delay: 600ms;
@@ -563,6 +1253,11 @@ body, section, header, footer {
   animation: progress-check 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
 }
@@ -570,15 +1265,36 @@ body, section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
 }
 .fonct--4 {
   animation-delay: 800ms;
@@ -587,6 +1303,11 @@ body, section, header, footer {
   animation: progress-check 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
 }
@@ -594,15 +1315,36 @@ body, section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
 }
 .fonct--5 {
   animation-delay: 1000ms;
@@ -611,6 +1353,11 @@ body, section, header, footer {
   animation: progress-check 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
 }
@@ -618,15 +1365,36 @@ body, section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
 }
 .fonct--6 {
   animation-delay: 1200ms;
@@ -635,6 +1403,11 @@ body, section, header, footer {
   animation: progress-check 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
 }
@@ -642,15 +1415,36 @@ body, section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
 }
 .fonct--7 {
   animation-delay: 1400ms;
@@ -659,6 +1453,11 @@ body, section, header, footer {
   animation: progress-check 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
 }
@@ -666,15 +1465,36 @@ body, section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
 }
 .fonct--8 {
   animation-delay: 1600ms;
@@ -683,6 +1503,11 @@ body, section, header, footer {
   animation: progress-check 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
 }
@@ -690,15 +1515,36 @@ body, section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
 }
 .fonct--9 {
   animation-delay: 1800ms;
@@ -707,6 +1553,11 @@ body, section, header, footer {
   animation: progress-check 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
 }
@@ -714,15 +1565,36 @@ body, section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
 }
 .fonct--10 {
   animation-delay: 2000ms;
@@ -731,6 +1603,11 @@ body, section, header, footer {
   animation: progress-check 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val {
+    animation-duration: 1000ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val {
   animation: progress-check-not 600ms;
 }
@@ -738,18 +1615,39 @@ body, section, header, footer {
   animation: rotate-check-logo 500ms 100ms;
   animation-fill-mode: forwards;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__anim-val-logo {
+    animation: rotate-check-logo-tablette 300ms 150ms;
+  }
+}
 .fonct:not(:hover) .fonct__anim-val-logo {
   animation: rotate-check-logo-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__anim-val-logo {
+    animation: rotate-check-logo-not-tablette 600ms;
+  }
 }
 .fonct:hover .fonct__prix {
   animation: translate-prix 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:hover .fonct__prix {
+    animation: translate-prix-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct:not(:hover) .fonct__prix {
   animation: translate-prix-not 600ms;
 }
+@media all and (min-device-width: 480px) {
+  .fonct:not(:hover) .fonct__prix {
+    animation: translate-prix-not-tablette 600ms;
+  }
+}
 .fonct__plat {
-  width: 900px;
+  width: 100%;
   margin-right: 100px;
   padding-left: 30px;
   border-radius: 50px 0px 0px 50px;
@@ -762,8 +1660,19 @@ body, section, header, footer {
   animation: width-plat 600ms;
   animation-fill-mode: both;
 }
+@media all and (min-device-width: 480px) {
+  .fonct__plat:hover {
+    animation: width-plat-tablette 600ms;
+    animation-fill-mode: both;
+  }
+}
 .fonct__plat:not(:hover) {
   animation: width-plat-not 600ms;
+}
+@media all and (min-device-width: 480px) {
+  .fonct__plat:not(:hover) {
+    animation: width-plat-not-tablette 600ms;
+  }
 }
 .fonct__intitulé {
   font-family: "roboto-bold";
@@ -774,6 +1683,11 @@ body, section, header, footer {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media all and (min-device-width: 480px) {
+  .fonct__intitulé {
+    font-size: 25px;
+  }
+}
 .fonct__accompagnement {
   z-index: 1;
   font-family: "roboto";
@@ -781,6 +1695,11 @@ body, section, header, footer {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media all and (min-device-width: 480px) {
+  .fonct__accompagnement {
+    font-size: 20px;
+  }
 }
 .fonct__prix {
   z-index: 2;
@@ -794,7 +1713,15 @@ body, section, header, footer {
   padding-right: 20px;
   transition: transform 600ms;
 }
+@media all and (min-device-width: 480px) {
+  .fonct__prix {
+    width: 25px;
+    font-size: 25px;
+    top: 70px;
+  }
+}
 .fonct__anim-val {
+  transform-origin: right;
   position: absolute;
   right: 0px;
   display: flex;
@@ -805,21 +1732,59 @@ body, section, header, footer {
   background: #99e2d0;
   border-radius: 0px 50px 50px 0px;
 }
+@media all and (min-device-width: 480px) {
+  .fonct__anim-val {
+    max-width: 110px;
+  }
+}
 .fonct__anim-val-logo {
   width: 55px;
   height: 55px;
+}
+@media all and (min-device-width: 480px) {
+  .fonct__anim-val-logo {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media all and (min-device-width: 480px) {
+  .fonct__anim-val-logo img {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .btn__plat {
   margin: auto;
   margin-top: 100px;
-  margin-bottom: 150px;
-  width: 450px;
+  margin-bottom: 250px;
+  width: 31%;
+}
+@media all and (min-device-width: 480px) {
+  .btn__plat {
+    width: 22%;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .btn__plat {
+    margin-bottom: 150px;
+  }
 }
 
 .carte__coeur-position {
   top: 810px;
   right: 110px;
+}
+@media all and (min-device-width: 480px) {
+  .carte__coeur-position {
+    top: 120px;
+    right: 40px;
+  }
+}
+@media all and (min-device-width: 1180px) {
+  .carte__coeur-position {
+    top: 50px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

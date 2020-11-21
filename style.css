@@ -1,27 +1,70 @@
 @charset "UTF-8";
-@keyframes progress-coeur {
+@-webkit-keyframes progress-coeur {
   0% {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
-@keyframes apparition-block {
+@keyframes progress-coeur {
   0% {
-    transform: translateY(9999px);
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes apparition-block {
+  0% {
+    -webkit-transform: translateY(9999px);
+            transform: translateY(9999px);
     opacity: 0;
   }
   40% {
-    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
     opacity: 0;
   }
   70% {
     opacity: 0.4;
   }
   100% {
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     opacity: 1;
+  }
+}
+@keyframes apparition-block {
+  0% {
+    -webkit-transform: translateY(9999px);
+            transform: translateY(9999px);
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes width-plat {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 580px;
   }
 }
 @keyframes width-plat {
@@ -32,6 +75,14 @@
     width: 580px;
   }
 }
+@-webkit-keyframes width-plat-tablette {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 270px;
+  }
+}
 @keyframes width-plat-tablette {
   0% {
     width: 100%;
@@ -40,9 +91,25 @@
     width: 270px;
   }
 }
+@-webkit-keyframes width-plat-not {
+  from {
+    width: 580px;
+  }
+  to {
+    width: 100%;
+  }
+}
 @keyframes width-plat-not {
   from {
     width: 580px;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes width-plat-not-tablette {
+  from {
+    width: 270px;
   }
   to {
     width: 100%;
@@ -56,12 +123,28 @@
     width: 100%;
   }
 }
+@-webkit-keyframes progress-check {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 180px;
+  }
+}
 @keyframes progress-check {
   from {
     width: 0px;
   }
   to {
     width: 180px;
+  }
+}
+@-webkit-keyframes progress-check-not {
+  from {
+    width: 180px;
+  }
+  to {
+    width: 0px;
   }
 }
 @keyframes progress-check-not {
@@ -72,30 +155,75 @@
     width: 0px;
   }
 }
-@keyframes rotate-check-logo {
+@-webkit-keyframes rotate-check-logo {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
     width: 0px;
   }
   10% {
     width: 55px;
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
     width: 55px;
+  }
+}
+@keyframes rotate-check-logo {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    width: 0px;
+  }
+  10% {
+    width: 55px;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    width: 55px;
+  }
+}
+@-webkit-keyframes rotate-check-logo-tablette {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    width: 0px;
+  }
+  10% {
+    width: 30px;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    width: 30px;
   }
 }
 @keyframes rotate-check-logo-tablette {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
     width: 0px;
   }
   10% {
     width: 30px;
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
     width: 30px;
+  }
+}
+@-webkit-keyframes rotate-check-logo-not {
+  0% {
+    width: 55px;
+  }
+  90% {
+    width: 55px;
+  }
+  100% {
+    width: 0px;
   }
 }
 @keyframes rotate-check-logo-not {
@@ -104,6 +232,17 @@
   }
   90% {
     width: 55px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+@-webkit-keyframes rotate-check-logo-not-tablette {
+  0% {
+    width: 30px;
+  }
+  90% {
+    width: 30px;
   }
   100% {
     width: 0px;
@@ -120,64 +259,140 @@
     width: 0px;
   }
 }
-@keyframes translate-prix {
+@-webkit-keyframes translate-prix {
   from {
-    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
   to {
-    transform: translateX(-180px);
+    -webkit-transform: translateX(-180px);
+            transform: translateX(-180px);
+  }
+}
+@keyframes translate-prix {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(-180px);
+            transform: translateX(-180px);
+  }
+}
+@-webkit-keyframes translate-prix-tablette {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(-110px);
+            transform: translateX(-110px);
   }
 }
 @keyframes translate-prix-tablette {
   from {
-    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
   to {
-    transform: translateX(-110px);
+    -webkit-transform: translateX(-110px);
+            transform: translateX(-110px);
+  }
+}
+@-webkit-keyframes translate-prix-not {
+  from {
+    -webkit-transform: translateX(-180px);
+            transform: translateX(-180px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 @keyframes translate-prix-not {
   from {
-    transform: translateX(-180px);
+    -webkit-transform: translateX(-180px);
+            transform: translateX(-180px);
   }
   to {
-    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+@-webkit-keyframes translate-prix-not-tablette {
+  from {
+    -webkit-transform: translateX(-110px);
+            transform: translateX(-110px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 @keyframes translate-prix-not-tablette {
   from {
-    transform: translateX(-110px);
+    -webkit-transform: translateX(-110px);
+            transform: translateX(-110px);
   }
   to {
-    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 @keyframes loader {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loader-apparition {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(-9999px);
+            transform: translateX(-9999px);
   }
 }
 @keyframes loader-apparition {
   0% {
-    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
   100% {
-    transform: translateX(-9999px);
+    -webkit-transform: translateX(-9999px);
+            transform: translateX(-9999px);
   }
 }
 header {
   position: relative;
-  box-shadow: 0px 11px 15px #d6d3d3;
+  -webkit-box-shadow: 0px 11px 15px #d6d3d3;
+          box-shadow: 0px 11px 15px #d6d3d3;
 }
 header + div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 @media all and (min-device-width: 1180px) {
   header {
-    box-shadow: 0px 0px 0px white;
+    -webkit-box-shadow: 0px 0px 0px white;
+            box-shadow: 0px 0px 0px white;
   }
 }
 
@@ -231,9 +446,14 @@ footer > div {
   width: 100%;
   background: #3a3a3a;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 50px;
   padding-bottom: 75px;
 }
@@ -245,7 +465,10 @@ footer > div {
 }
 @media all and (min-device-width: 1180px) {
   footer > div {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     font-size: 18px;
     padding-bottom: 20px;
   }
@@ -447,6 +670,8 @@ body, section, header, footer, .global {
   }
 }
 .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
   font-family: "roboto";
@@ -454,8 +679,12 @@ body, section, header, footer, .global {
   border-radius: 60px;
   color: white;
   font-size: 40px;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-left: 40px;
   padding-right: 40px;
 }
@@ -474,8 +703,11 @@ body, section, header, footer, .global {
 
 .btn1 {
   z-index: 2;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(#a16be0));
+  background: -o-linear-gradient(#ff93e1, #a16be0);
   background: linear-gradient(#ff93e1, #a16be0);
-  box-shadow: 5px 15px 30px #9f9898;
+  -webkit-box-shadow: 5px 15px 30px #9f9898;
+          box-shadow: 5px 15px 30px #9f9898;
   opacity: 0;
 }
 .btn1:hover {
@@ -484,16 +716,24 @@ body, section, header, footer, .global {
 
 .btn2 {
   z-index: 1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: -o-linear-gradient(#ff79da, #9356dc);
   background: linear-gradient(#ff79da, #9356dc);
-  box-shadow: 5px 15px 30px #c4c0c0;
+  -webkit-box-shadow: 5px 15px 30px #c4c0c0;
+          box-shadow: 5px 15px 30px #c4c0c0;
 }
 
 .block {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: auto;
-  align-items: center;
-  box-shadow: 5px 10px 30px #d4d2d2;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 5px 10px 30px #d4d2d2;
+          box-shadow: 5px 10px 30px #d4d2d2;
 }
 
 section, header, footer {
@@ -508,7 +748,8 @@ section, header, footer {
 }
 
 .loader div {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: block;
   position: absolute;
   width: 300px;
@@ -516,33 +757,46 @@ section, header, footer {
   margin: 8px;
   border: 20px solid #9356dc;
   border-radius: 50%;
-  animation: loader 1200ms cubic-bezier(0.5, 0, 0.5, 1) 2;
+  -webkit-animation: loader 1200ms cubic-bezier(0.5, 0, 0.5, 1) 2;
+          animation: loader 1200ms cubic-bezier(0.5, 0, 0.5, 1) 2;
   border-color: #9356dc transparent transparent transparent;
 }
 
 .loader div:nth-child(1) {
-  animation-delay: -0.45s;
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
 }
 
 .loader div:nth-child(2) {
-  animation-delay: -0.3s;
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
 }
 
 .loader div:nth-child(3) {
-  animation-delay: -0.15s;
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
 }
 
 .loader-position {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 2;
   position: fixed;
   width: 100%;
   min-height: 100%;
-  animation: loader-apparition;
-  animation-delay: 2400ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: loader-apparition;
+          animation: loader-apparition;
+  -webkit-animation-delay: 2400ms;
+          animation-delay: 2400ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   top: 0px;
   background: rgba(10, 10, 10, 0.8);
 }
@@ -649,13 +903,17 @@ section, header, footer {
   }
 }
 .section2__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 80%;
   margin: auto;
   font-size: 45px;
   color: grey;
   font-family: "roboto";
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 50px;
   text-align: center;
 }
@@ -668,7 +926,9 @@ section, header, footer {
   .section2__description {
     font-size: 18px;
     margin-left: 20px;
-    justify-content: left;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
     margin-top: 15px;
   }
 }
@@ -707,6 +967,8 @@ section, header, footer {
 
 @media all and (min-device-width: 480px) {
   .fonctionnement {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: auto;
     max-width: 1000px;
@@ -732,14 +994,20 @@ section, header, footer {
   }
 }
 .fonct__menu > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
 }
 .fonct__num {
   font-size: 40px;
   color: white;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #9356dc;
   width: 60px;
   height: 60px;
@@ -861,15 +1129,25 @@ section, header, footer {
 
 @media all and (min-device-width: 480px) {
   .restaurant1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
 @media all and (min-device-width: 480px) {
   .restaurant2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     margin-bottom: 50px;
   }
 }
@@ -877,13 +1155,19 @@ section, header, footer {
 .carte {
   font-family: "roboto";
   z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 90%;
   margin: auto;
   margin-bottom: 100px;
-  box-shadow: 5px 10px 30px #d4d2d2;
+  -webkit-box-shadow: 5px 10px 30px #d4d2d2;
+          box-shadow: 5px 10px 30px #d4d2d2;
   border-radius: 50px;
 }
 @media all and (min-device-width: 480px) {
@@ -900,13 +1184,16 @@ section, header, footer {
 }
 @media all and (min-device-width: 1180px) {
   .carte__flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     border-radius: 30px;
   }
 }
 .carte__image {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50px 50px 0px 0px;
   height: 450px;
 }
@@ -963,14 +1250,22 @@ section, header, footer {
   }
 }
 .carte__coeur:hover + .carte__coeur-plein {
-  transform: scale(1);
-  animation: progress-coeur 200ms;
-  animation-fill-mode: both;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: progress-coeur 200ms;
+          animation: progress-coeur 200ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 .carte__coeur-plein {
-  transform: scale(0);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
 }
 .carte__nouveau {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
   font-size: 35px;
@@ -980,8 +1275,12 @@ section, header, footer {
   height: 80px;
   right: 40px;
   top: 50px;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #798679;
   font-family: "roboto-bold";
 }
@@ -1004,9 +1303,14 @@ section, header, footer {
 
 .section1_2 {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 @media all and (min-device-width: 480px) {
   .section1_2 {
@@ -1089,7 +1393,8 @@ section, header, footer {
 .image-rest img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media all and (min-device-width: 480px) {
   .image-rest img {
@@ -1103,8 +1408,13 @@ section, header, footer {
 }
 
 .languette {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: absolute;
   border-radius: 100px 100px 0px 0px;
   background: white;
@@ -1122,16 +1432,21 @@ section, header, footer {
 }
 
 .fonct {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
-  box-shadow: 5px 10px 30px #d4d2d2;
+  -webkit-box-shadow: 5px 10px 30px #d4d2d2;
+          box-shadow: 5px 10px 30px #d4d2d2;
   width: 95%;
   height: 165px;
   margin: auto;
   margin-top: 75px;
   border-radius: 50px;
-  animation: apparition-block 1000ms;
-  animation-fill-mode: both;
+  -webkit-animation: apparition-block 1000ms;
+          animation: apparition-block 1000ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct {
@@ -1147,503 +1462,663 @@ section, header, footer {
   }
 }
 .fonct--1 {
-  animation-delay: 200ms;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
 }
 .fonct:hover .fonct__anim-val {
-  animation: progress-check 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: progress-check 600ms;
+          animation: progress-check 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val {
-    animation-duration: 1000ms;
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val {
-  animation: progress-check-not 600ms;
+  -webkit-animation: progress-check-not 600ms;
+          animation: progress-check-not 600ms;
 }
 .fonct:hover .fonct__anim-val-logo {
-  animation: rotate-check-logo 500ms 100ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: rotate-check-logo 500ms 100ms;
+          animation: rotate-check-logo 500ms 100ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val-logo {
-    animation: rotate-check-logo-tablette 300ms 150ms;
+    -webkit-animation: rotate-check-logo-tablette 300ms 150ms;
+            animation: rotate-check-logo-tablette 300ms 150ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val-logo {
-  animation: rotate-check-logo-not 600ms;
+  -webkit-animation: rotate-check-logo-not 600ms;
+          animation: rotate-check-logo-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__anim-val-logo {
-    animation: rotate-check-logo-not-tablette 600ms;
+    -webkit-animation: rotate-check-logo-not-tablette 600ms;
+            animation: rotate-check-logo-not-tablette 600ms;
   }
 }
 .fonct:hover .fonct__prix {
-  animation: translate-prix 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: translate-prix 600ms;
+          animation: translate-prix 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__prix {
-    animation: translate-prix-tablette 600ms;
-    animation-fill-mode: both;
+    -webkit-animation: translate-prix-tablette 600ms;
+            animation: translate-prix-tablette 600ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
   }
 }
 .fonct:not(:hover) .fonct__prix {
-  animation: translate-prix-not 600ms;
+  -webkit-animation: translate-prix-not 600ms;
+          animation: translate-prix-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__prix {
-    animation: translate-prix-not-tablette 600ms;
+    -webkit-animation: translate-prix-not-tablette 600ms;
+            animation: translate-prix-not-tablette 600ms;
   }
 }
 .fonct--2 {
-  animation-delay: 400ms;
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
 }
 .fonct:hover .fonct__anim-val {
-  animation: progress-check 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: progress-check 600ms;
+          animation: progress-check 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val {
-    animation-duration: 1000ms;
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val {
-  animation: progress-check-not 600ms;
+  -webkit-animation: progress-check-not 600ms;
+          animation: progress-check-not 600ms;
 }
 .fonct:hover .fonct__anim-val-logo {
-  animation: rotate-check-logo 500ms 100ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: rotate-check-logo 500ms 100ms;
+          animation: rotate-check-logo 500ms 100ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val-logo {
-    animation: rotate-check-logo-tablette 300ms 150ms;
+    -webkit-animation: rotate-check-logo-tablette 300ms 150ms;
+            animation: rotate-check-logo-tablette 300ms 150ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val-logo {
-  animation: rotate-check-logo-not 600ms;
+  -webkit-animation: rotate-check-logo-not 600ms;
+          animation: rotate-check-logo-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__anim-val-logo {
-    animation: rotate-check-logo-not-tablette 600ms;
+    -webkit-animation: rotate-check-logo-not-tablette 600ms;
+            animation: rotate-check-logo-not-tablette 600ms;
   }
 }
 .fonct:hover .fonct__prix {
-  animation: translate-prix 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: translate-prix 600ms;
+          animation: translate-prix 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__prix {
-    animation: translate-prix-tablette 600ms;
-    animation-fill-mode: both;
+    -webkit-animation: translate-prix-tablette 600ms;
+            animation: translate-prix-tablette 600ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
   }
 }
 .fonct:not(:hover) .fonct__prix {
-  animation: translate-prix-not 600ms;
+  -webkit-animation: translate-prix-not 600ms;
+          animation: translate-prix-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__prix {
-    animation: translate-prix-not-tablette 600ms;
+    -webkit-animation: translate-prix-not-tablette 600ms;
+            animation: translate-prix-not-tablette 600ms;
   }
 }
 .fonct--3 {
-  animation-delay: 600ms;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
 }
 .fonct:hover .fonct__anim-val {
-  animation: progress-check 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: progress-check 600ms;
+          animation: progress-check 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val {
-    animation-duration: 1000ms;
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val {
-  animation: progress-check-not 600ms;
+  -webkit-animation: progress-check-not 600ms;
+          animation: progress-check-not 600ms;
 }
 .fonct:hover .fonct__anim-val-logo {
-  animation: rotate-check-logo 500ms 100ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: rotate-check-logo 500ms 100ms;
+          animation: rotate-check-logo 500ms 100ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val-logo {
-    animation: rotate-check-logo-tablette 300ms 150ms;
+    -webkit-animation: rotate-check-logo-tablette 300ms 150ms;
+            animation: rotate-check-logo-tablette 300ms 150ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val-logo {
-  animation: rotate-check-logo-not 600ms;
+  -webkit-animation: rotate-check-logo-not 600ms;
+          animation: rotate-check-logo-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__anim-val-logo {
-    animation: rotate-check-logo-not-tablette 600ms;
+    -webkit-animation: rotate-check-logo-not-tablette 600ms;
+            animation: rotate-check-logo-not-tablette 600ms;
   }
 }
 .fonct:hover .fonct__prix {
-  animation: translate-prix 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: translate-prix 600ms;
+          animation: translate-prix 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__prix {
-    animation: translate-prix-tablette 600ms;
-    animation-fill-mode: both;
+    -webkit-animation: translate-prix-tablette 600ms;
+            animation: translate-prix-tablette 600ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
   }
 }
 .fonct:not(:hover) .fonct__prix {
-  animation: translate-prix-not 600ms;
+  -webkit-animation: translate-prix-not 600ms;
+          animation: translate-prix-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__prix {
-    animation: translate-prix-not-tablette 600ms;
+    -webkit-animation: translate-prix-not-tablette 600ms;
+            animation: translate-prix-not-tablette 600ms;
   }
 }
 .fonct--4 {
-  animation-delay: 800ms;
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
 }
 .fonct:hover .fonct__anim-val {
-  animation: progress-check 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: progress-check 600ms;
+          animation: progress-check 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val {
-    animation-duration: 1000ms;
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val {
-  animation: progress-check-not 600ms;
+  -webkit-animation: progress-check-not 600ms;
+          animation: progress-check-not 600ms;
 }
 .fonct:hover .fonct__anim-val-logo {
-  animation: rotate-check-logo 500ms 100ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: rotate-check-logo 500ms 100ms;
+          animation: rotate-check-logo 500ms 100ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val-logo {
-    animation: rotate-check-logo-tablette 300ms 150ms;
+    -webkit-animation: rotate-check-logo-tablette 300ms 150ms;
+            animation: rotate-check-logo-tablette 300ms 150ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val-logo {
-  animation: rotate-check-logo-not 600ms;
+  -webkit-animation: rotate-check-logo-not 600ms;
+          animation: rotate-check-logo-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__anim-val-logo {
-    animation: rotate-check-logo-not-tablette 600ms;
+    -webkit-animation: rotate-check-logo-not-tablette 600ms;
+            animation: rotate-check-logo-not-tablette 600ms;
   }
 }
 .fonct:hover .fonct__prix {
-  animation: translate-prix 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: translate-prix 600ms;
+          animation: translate-prix 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__prix {
-    animation: translate-prix-tablette 600ms;
-    animation-fill-mode: both;
+    -webkit-animation: translate-prix-tablette 600ms;
+            animation: translate-prix-tablette 600ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
   }
 }
 .fonct:not(:hover) .fonct__prix {
-  animation: translate-prix-not 600ms;
+  -webkit-animation: translate-prix-not 600ms;
+          animation: translate-prix-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__prix {
-    animation: translate-prix-not-tablette 600ms;
+    -webkit-animation: translate-prix-not-tablette 600ms;
+            animation: translate-prix-not-tablette 600ms;
   }
 }
 .fonct--5 {
-  animation-delay: 1000ms;
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
 }
 .fonct:hover .fonct__anim-val {
-  animation: progress-check 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: progress-check 600ms;
+          animation: progress-check 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val {
-    animation-duration: 1000ms;
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val {
-  animation: progress-check-not 600ms;
+  -webkit-animation: progress-check-not 600ms;
+          animation: progress-check-not 600ms;
 }
 .fonct:hover .fonct__anim-val-logo {
-  animation: rotate-check-logo 500ms 100ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: rotate-check-logo 500ms 100ms;
+          animation: rotate-check-logo 500ms 100ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val-logo {
-    animation: rotate-check-logo-tablette 300ms 150ms;
+    -webkit-animation: rotate-check-logo-tablette 300ms 150ms;
+            animation: rotate-check-logo-tablette 300ms 150ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val-logo {
-  animation: rotate-check-logo-not 600ms;
+  -webkit-animation: rotate-check-logo-not 600ms;
+          animation: rotate-check-logo-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__anim-val-logo {
-    animation: rotate-check-logo-not-tablette 600ms;
+    -webkit-animation: rotate-check-logo-not-tablette 600ms;
+            animation: rotate-check-logo-not-tablette 600ms;
   }
 }
 .fonct:hover .fonct__prix {
-  animation: translate-prix 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: translate-prix 600ms;
+          animation: translate-prix 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__prix {
-    animation: translate-prix-tablette 600ms;
-    animation-fill-mode: both;
+    -webkit-animation: translate-prix-tablette 600ms;
+            animation: translate-prix-tablette 600ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
   }
 }
 .fonct:not(:hover) .fonct__prix {
-  animation: translate-prix-not 600ms;
+  -webkit-animation: translate-prix-not 600ms;
+          animation: translate-prix-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__prix {
-    animation: translate-prix-not-tablette 600ms;
+    -webkit-animation: translate-prix-not-tablette 600ms;
+            animation: translate-prix-not-tablette 600ms;
   }
 }
 .fonct--6 {
-  animation-delay: 1200ms;
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
 }
 .fonct:hover .fonct__anim-val {
-  animation: progress-check 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: progress-check 600ms;
+          animation: progress-check 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val {
-    animation-duration: 1000ms;
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val {
-  animation: progress-check-not 600ms;
+  -webkit-animation: progress-check-not 600ms;
+          animation: progress-check-not 600ms;
 }
 .fonct:hover .fonct__anim-val-logo {
-  animation: rotate-check-logo 500ms 100ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: rotate-check-logo 500ms 100ms;
+          animation: rotate-check-logo 500ms 100ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val-logo {
-    animation: rotate-check-logo-tablette 300ms 150ms;
+    -webkit-animation: rotate-check-logo-tablette 300ms 150ms;
+            animation: rotate-check-logo-tablette 300ms 150ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val-logo {
-  animation: rotate-check-logo-not 600ms;
+  -webkit-animation: rotate-check-logo-not 600ms;
+          animation: rotate-check-logo-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__anim-val-logo {
-    animation: rotate-check-logo-not-tablette 600ms;
+    -webkit-animation: rotate-check-logo-not-tablette 600ms;
+            animation: rotate-check-logo-not-tablette 600ms;
   }
 }
 .fonct:hover .fonct__prix {
-  animation: translate-prix 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: translate-prix 600ms;
+          animation: translate-prix 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__prix {
-    animation: translate-prix-tablette 600ms;
-    animation-fill-mode: both;
+    -webkit-animation: translate-prix-tablette 600ms;
+            animation: translate-prix-tablette 600ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
   }
 }
 .fonct:not(:hover) .fonct__prix {
-  animation: translate-prix-not 600ms;
+  -webkit-animation: translate-prix-not 600ms;
+          animation: translate-prix-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__prix {
-    animation: translate-prix-not-tablette 600ms;
+    -webkit-animation: translate-prix-not-tablette 600ms;
+            animation: translate-prix-not-tablette 600ms;
   }
 }
 .fonct--7 {
-  animation-delay: 1400ms;
+  -webkit-animation-delay: 1400ms;
+          animation-delay: 1400ms;
 }
 .fonct:hover .fonct__anim-val {
-  animation: progress-check 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: progress-check 600ms;
+          animation: progress-check 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val {
-    animation-duration: 1000ms;
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val {
-  animation: progress-check-not 600ms;
+  -webkit-animation: progress-check-not 600ms;
+          animation: progress-check-not 600ms;
 }
 .fonct:hover .fonct__anim-val-logo {
-  animation: rotate-check-logo 500ms 100ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: rotate-check-logo 500ms 100ms;
+          animation: rotate-check-logo 500ms 100ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val-logo {
-    animation: rotate-check-logo-tablette 300ms 150ms;
+    -webkit-animation: rotate-check-logo-tablette 300ms 150ms;
+            animation: rotate-check-logo-tablette 300ms 150ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val-logo {
-  animation: rotate-check-logo-not 600ms;
+  -webkit-animation: rotate-check-logo-not 600ms;
+          animation: rotate-check-logo-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__anim-val-logo {
-    animation: rotate-check-logo-not-tablette 600ms;
+    -webkit-animation: rotate-check-logo-not-tablette 600ms;
+            animation: rotate-check-logo-not-tablette 600ms;
   }
 }
 .fonct:hover .fonct__prix {
-  animation: translate-prix 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: translate-prix 600ms;
+          animation: translate-prix 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__prix {
-    animation: translate-prix-tablette 600ms;
-    animation-fill-mode: both;
+    -webkit-animation: translate-prix-tablette 600ms;
+            animation: translate-prix-tablette 600ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
   }
 }
 .fonct:not(:hover) .fonct__prix {
-  animation: translate-prix-not 600ms;
+  -webkit-animation: translate-prix-not 600ms;
+          animation: translate-prix-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__prix {
-    animation: translate-prix-not-tablette 600ms;
+    -webkit-animation: translate-prix-not-tablette 600ms;
+            animation: translate-prix-not-tablette 600ms;
   }
 }
 .fonct--8 {
-  animation-delay: 1600ms;
+  -webkit-animation-delay: 1600ms;
+          animation-delay: 1600ms;
 }
 .fonct:hover .fonct__anim-val {
-  animation: progress-check 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: progress-check 600ms;
+          animation: progress-check 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val {
-    animation-duration: 1000ms;
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val {
-  animation: progress-check-not 600ms;
+  -webkit-animation: progress-check-not 600ms;
+          animation: progress-check-not 600ms;
 }
 .fonct:hover .fonct__anim-val-logo {
-  animation: rotate-check-logo 500ms 100ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: rotate-check-logo 500ms 100ms;
+          animation: rotate-check-logo 500ms 100ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val-logo {
-    animation: rotate-check-logo-tablette 300ms 150ms;
+    -webkit-animation: rotate-check-logo-tablette 300ms 150ms;
+            animation: rotate-check-logo-tablette 300ms 150ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val-logo {
-  animation: rotate-check-logo-not 600ms;
+  -webkit-animation: rotate-check-logo-not 600ms;
+          animation: rotate-check-logo-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__anim-val-logo {
-    animation: rotate-check-logo-not-tablette 600ms;
+    -webkit-animation: rotate-check-logo-not-tablette 600ms;
+            animation: rotate-check-logo-not-tablette 600ms;
   }
 }
 .fonct:hover .fonct__prix {
-  animation: translate-prix 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: translate-prix 600ms;
+          animation: translate-prix 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__prix {
-    animation: translate-prix-tablette 600ms;
-    animation-fill-mode: both;
+    -webkit-animation: translate-prix-tablette 600ms;
+            animation: translate-prix-tablette 600ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
   }
 }
 .fonct:not(:hover) .fonct__prix {
-  animation: translate-prix-not 600ms;
+  -webkit-animation: translate-prix-not 600ms;
+          animation: translate-prix-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__prix {
-    animation: translate-prix-not-tablette 600ms;
+    -webkit-animation: translate-prix-not-tablette 600ms;
+            animation: translate-prix-not-tablette 600ms;
   }
 }
 .fonct--9 {
-  animation-delay: 1800ms;
+  -webkit-animation-delay: 1800ms;
+          animation-delay: 1800ms;
 }
 .fonct:hover .fonct__anim-val {
-  animation: progress-check 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: progress-check 600ms;
+          animation: progress-check 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val {
-    animation-duration: 1000ms;
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val {
-  animation: progress-check-not 600ms;
+  -webkit-animation: progress-check-not 600ms;
+          animation: progress-check-not 600ms;
 }
 .fonct:hover .fonct__anim-val-logo {
-  animation: rotate-check-logo 500ms 100ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: rotate-check-logo 500ms 100ms;
+          animation: rotate-check-logo 500ms 100ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val-logo {
-    animation: rotate-check-logo-tablette 300ms 150ms;
+    -webkit-animation: rotate-check-logo-tablette 300ms 150ms;
+            animation: rotate-check-logo-tablette 300ms 150ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val-logo {
-  animation: rotate-check-logo-not 600ms;
+  -webkit-animation: rotate-check-logo-not 600ms;
+          animation: rotate-check-logo-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__anim-val-logo {
-    animation: rotate-check-logo-not-tablette 600ms;
+    -webkit-animation: rotate-check-logo-not-tablette 600ms;
+            animation: rotate-check-logo-not-tablette 600ms;
   }
 }
 .fonct:hover .fonct__prix {
-  animation: translate-prix 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: translate-prix 600ms;
+          animation: translate-prix 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__prix {
-    animation: translate-prix-tablette 600ms;
-    animation-fill-mode: both;
+    -webkit-animation: translate-prix-tablette 600ms;
+            animation: translate-prix-tablette 600ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
   }
 }
 .fonct:not(:hover) .fonct__prix {
-  animation: translate-prix-not 600ms;
+  -webkit-animation: translate-prix-not 600ms;
+          animation: translate-prix-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__prix {
-    animation: translate-prix-not-tablette 600ms;
+    -webkit-animation: translate-prix-not-tablette 600ms;
+            animation: translate-prix-not-tablette 600ms;
   }
 }
 .fonct--10 {
-  animation-delay: 2000ms;
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
 }
 .fonct:hover .fonct__anim-val {
-  animation: progress-check 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: progress-check 600ms;
+          animation: progress-check 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val {
-    animation-duration: 1000ms;
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val {
-  animation: progress-check-not 600ms;
+  -webkit-animation: progress-check-not 600ms;
+          animation: progress-check-not 600ms;
 }
 .fonct:hover .fonct__anim-val-logo {
-  animation: rotate-check-logo 500ms 100ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: rotate-check-logo 500ms 100ms;
+          animation: rotate-check-logo 500ms 100ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__anim-val-logo {
-    animation: rotate-check-logo-tablette 300ms 150ms;
+    -webkit-animation: rotate-check-logo-tablette 300ms 150ms;
+            animation: rotate-check-logo-tablette 300ms 150ms;
   }
 }
 .fonct:not(:hover) .fonct__anim-val-logo {
-  animation: rotate-check-logo-not 600ms;
+  -webkit-animation: rotate-check-logo-not 600ms;
+          animation: rotate-check-logo-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__anim-val-logo {
-    animation: rotate-check-logo-not-tablette 600ms;
+    -webkit-animation: rotate-check-logo-not-tablette 600ms;
+            animation: rotate-check-logo-not-tablette 600ms;
   }
 }
 .fonct:hover .fonct__prix {
-  animation: translate-prix 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: translate-prix 600ms;
+          animation: translate-prix 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct:hover .fonct__prix {
-    animation: translate-prix-tablette 600ms;
-    animation-fill-mode: both;
+    -webkit-animation: translate-prix-tablette 600ms;
+            animation: translate-prix-tablette 600ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
   }
 }
 .fonct:not(:hover) .fonct__prix {
-  animation: translate-prix-not 600ms;
+  -webkit-animation: translate-prix-not 600ms;
+          animation: translate-prix-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct:not(:hover) .fonct__prix {
-    animation: translate-prix-not-tablette 600ms;
+    -webkit-animation: translate-prix-not-tablette 600ms;
+            animation: translate-prix-not-tablette 600ms;
   }
 }
 .fonct__plat {
@@ -1653,25 +2128,32 @@ section, header, footer {
   border-radius: 50px 0px 0px 50px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 .fonct__plat:hover {
   cursor: pointer;
-  animation: width-plat 600ms;
-  animation-fill-mode: both;
+  -webkit-animation: width-plat 600ms;
+          animation: width-plat 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media all and (min-device-width: 480px) {
   .fonct__plat:hover {
-    animation: width-plat-tablette 600ms;
-    animation-fill-mode: both;
+    -webkit-animation: width-plat-tablette 600ms;
+            animation: width-plat-tablette 600ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
   }
 }
 .fonct__plat:not(:hover) {
-  animation: width-plat-not 600ms;
+  -webkit-animation: width-plat-not 600ms;
+          animation: width-plat-not 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct__plat:not(:hover) {
-    animation: width-plat-not-tablette 600ms;
+    -webkit-animation: width-plat-not-tablette 600ms;
+            animation: width-plat-not-tablette 600ms;
   }
 }
 .fonct__intitulé {
@@ -1681,7 +2163,8 @@ section, header, footer {
   margin-bottom: 20px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 @media all and (min-device-width: 480px) {
   .fonct__intitulé {
@@ -1694,7 +2177,8 @@ section, header, footer {
   font-size: 40px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 @media all and (min-device-width: 480px) {
   .fonct__accompagnement {
@@ -1711,7 +2195,11 @@ section, header, footer {
   top: 90px;
   right: 35px;
   padding-right: 20px;
+  -webkit-transition: -webkit-transform 600ms;
+  transition: -webkit-transform 600ms;
+  -o-transition: transform 600ms;
   transition: transform 600ms;
+  transition: transform 600ms, -webkit-transform 600ms;
 }
 @media all and (min-device-width: 480px) {
   .fonct__prix {
@@ -1721,14 +2209,22 @@ section, header, footer {
   }
 }
 .fonct__anim-val {
-  transform-origin: right;
+  -webkit-transform-origin: right;
+      -ms-transform-origin: right;
+          transform-origin: right;
   position: absolute;
   right: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 0px;
   height: 100%;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: #99e2d0;
   border-radius: 0px 50px 50px 0px;
 }
@@ -1787,4 +2283,4 @@ section, header, footer {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3N0eWxlLmNzcyIsIi4uL3V0aWxzL19rZXlmcmFtZXMuc2NzcyIsIi4uL3V0aWxzL19rZXlmcmFtZXMtbG9hZGVyLnNjc3MiLCIuLi9sYXlvdXRzL19oZWFkZXIuc2NzcyIsIi4uL3V0aWxzL19taXhpbnMuc2NzcyIsIi4uL2xheW91dHMvX2Zvb3Rlci5zY3NzIiwiLi4vdXRpbHMvX3ZhcmlhYmxlcy5zY3NzIiwiLi4vbGF5b3V0cy9fdGl0cmVzLnNjc3MiLCIuLi9sYXlvdXRzL19ib2R5LnNjc3MiLCIuLi9iYXNlL19wb2xpY2VzLnNjc3MiLCIuLi9iYXNlL3Jlc2V0LWNzcy5zY3NzIiwiLi4vYmFzZS9fYmxvYy1zaXplLnNjc3MiLCIuLi9jb21wb25lbnRzL19ib3V0b24uc2NzcyIsIi4uL2NvbXBvbmVudHMvX2Jsb2NrLWZvbmN0LWV0LXBsYXRzLnNjc3MiLCIuLi9jb21wb25lbnRzL19sb2FkZXIuc2NzcyIsIi4uL3BhZ2VzL19zZWN0aW9uMS5zY3NzIiwiLi4vcGFnZXMvX3NlY3Rpb24yLnNjc3MiLCIuLi9wYWdlcy9fc2VjdGlvbjMuc2NzcyIsIi4uL3BhZ2VzL19zZWN0aW9uNC5zY3NzIiwiLi4vcGFnZXMvX3NlY3Rpb24xXzIuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxnQkFBZ0I7QUNBaEI7RUFDSTtJQUNJLDJCQUFBO1lBQUEsbUJBQUE7RURFTjtFQ0FFO0lBQ0ksMkJBQUE7WUFBQSxtQkFBQTtFREVOO0FBQ0Y7QUNSQTtFQUNJO0lBQ0ksMkJBQUE7WUFBQSxtQkFBQTtFREVOO0VDQUU7SUFDSSwyQkFBQTtZQUFBLG1CQUFBO0VERU47QUFDRjtBQ0NBO0VBQ0k7SUFDSSxxQ0FBQTtZQUFBLDZCQUFBO0lBQ0EsVUFBQTtFRENOO0VDRUU7SUFDSSxtQ0FBQTtZQUFBLDJCQUFBO0lBQ0EsVUFBQTtFREFOO0VDRUU7SUFDSSxZQUFBO0VEQU47RUNFRTtJQUNJLGtDQUFBO1lBQUEsMEJBQUE7SUFDQSxVQUFBO0VEQU47QUFDRjtBQ2hCQTtFQUNJO0lBQ0kscUNBQUE7WUFBQSw2QkFBQTtJQUNBLFVBQUE7RURDTjtFQ0VFO0lBQ0ksbUNBQUE7WUFBQSwyQkFBQTtJQUNBLFVBQUE7RURBTjtFQ0VFO0lBQ0ksWUFBQTtFREFOO0VDRUU7SUFDSSxrQ0FBQTtZQUFBLDBCQUFBO0lBQ0EsVUFBQTtFREFOO0FBQ0Y7QUNHQTtFQUNJO0lBQ0ksV0FBQTtFREROO0VDR0U7SUFDSSxZQUFBO0VERE47QUFDRjtBQ0xBO0VBQ0k7SUFDSSxXQUFBO0VERE47RUNHRTtJQUNJLFlBQUE7RURETjtBQUNGO0FDR0E7RUFDSTtJQUNJLFdBQUE7RURETjtFQ0dFO0lBQ0ksWUFBQTtFREROO0FBQ0Y7QUNMQTtFQUNJO0lBQ0ksV0FBQTtFREROO0VDR0U7SUFDSSxZQUFBO0VERE47QUFDRjtBQ0dBO0VBQ0k7SUFDSSxZQUFBO0VERE47RUNHRTtJQUNJLFdBQUE7RURETjtBQUNGO0FDTEE7RUFDSTtJQUNJLFlBQUE7RURETjtFQ0dFO0lBQ0ksV0FBQTtFREROO0FBQ0Y7QUNHQTtFQUNJO0lBQ0ksWUFBQTtFREROO0VDR0U7SUFDSSxXQUFBO0VERE47QUFDRjtBQ0xBO0VBQ0k7SUFDSSxZQUFBO0VERE47RUNHRTtJQUNJLFdBQUE7RURETjtBQUNGO0FDR0E7RUFDSTtJQUNJLFVBQUE7RURETjtFQ0dFO0lBQ0ksWUFBQTtFREROO0FBQ0Y7QUNMQTtFQUNJO0lBQ0ksVUFBQTtFREROO0VDR0U7SUFDSSxZQUFBO0VERE47QUFDRjtBQ0lBO0VBQ0k7SUFDSSxZQUFBO0VERk47RUNJRTtJQUNJLFVBQUE7RURGTjtBQUNGO0FDSkE7RUFDSTtJQUNJLFlBQUE7RURGTjtFQ0lFO0lBQ0ksVUFBQTtFREZOO0FBQ0Y7QUNJQTtFQUNJO0lBQ0ksK0JBQUE7WUFBQSx1QkFBQTtJQUNBLFVBQUE7RURGTjtFQ0lFO0lBQ0ksV0FBQTtFREZOO0VDSUU7SUFDSSxpQ0FBQTtZQUFBLHlCQUFBO0lBQ0EsV0FBQTtFREZOO0FBQ0Y7QUNUQTtFQUNJO0lBQ0ksK0JBQUE7WUFBQSx1QkFBQTtJQUNBLFVBQUE7RURGTjtFQ0lFO0lBQ0ksV0FBQTtFREZOO0VDSUU7SUFDSSxpQ0FBQTtZQUFBLHlCQUFBO0lBQ0EsV0FBQTtFREZOO0FBQ0Y7QUNLQTtFQUNJO0lBQ0ksK0JBQUE7WUFBQSx1QkFBQTtJQUNBLFVBQUE7RURITjtFQ0tFO0lBQ0ksV0FBQTtFREhOO0VDS0U7SUFDSSxpQ0FBQTtZQUFBLHlCQUFBO0lBQ0EsV0FBQTtFREhOO0FBQ0Y7QUNSQTtFQUNJO0lBQ0ksK0JBQUE7WUFBQSx1QkFBQTtJQUNBLFVBQUE7RURITjtFQ0tFO0lBQ0ksV0FBQTtFREhOO0VDS0U7SUFDSSxpQ0FBQTtZQUFBLHlCQUFBO0lBQ0EsV0FBQTtFREhOO0FBQ0Y7QUNLQTtFQUNJO0lBQ0ksV0FBQTtFREhOO0VDS0U7SUFDSSxXQUFBO0VESE47RUNLRTtJQUNJLFVBQUE7RURITjtBQUNGO0FDTkE7RUFDSTtJQUNJLFdBQUE7RURITjtFQ0tFO0lBQ0ksV0FBQTtFREhOO0VDS0U7SUFDSSxVQUFBO0VESE47QUFDRjtBQ01BO0VBQ0k7SUFDSSxXQUFBO0VESk47RUNNRTtJQUNJLFdBQUE7RURKTjtFQ01FO0lBQ0ksVUFBQTtFREpOO0FBQ0Y7QUNMQTtFQUNJO0lBQ0ksV0FBQTtFREpOO0VDTUU7SUFDSSxXQUFBO0VESk47RUNNRTtJQUNJLFVBQUE7RURKTjtBQUNGO0FDTUE7RUFDSTtJQUNJLGtDQUFBO1lBQUEsMEJBQUE7RURKTjtFQ01FO0lBQ0kscUNBQUE7WUFBQSw2QkFBQTtFREpOO0FBQ0Y7QUNGQTtFQUNJO0lBQ0ksa0NBQUE7WUFBQSwwQkFBQTtFREpOO0VDTUU7SUFDSSxxQ0FBQTtZQUFBLDZCQUFBO0VESk47QUFDRjtBQ01BO0VBQ0k7SUFDSSxrQ0FBQTtZQUFBLDBCQUFBO0VESk47RUNNRTtJQUNJLHFDQUFBO1lBQUEsNkJBQUE7RURKTjtBQUNGO0FDRkE7RUFDSTtJQUNJLGtDQUFBO1lBQUEsMEJBQUE7RURKTjtFQ01FO0lBQ0kscUNBQUE7WUFBQSw2QkFBQTtFREpOO0FBQ0Y7QUNNQTtFQUNJO0lBQ0kscUNBQUE7WUFBQSw2QkFBQTtFREpOO0VDTUU7SUFDSSxrQ0FBQTtZQUFBLDBCQUFBO0VESk47QUFDRjtBQ0ZBO0VBQ0k7SUFDSSxxQ0FBQTtZQUFBLDZCQUFBO0VESk47RUNNRTtJQUNJLGtDQUFBO1lBQUEsMEJBQUE7RURKTjtBQUNGO0FDTUE7RUFDSTtJQUNJLHFDQUFBO1lBQUEsNkJBQUE7RURKTjtFQ01FO0lBQ0ksa0NBQUE7WUFBQSwwQkFBQTtFREpOO0FBQ0Y7QUNGQTtFQUNJO0lBQ0kscUNBQUE7WUFBQSw2QkFBQTtFREpOO0VDTUU7SUFDSSxrQ0FBQTtZQUFBLDBCQUFBO0VESk47QUFDRjtBRXpKQTtFQUNJO0lBQ0ksK0JBQUE7WUFBQSx1QkFBQTtFRjJKTjtFRXpKRTtJQUNJLGlDQUFBO1lBQUEseUJBQUE7RUYySk47QUFDRjtBRWpLQTtFQUNJO0lBQ0ksK0JBQUE7WUFBQSx1QkFBQTtFRjJKTjtFRXpKRTtJQUNJLGlDQUFBO1lBQUEseUJBQUE7RUYySk47QUFDRjtBRXhKQTtFQUNJO0lBQ0ksa0NBQUE7WUFBQSwwQkFBQTtFRjBKTjtFRXhKRTtJQUNJLHNDQUFBO1lBQUEsOEJBQUE7RUYwSk47QUFDRjtBRWhLQTtFQUNJO0lBQ0ksa0NBQUE7WUFBQSwwQkFBQTtFRjBKTjtFRXhKRTtJQUNJLHNDQUFBO1lBQUEsOEJBQUE7RUYwSk47QUFDRjtBR3pLQTtFQUNJLGtCQUFBO0VBSUEseUNBQUE7VUFBQSxpQ0FBQTtBSHdLSjtBRzNLSTtFQUNJLG9CQUFBO0VBQUEsb0JBQUE7RUFBQSxhQUFBO0FINktSO0FJNUpRO0VEcEJSO0lBUVEscUNBQUE7WUFBQSw2QkFBQTtFSDRLTjtBQUNGOztBRzFLQTtFQUNRLFlBQUE7RUFDQSxVQUFBO0VBQ0EsaUJBQUE7RUFDQSxvQkFBQTtBSDZLUjtBSTlLUTtFREhSO0lBTVksVUFBQTtJQUNBLGlCQUFBO0lBQ0Esb0JBQUE7RUgrS1Y7QUFDRjtBSS9LUTtFRFRSO0lBV1ksVUFBQTtJQUNBLGlCQUFBO0lBQ0EsbUJBQUE7RUhpTFY7QUFDRjtBR2hMUTtFQUNJLFdBQUE7QUhrTFo7O0FHN0tJO0VBQ0ksa0JBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLFNBQUE7RUFDQSxVQUFBO0FIZ0xSO0FJdk1RO0VEa0JKO0lBT1EsV0FBQTtJQUNBLFlBQUE7SUFDQSxTQUFBO0VIa0xWO0FBQ0Y7QUl4TVE7RURZSjtJQVlRLFdBQUE7SUFDQSxZQUFBO0lBQ0EsU0FBQTtFSG9MVjtBQUNGOztBS25PQTtFQUNJLFdBQUE7RUFDQSxtQkNVaUI7RURUakIsWUFBQTtFQUNBLG9CQUFBO0VBQUEsb0JBQUE7RUFBQSxhQUFBO0VBQ0Esa0JBQUE7RUFDQSw0QkFBQTtFQUFBLDZCQUFBO01BQUEsMEJBQUE7VUFBQSxzQkFBQTtFQUNBLGVBQUE7RUFDQSxvQkFBQTtBTHNPSjtBSWhPUTtFQ2RSO0lBVVEsZUFBQTtJQUNBLG9CQUFBO0VMd09OO0FBQ0Y7QUloT1E7RUNwQlI7SUFjUSw4QkFBQTtJQUFBLDZCQUFBO1FBQUEsdUJBQUE7WUFBQSxtQkFBQTtJQUNBLGVBQUE7SUFDQSxvQkFBQTtFTDBPTjtBQUNGOztBS3RPSTtFQUNJLGVBQUE7RUFDQSxvQkFBQTtFQUNBLG1CQUFBO0VBQ0Esd0JDdkJNO0VEd0JOLGdCQUFBO0VBQ0EsaUJBQUE7QUx5T1I7QUl0UFE7RUNPSjtJQVFRLGVBQUE7SUFDQSxvQkFBQTtJQUNBLGlCQUFBO0lBQ0EsZ0JBQUE7RUwyT1Y7QUFDRjtBSXhQUTtFQ0NKO0lBY1EsZUFBQTtJQUNBLGdCQUFBO0VMNk9WO0FBQ0Y7QUszT0k7RUFDSSxtQkFBQTtBTDZPUjtBSXZRUTtFQ3lCSjtJQUdRLGtCQUFBO0VMK09WO0FBQ0Y7QUl0UVE7RUNtQko7SUFNUSxnQkFBQTtJQUNBLGtCQUFBO0VMaVBWO0FBQ0Y7QUtoUFE7RUFDSSxvQkFBQTtBTGtQWjtBSS9RUTtFQzRCQTtJQUdRLG1CQUFBO0VMb1BkO0FBQ0Y7QUtsUFE7RUFDSSxpQkFBQTtFQUNBLG9CQUFBO0FMb1BaO0FLblBZO0VBQ0kscUJBQUE7RUFDQSxZQUFBO0FMcVBoQjtBSTVSUTtFQ2tDQTtJQVFRLGdCQUFBO0lBQ0Esa0JBQUE7RUxzUGQ7QUFDRjtBS25QSTtFQUNJLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFDQSxVQUFBO0FMcVBSO0FJOVNRO0VDcURKO0lBTVEsV0FBQTtJQUNBLFlBQUE7SUFDQSxVQUFBO0VMdVBWO0FBQ0Y7QUkvU1E7RUMrQ0o7SUFXUSxXQUFBO0lBQ0EsWUFBQTtFTHlQVjtBQUNGO0FLeFBRO0VBQ0ksVUFBQTtBTDBQWjtBSTlUUTtFQ21FQTtJQUdRLFVBQUE7RUw0UGQ7QUFDRjtBSTdUUTtFQzZEQTtJQU1RLFNBQUE7SUFDQSxXQUFBO0VMOFBkO0FBQ0Y7QUs1UFE7RUFDSSxVQUFBO0FMOFBaO0FJNVVRO0VDNkVBO0lBR1EsVUFBQTtFTGdRZDtBQUNGO0FJM1VRO0VDdUVBO0lBTVEsU0FBQTtJQUNBLFdBQUE7RUxrUWQ7QUFDRjs7QU9yV0E7RUFDSSwwQkFBQTtBUHdXSjs7QVF4V0k7RUFDSSxvQkFBQTtBUjJXUjtBUTFXSTtFQUNJLDBCRkhNO0FOK1dkOztBU2hYQTtFQUNJLHdCQUFBO0VBQ0EseUJBQUE7QVRtWEo7QVNoWEE7RUFDSSxxQkFBQTtFQUNBLDhCQUFBO0FUa1hKO0FTL1dBO0VBQ0ksMEJBQUE7RUFDQSwyQkFBQTtBVGlYSjtBVTdYQTs7Ozs7Ozs7Ozs7OztFQWFDLFNBQUE7RUFDQSxVQUFBO0VBQ0EsU0FBQTtFQUNBLGVBQUE7RUFDQSxhQUFBO0VBQ0Esd0JBQUE7QVYrWEQ7O0FVN1hBLGdEQUFBO0FBQ0E7O0VBRUMsY0FBQTtBVmdZRDs7QVU5WEE7RUFDQyxjQUFBO0FWaVlEOztBVS9YQTtFQUNDLGdCQUFBO0FWa1lEOztBVWhZQTtFQUNDLFlBQUE7QVZtWUQ7O0FVallBOztFQUVDLFdBQUE7RUFDQSxhQUFBO0FWb1lEOztBVWxZQTtFQUNDLHlCQUFBO0VBQ0EsaUJBQUE7QVZxWUQ7O0FXOWFBO0VBQ0ksV0FBQTtBWGliSjtBSTlaUTtFT3BCUjtJQUdRLGFBQUE7SUFDQSxrQkFBQTtFWG1iTjtBQUNGOztBSXBhUTtFT1pKO0lBQ0ksWUFBQTtJQUNBLHVCQUFBO0VYb2JOO0FBQ0Y7QVkvYkE7RUFDSSxvQkFBQTtFQUFBLG9CQUFBO0VBQUEsYUFBQTtFQUNBLGtCQUFBO0VBQ0EscUJOSEs7RU1JTCxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtFQUNBLHdCQUFBO01BQUEscUJBQUE7VUFBQSx1QkFBQTtFQUNBLHlCQUFBO01BQUEsc0JBQUE7VUFBQSxtQkFBQTtFQUNBLGtCQUFBO0VBQ0EsbUJBQUE7QVppY0o7QUk5YlE7RVFkUjtJQWFRLGVBQUE7SUFDQSxZQUFBO0VabWNOO0FBQ0Y7QUk5YlE7RVFwQlI7SUFpQlEsZUFBQTtJQUNBLFlBQUE7RVpxY047QUFDRjs7QVlsY0E7RUFDSSxVQUFBO0VBQ0EsdUZBQUE7RUFBQSxnREFBQTtFQUFBLDZDQUFBO0VBQ0EseUNBQUE7VUFBQSxpQ0FBQTtFQUNBLFVBQUE7QVpxY0o7QVlwY0k7RUFDSSxVQUFBO0Fac2NSOztBWW5jQTtFQUNJLFVBQUE7RUFDQSx1RkFBQTtFQUFBLGdEQUFBO0VBQUEsNkNBQUE7RUFDQSx5Q0FBQTtVQUFBLGlDQUFBO0Fac2NKOztBYXhlQTtFQUNJLGtCQUFBO0VBQ0Esb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSxZQUFBO0VBQ0EseUJBQUE7TUFBQSxzQkFBQTtVQUFBLG1CQUFBO0VBQ0EseUNBQUE7VUFBQSxpQ0FBQTtBYjJlSjs7QWNoZkE7RUFDSSxVQUFBO0FkbWZKOztBY2hmQTtFQUNJLHFCQUFBO0VBQ0Esa0JBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtBZG1mSjs7QWNoZkE7RUFDSSw4QkFBQTtVQUFBLHNCQUFBO0VBQ0EsY0FBQTtFQUNBLGtCQUFBO0VBQ0EsWUFBQTtFQUNBLGFBQUE7RUFDQSxXQUFBO0VBQ0EsMEJBQUE7RUFDQSxrQkFBQTtFQUNBLCtEQUFBO1VBQUEsdURBQUE7RUFDQSx5REFBQTtBZG1mSjs7QWNqZkE7RUFDSSwrQkFBQTtVQUFBLHVCQUFBO0Fkb2ZKOztBY2xmQTtFQUNJLDhCQUFBO1VBQUEsc0JBQUE7QWRxZko7O0FjbmZBO0VBQ0ksK0JBQUE7VUFBQSx1QkFBQTtBZHNmSjs7QWNwZkE7RUFDSSxvQkFBQTtFQUFBLG9CQUFBO0VBQUEsYUFBQTtFQUNBLHdCQUFBO01BQUEscUJBQUE7VUFBQSx1QkFBQTtFQUNBLHlCQUFBO01BQUEsc0JBQUE7VUFBQSxtQkFBQTtFQUNBLFVBQUE7RUFDQSxlQUFBO0VBQ0EsV0FBQTtFQUNBLGdCQUFBO0VBQ0Esb0NBQUE7VUFBQSw0QkFBQTtFQUNBLCtCQUFBO1VBQUEsdUJBQUE7RUFDQSxxQ0FBQTtVQUFBLDZCQUFBO0VBQ0EsUUFBQTtFQUNBLGlDUi9CZ0I7QU5zaEJwQjs7QWVuaUJBO0VBQ0ksZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLGFBQUE7RUFDQSx5QlRHYztBTm1pQmxCO0FJNWhCUTtFV2RSO0lBTVksWUFBQTtJQUNBLGdCQUFBO0Vmd2lCVjtBQUNGO0FldmlCSTtFQUNJLFlBQUE7QWZ5aUJSO0FJcmlCUTtFV0xKO0lBR1EsWUFBQTtFZjJpQlY7QUFDRjs7QWV2aUJJO0VBQ0ksd0NBQUE7RUFDQSw0QkFBQTtFQUNBLDJCQUFBO0VBQ0EscUJBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtBZjBpQlI7QUluakJRO0VXR0o7SUFRWSxXQUFBO0lBQ0EsWUFBQTtJQUNBLHFCQUFBO0lBQ0EsZ0JBQUE7RWY0aUJkO0FBQ0Y7QUlyakJRO0VXSEo7SUFjWSxXQUFBO0lBQ0EsWUFBQTtJQUNBLHFCQUFBO0VmOGlCZDtBQUNGO0FlNWlCSTtFQUNJLGlCQUFBO0VBQ0EsWUFBQTtFQUNBLHlCVGhDVTtFU2lDVixlQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0VBQ0EsaUJBQUE7QWY4aUJSO0FJM2tCUTtFV3NCSjtJQVNZLGVBQUE7SUFDQSxZQUFBO0VmZ2pCZDtBQUNGO0FJM2tCUTtFV2dCSjtJQWFZLGVBQUE7SUFDQSxZQUFBO0Vma2pCZDtBQUNGOztBZ0JybUJBO0VBRUksV0FBQTtFQUNBLG9CQUFBO0FoQnVtQko7QUk1bEJRO0VZZFI7SUFLUSxnQkFBQTtJQUNBLFlBQUE7RWhCeW1CTjtBQUNGO0FJNWxCUTtFWXBCUjtJQVNRLGVBQUE7RWhCMm1CTjtBQUNGO0FnQjFtQkk7RUFDSSxlQUFBO0VBQ0EsMEJWWk07RVVhTixrQkFBQTtFQUNBLFVBQUE7RUFDQSxZQUFBO0VBQ0EsaUJBQUE7QWhCNG1CUjtBSS9tQlE7RVlISjtJQVFRLGVBQUE7RWhCOG1CVjtBQUNGO0FJOW1CUTtFWVRKO0lBV1EsZUFBQTtJQUNBLGlCQUFBO0lBQ0EsZ0JBQUE7RWhCZ25CVjtBQUNGO0FnQjltQkk7RUFDSSxvQkFBQTtFQUFBLG9CQUFBO0VBQUEsYUFBQTtFQUNBLFVBQUE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtFQUNBLFdBQUE7RUFDQSxxQlZqQ0M7RVVrQ0Qsd0JBQUE7TUFBQSxxQkFBQTtVQUFBLHVCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxrQkFBQTtBaEJnbkJSO0FJdG9CUTtFWWFKO0lBV1EsZUFBQTtFaEJrbkJWO0FBQ0Y7QUlyb0JRO0VZT0o7SUFjUSxlQUFBO0lBQ0EsaUJBQUE7SUFDQSxzQkFBQTtRQUFBLG1CQUFBO1lBQUEscUJBQUE7SUFDQSxnQkFBQTtFaEJvbkJWO0FBQ0Y7QWdCbG5CSTtFQUNJLFlBQUE7RUFDQSxnQkFBQTtFQUNBLFVBQUE7QWhCb25CUjtBSWxwQlE7RVkyQko7SUFLUSxVQUFBO0VoQnNuQlY7QUFDRjs7QWlCM3FCQTtFQUNJLGlCQUFBO0FqQjhxQko7QWlCN3FCSTtFQUNBLG9CQUFBO0VBQ0EsaUJBQUE7RUFDQSxlQUFBO0VBQ0EsMEJYTFU7QU5vckJkO0FJdnFCUTtFYVpKO0lBTUksZUFBQTtJQUNBLG9CQUFBO0VqQmlyQk47QUFDRjtBSXZxQlE7RWFsQko7SUFVUSxlQUFBO0lBQ0EsaUJBQUE7RWpCbXJCVjtBQUNGOztBSW5yQlE7RWFJUjtJQUVRLG9CQUFBO0lBQUEsb0JBQUE7SUFBQSxhQUFBO0lBQ0EsWUFBQTtJQUNBLGlCQUFBO0VqQmtyQk47QUFDRjs7QWlCOXFCSTtFQUNJLFlBQUE7RUFDQSxtQkFBQTtFQUNBLFVBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7QWpCaXJCUjtBSW5zQlE7RWFhSjtJQU9RLFVBQUE7SUFDQSxZQUFBO0VqQm1yQlY7QUFDRjtBSW5zQlE7RWFPSjtJQVdRLFVBQUE7RWpCcXJCVjtBQUNGO0FpQnByQlE7RUFDSSxvQkFBQTtFQUFBLG9CQUFBO0VBQUEsYUFBQTtFQUNBLGtCQUFBO0FqQnNyQlo7QWlCbnJCSTtFQUNJLGVBQUE7RUFDQSxZQUFBO0VBQ0Esd0JBQUE7TUFBQSxxQkFBQTtVQUFBLHVCQUFBO0VBQ0EseUJBQUE7TUFBQSxzQkFBQTtVQUFBLG1CQUFBO0VBQ0EseUJYL0NXO0VXZ0RYLFdBQUE7RUFDQSxZQUFBO0VBQ0EsbUJBQUE7RUFDQSxXQUFBO0FqQnFyQlI7QUk3dEJRO0VhK0JKO0lBV1EsZUFBQTtJQUNBLFdBQUE7SUFDQSxZQUFBO0lBQ0EsV0FBQTtFakJ1ckJWO0FBQ0Y7QUkvdEJRO0VheUJKO0lBaUJRLGVBQUE7SUFDQSxXQUFBO0lBQ0EsWUFBQTtJQUNBLFdBQUE7RWpCeXJCVjtBQUNGO0FpQnRyQkk7RUFDSSxXQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFDQSw0QkFBQTtFQUNBLDJCQUFBO0FqQndyQlI7QUlwdkJRO0VhdURKO0lBT1EsVUFBQTtJQUNBLFdBQUE7SUFDQSxZQUFBO0VqQjByQlY7QUFDRjtBSXJ2QlE7RWFpREo7SUFZUSxVQUFBO0lBQ0EsV0FBQTtJQUNBLFlBQUE7RWpCNHJCVjtBQUNGO0FpQjNyQlE7RUFDSSxtQ0FBQTtBakI2ckJaO0FpQjNyQlE7RUFDSSxpQ0FBQTtBakI2ckJaO0FpQjNyQlE7RUFDSSxrQ0FBQTtBakI2ckJaO0FpQjFyQkk7RUFDSSxXQUFBO0VBQ0EsZUFBQTtFQUNBLDBCWGpHTTtBTjZ4QmQ7QUloeEJRO0VhaUZKO0lBS1EsVUFBQTtJQUNBLGVBQUE7SUFDQSxrQkFBQTtFakI4ckJWO0FBQ0Y7QUlqeEJRO0VhMkVKO0lBVVEsVUFBQTtJQUNBLGVBQUE7RWpCZ3NCVjtBQUNGOztBa0IzeUJBO0VBQ0ksaUJBQUE7QWxCOHlCSjtBSWp5QlE7RWNkUjtJQUdRLGlCQUFBO0VsQmd6Qk47QUFDRjtBa0IveUJJO0VBQ0ksV0FBQTtFQUNBLHFCQUFBO0VBQ0EsWUFBQTtBbEJpekJSO0FrQjl5Qkk7RUFDSSxlQUFBO0VBQ0EsMEJaWk07RVlhTixpQkFBQTtFQUNBLG9CQUFBO0FsQmd6QlI7QUlqekJRO0VjSEo7SUFNUSxlQUFBO0VsQmt6QlY7QUFDRjtBSWh6QlE7RWNUSjtJQVNRLGVBQUE7SUFDQSxpQkFBQTtFbEJvekJWO0FBQ0Y7QWtCbHpCSTtFQUNJLGVBQUE7RUFDQSxrQkFBQTtFQUNBLGdCQUFBO0FsQm96QlI7QUlqMEJRO0VjVUo7SUFLUSxlQUFBO0lBQ0EsZ0JBQUE7SUFDQSxpQkFBQTtFbEJzekJWO0FBQ0Y7QUlsMEJRO0VjSUo7SUFVUSxlQUFBO0VsQnd6QlY7QUFDRjs7QUk3MEJRO0VjeUJSO0lBRVEsb0JBQUE7SUFBQSxvQkFBQTtJQUFBLGFBQUE7SUFDQSw4QkFBQTtJQUFBLDZCQUFBO1FBQUEsdUJBQUE7WUFBQSxtQkFBQTtFbEJ1ekJOO0FBQ0Y7O0FJcDFCUTtFY2dDUjtJQUVRLG9CQUFBO0lBQUEsb0JBQUE7SUFBQSxhQUFBO0lBQ0EsOEJBQUE7SUFBQSw2QkFBQTtRQUFBLHVCQUFBO1lBQUEsbUJBQUE7SUFDQSxtQkFBQTtFbEJ1ekJOO0FBQ0Y7O0FrQnJ6QkE7RUFDSSxxQlp0REs7RVl1REwsVUFBQTtFQUNBLG9CQUFBO0VBQUEsb0JBQUE7RUFBQSxhQUFBO0VBQ0Esa0JBQUE7RUFDQSw0QkFBQTtFQUFBLDZCQUFBO01BQUEsMEJBQUE7VUFBQSxzQkFBQTtFQUNBLFVBQUE7RUFDQSxZQUFBO0VBQ0Esb0JBQUE7RUFDQSx5Q0FBQTtVQUFBLGlDQUFBO0VBQ0EsbUJBQUE7QWxCd3pCSjtBSXoyQlE7RWN1Q1I7SUFZUSxVQUFBO0lBQ0EsbUJBQUE7RWxCMHpCTjtBQUNGO0FJejJCUTtFY2lDUjtJQWdCUSxhQUFBO0lBQ0EsbUJBQUE7RWxCNHpCTjtBQUNGO0FJLzJCUTtFY29ESjtJQUVRLG9CQUFBO0lBQUEsb0JBQUE7SUFBQSxhQUFBO0lBQ0EsbUJBQUE7RWxCNnpCVjtBQUNGO0FrQjN6Qkk7RUFDSSxXQUFBO0VBQ0Esb0JBQUE7S0FBQSxpQkFBQTtFQUNBLGdDQUFBO0VBQ0EsYUFBQTtBbEI2ekJSO0FJajRCUTtFY2dFSjtJQU1RLGFBQUE7RWxCK3pCVjtBQUNGO0FJaDRCUTtFYzBESjtJQVNRLGdDQUFBO0lBQ0EsWUFBQTtJQUNBLGFBQUE7RWxCaTBCVjtBQUNGO0FrQi96Qkk7RUFDSSwwQkFBQTtFQUNBLGVBQUE7QWxCaTBCUjtBSWo1QlE7RWM4RUo7SUFJUSxlQUFBO0lBQ0EsaUJBQUE7RWxCbTBCVjtBQUNGO0FrQmowQkk7RUFDSSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxVQUFBO0VkdEdBLFdBQUE7RUFDQSxZQUFBO0FKMDZCUjtBSTk1QlE7RWNzRko7SWRoR1ksV0FBQTtJQUNBLFlBQUE7RUo0NkJkO0FBQ0Y7QUk5NUJRO0VjZ0ZKO0lkNUZZLFdBQUE7SUFDQSxZQUFBO0VKODZCZDtBQUNGO0FJMTZCUTtFY3NGSjtJQU1RLFVBQUE7SUFDQSxXQUFBO0VsQmsxQlY7QUFDRjtBSTE2QlE7RWNnRko7SUFVUSxTQUFBO0VsQm8xQlY7QUFDRjtBa0JuMUJRO0VBQ0ksMkJBQUE7TUFBQSx1QkFBQTtVQUFBLG1CQUFBO0VBQ0EsdUNBQUE7VUFBQSwrQkFBQTtFQUNBLGlDQUFBO1VBQUEseUJBQUE7QWxCcTFCWjtBa0JuMUJZO0VBQ0csMkJBQUE7TUFBQSx1QkFBQTtVQUFBLG1CQUFBO0FsQnExQmY7QWtCbDFCSTtFQUNJLG9CQUFBO0VBQUEsb0JBQUE7RUFBQSxhQUFBO0VBQ0Esa0JBQUE7RUFDQSxlQUFBO0VBQ0EseUJaeEhZO0VZeUhaLGtCQUFBO0VBQ0EsWUFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EsU0FBQTtFQUNBLHdCQUFBO01BQUEscUJBQUE7VUFBQSx1QkFBQTtFQUNBLHlCQUFBO01BQUEsc0JBQUE7VUFBQSxtQkFBQTtFQUNBLGNBQUE7RUFDQSwwQlpySU07QU55OUJkO0FJNThCUTtFYzJHSjtJQWVRLGVBQUE7SUFDQSxZQUFBO0lBQ0EsWUFBQTtFbEJzMUJWO0FBQ0Y7QUk3OEJRO0VjcUdKO0lBb0JRLGVBQUE7SUFDQSxXQUFBO0lBQ0EsWUFBQTtJQUNBLFVBQUE7SUFDQSxTQUFBO0VsQncxQlY7QUFDRjs7QW1CMStCQTtFQUNJLFdBQUE7RUFDQSxvQkFBQTtFQUFBLG9CQUFBO0VBQUEsYUFBQTtFQUNBLGtCQUFBO0VBQ0EsNEJBQUE7RUFBQSw2QkFBQTtNQUFBLDBCQUFBO1VBQUEsc0JBQUE7QW5CNitCSjtBSW4rQlE7RWVkUjtJQU1RLGtCQUFBO0VuQisrQk47QUFDRjtBbUI5K0JJO0VBQ0ksd0JiUE07RWFRTixlQUFBO0VBQ0EsaUJBQUE7QW5CZy9CUjtBSTcrQlE7RWVOSjtJQUtRLGVBQUE7SUFDQSxvQkFBQTtJQUNBLGdCQUFBO0VuQmsvQlY7QUFDRjtBSTkrQlE7RWVaSjtJQVNZLGVBQUE7SUFDQSxvQkFBQTtFbkJxL0JkO0FBQ0Y7QW1CbC9CSTtFQUNJLHFCYnZCQztFYXdCRCxlQUFBO0VBQ0EsaUJBQUE7RUFDQSxpQkFBQTtBbkJvL0JSO0FJaGdDUTtFZVFKO0lBTVEsZUFBQTtJQUNBLGdCQUFBO0lBQ0EsZ0NBQUE7SUFDQSxVQUFBO0lBQ0EsWUFBQTtJQUNBLGdCQUFBO0lBQ0Esb0JBQUE7RW5Ccy9CVjtBQUNGO0FJcmdDUTtFZUVKO0lBZVksZUFBQTtJQUNBLFVBQUE7SUFDQSxtQkFBQTtFbkJ3L0JkO0FBQ0Y7QW1CdC9CUTtFQUNJLGlDQUFBO0FuQncvQlo7QUlyaENRO0VlNEJBO0lBR1EsOEJBQUE7RW5CMC9CZDtBQUNGOztBbUJ0L0JBO0VBQ0ksV0FBQTtFQUNBLGFBQUE7QW5CeS9CSjtBSS9oQ1E7RWVvQ1I7SUFJUSxZQUFBO0lBQ0EsYUFBQTtJQUNBLGtCQUFBO0lBQ0EsVUFBQTtJQUNBLFVBQUE7SUFDQSxvQkFBQTtFbkIyL0JOO0FBQ0Y7QUluaUNRO0VlOEJSO0lBWVEsa0JBQUE7SUFDQSxZQUFBO0lBQ0EsYUFBQTtJQUNBLFVBQUE7RW5CNi9CTjtBQUNGO0FtQjUvQkk7RUFDSSxXQUFBO0VBQ0EsWUFBQTtFQUNBLG9CQUFBO0tBQUEsaUJBQUE7QW5COC9CUjtBSXRqQ1E7RWVxREo7SUFLUSxvQkFBQTtFbkJnZ0NWO0FBQ0Y7QUlyakNRO0VlK0NKO0lBUVEsa0JBQUE7RW5Ca2dDVjtBQUNGOztBbUI5L0JBO0VBQ0ksb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSw0QkFBQTtFQUFBLDZCQUFBO01BQUEsMEJBQUE7VUFBQSxzQkFBQTtFQUNBLGtCQUFBO0VBQ0Esa0NBQUE7RUFDQSxpQkFBQTtFQUNBLFdBQUE7RUFDQSxhQUFBO0VBQ0EsVUFBQTtBbkJpZ0NKO0FJM2tDUTtFZWtFUjtJQVVRLGFBQUE7RW5CbWdDTjtBQUNGO0FtQmxnQ0k7RUFDSSxvQkFBQTtBbkJvZ0NSOztBbUIvL0JBO0VBQ0ksb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSxrQkFBQTtFQUNBLHlDQUFBO1VBQUEsaUNBQUE7RUFDQSxVQUFBO0VBQ0EsYUFBQTtFQUNBLFlBQUE7RUFDQSxnQkFBQTtFQUNBLG1CQUFBO0VBQ0EsMENBQUE7VUFBQSxrQ0FBQTtFQUNBLGlDQUFBO1VBQUEseUJBQUE7QW5Ca2dDSjtBSWhtQ1E7RWVvRlI7SUFZUSxZQUFBO0lBQ0EsYUFBQTtJQUNBLGdCQUFBO0VuQm9nQ047QUFDRjtBSWptQ1E7RWU4RVI7SUFpQlEsbUJBQUE7SUFDQSxnQkFBQTtFbkJzZ0NOO0FBQ0Y7QW1CcGdDUTtFQUNJLDhCQUFBO1VBQUEsc0JBQUE7QW5Cc2dDWjtBbUJwZ0NRO0VBQ0ksdUNBQUE7VUFBQSwrQkFBQTtFQUNBLGlDQUFBO1VBQUEseUJBQUE7QW5Cc2dDWjtBSXBuQ1E7RWU0R0E7SUFJUSxrQ0FBQTtZQUFBLDBCQUFBO0VuQndnQ2Q7QUFDRjtBbUJ0Z0NRO0VBQ0ksMkNBQUE7VUFBQSxtQ0FBQTtBbkJ3Z0NaO0FtQnRnQ1E7RUFDUSxnREFBQTtVQUFBLHdDQUFBO0VBQ0EscUNBQUE7VUFBQSw2QkFBQTtBbkJ3Z0NoQjtBSWhvQ1E7RWVzSEE7SUFJWSx5REFBQTtZQUFBLGlEQUFBO0VuQjBnQ2xCO0FBQ0Y7QW1CeGdDUTtFQUNRLDhDQUFBO1VBQUEsc0NBQUE7QW5CMGdDaEI7QUl4b0NRO0VlNkhBO0lBR1ksdURBQUE7WUFBQSwrQ0FBQTtFbkI0Z0NsQjtBQUNGO0FtQjFnQ1E7RUFDSSx1Q0FBQTtVQUFBLCtCQUFBO0VBQ0EsaUNBQUE7VUFBQSx5QkFBQTtBbkI0Z0NaO0FJanBDUTtFZW1JQTtJQUlRLGdEQUFBO1lBQUEsd0NBQUE7SUFDQSxpQ0FBQTtZQUFBLHlCQUFBO0VuQjhnQ2Q7QUFDRjtBbUI1Z0NRO0VBQ0ksMkNBQUE7VUFBQSxtQ0FBQTtBbkI4Z0NaO0FJMXBDUTtFZTJJQTtJQUdRLG9EQUFBO1lBQUEsNENBQUE7RW5CZ2hDZDtBQUNGO0FtQnRqQ1E7RUFDSSw4QkFBQTtVQUFBLHNCQUFBO0FuQndqQ1o7QW1CdGpDUTtFQUNJLHVDQUFBO1VBQUEsK0JBQUE7RUFDQSxpQ0FBQTtVQUFBLHlCQUFBO0FuQndqQ1o7QUl0cUNRO0VlNEdBO0lBSVEsa0NBQUE7WUFBQSwwQkFBQTtFbkIwakNkO0FBQ0Y7QW1CeGpDUTtFQUNJLDJDQUFBO1VBQUEsbUNBQUE7QW5CMGpDWjtBbUJ4akNRO0VBQ1EsZ0RBQUE7VUFBQSx3Q0FBQTtFQUNBLHFDQUFBO1VBQUEsNkJBQUE7QW5CMGpDaEI7QUlsckNRO0Vlc0hBO0lBSVkseURBQUE7WUFBQSxpREFBQTtFbkI0akNsQjtBQUNGO0FtQjFqQ1E7RUFDUSw4Q0FBQTtVQUFBLHNDQUFBO0FuQjRqQ2hCO0FJMXJDUTtFZTZIQTtJQUdZLHVEQUFBO1lBQUEsK0NBQUE7RW5COGpDbEI7QUFDRjtBbUI1akNRO0VBQ0ksdUNBQUE7VUFBQSwrQkFBQTtFQUNBLGlDQUFBO1VBQUEseUJBQUE7QW5COGpDWjtBSW5zQ1E7RWVtSUE7SUFJUSxnREFBQTtZQUFBLHdDQUFBO0lBQ0EsaUNBQUE7WUFBQSx5QkFBQTtFbkJna0NkO0FBQ0Y7QW1COWpDUTtFQUNJLDJDQUFBO1VBQUEsbUNBQUE7QW5CZ2tDWjtBSTVzQ1E7RWUySUE7SUFHUSxvREFBQTtZQUFBLDRDQUFBO0VuQmtrQ2Q7QUFDRjtBbUJ4bUNRO0VBQ0ksOEJBQUE7VUFBQSxzQkFBQTtBbkIwbUNaO0FtQnhtQ1E7RUFDSSx1Q0FBQTtVQUFBLCtCQUFBO0VBQ0EsaUNBQUE7VUFBQSx5QkFBQTtBbkIwbUNaO0FJeHRDUTtFZTRHQTtJQUlRLGtDQUFBO1lBQUEsMEJBQUE7RW5CNG1DZDtBQUNGO0FtQjFtQ1E7RUFDSSwyQ0FBQTtVQUFBLG1DQUFBO0FuQjRtQ1o7QW1CMW1DUTtFQUNRLGdEQUFBO1VBQUEsd0NBQUE7RUFDQSxxQ0FBQTtVQUFBLDZCQUFBO0FuQjRtQ2hCO0FJcHVDUTtFZXNIQTtJQUlZLHlEQUFBO1lBQUEsaURBQUE7RW5COG1DbEI7QUFDRjtBbUI1bUNRO0VBQ1EsOENBQUE7VUFBQSxzQ0FBQTtBbkI4bUNoQjtBSTV1Q1E7RWU2SEE7SUFHWSx1REFBQTtZQUFBLCtDQUFBO0VuQmduQ2xCO0FBQ0Y7QW1COW1DUTtFQUNJLHVDQUFBO1VBQUEsK0JBQUE7RUFDQSxpQ0FBQTtVQUFBLHlCQUFBO0FuQmduQ1o7QUlydkNRO0VlbUlBO0lBSVEsZ0RBQUE7WUFBQSx3Q0FBQTtJQUNBLGlDQUFBO1lBQUEseUJBQUE7RW5Ca25DZDtBQUNGO0FtQmhuQ1E7RUFDSSwyQ0FBQTtVQUFBLG1DQUFBO0FuQmtuQ1o7QUk5dkNRO0VlMklBO0lBR1Esb0RBQUE7WUFBQSw0Q0FBQTtFbkJvbkNkO0FBQ0Y7QW1CMXBDUTtFQUNJLDhCQUFBO1VBQUEsc0JBQUE7QW5CNHBDWjtBbUIxcENRO0VBQ0ksdUNBQUE7VUFBQSwrQkFBQTtFQUNBLGlDQUFBO1VBQUEseUJBQUE7QW5CNHBDWjtBSTF3Q1E7RWU0R0E7SUFJUSxrQ0FBQTtZQUFBLDBCQUFBO0VuQjhwQ2Q7QUFDRjtBbUI1cENRO0VBQ0ksMkNBQUE7VUFBQSxtQ0FBQTtBbkI4cENaO0FtQjVwQ1E7RUFDUSxnREFBQTtVQUFBLHdDQUFBO0VBQ0EscUNBQUE7VUFBQSw2QkFBQTtBbkI4cENoQjtBSXR4Q1E7RWVzSEE7SUFJWSx5REFBQTtZQUFBLGlEQUFBO0VuQmdxQ2xCO0FBQ0Y7QW1COXBDUTtFQUNRLDhDQUFBO1VBQUEsc0NBQUE7QW5CZ3FDaEI7QUk5eENRO0VlNkhBO0lBR1ksdURBQUE7WUFBQSwrQ0FBQTtFbkJrcUNsQjtBQUNGO0FtQmhxQ1E7RUFDSSx1Q0FBQTtVQUFBLCtCQUFBO0VBQ0EsaUNBQUE7VUFBQSx5QkFBQTtBbkJrcUNaO0FJdnlDUTtFZW1JQTtJQUlRLGdEQUFBO1lBQUEsd0NBQUE7SUFDQSxpQ0FBQTtZQUFBLHlCQUFBO0VuQm9xQ2Q7QUFDRjtBbUJscUNRO0VBQ0ksMkNBQUE7VUFBQSxtQ0FBQTtBbkJvcUNaO0FJaHpDUTtFZTJJQTtJQUdRLG9EQUFBO1lBQUEsNENBQUE7RW5Cc3FDZDtBQUNGO0FtQjVzQ1E7RUFDSSwrQkFBQTtVQUFBLHVCQUFBO0FuQjhzQ1o7QW1CNXNDUTtFQUNJLHVDQUFBO1VBQUEsK0JBQUE7RUFDQSxpQ0FBQTtVQUFBLHlCQUFBO0FuQjhzQ1o7QUk1ekNRO0VlNEdBO0lBSVEsa0NBQUE7WUFBQSwwQkFBQTtFbkJndENkO0FBQ0Y7QW1COXNDUTtFQUNJLDJDQUFBO1VBQUEsbUNBQUE7QW5CZ3RDWjtBbUI5c0NRO0VBQ1EsZ0RBQUE7VUFBQSx3Q0FBQTtFQUNBLHFDQUFBO1VBQUEsNkJBQUE7QW5CZ3RDaEI7QUl4MENRO0Vlc0hBO0lBSVkseURBQUE7WUFBQSxpREFBQTtFbkJrdENsQjtBQUNGO0FtQmh0Q1E7RUFDUSw4Q0FBQTtVQUFBLHNDQUFBO0FuQmt0Q2hCO0FJaDFDUTtFZTZIQTtJQUdZLHVEQUFBO1lBQUEsK0NBQUE7RW5Cb3RDbEI7QUFDRjtBbUJsdENRO0VBQ0ksdUNBQUE7VUFBQSwrQkFBQTtFQUNBLGlDQUFBO1VBQUEseUJBQUE7QW5Cb3RDWjtBSXoxQ1E7RWVtSUE7SUFJUSxnREFBQTtZQUFBLHdDQUFBO0lBQ0EsaUNBQUE7WUFBQSx5QkFBQTtFbkJzdENkO0FBQ0Y7QW1CcHRDUTtFQUNJLDJDQUFBO1VBQUEsbUNBQUE7QW5Cc3RDWjtBSWwyQ1E7RWUySUE7SUFHUSxvREFBQTtZQUFBLDRDQUFBO0VuQnd0Q2Q7QUFDRjtBbUI5dkNRO0VBQ0ksK0JBQUE7VUFBQSx1QkFBQTtBbkJnd0NaO0FtQjl2Q1E7RUFDSSx1Q0FBQTtVQUFBLCtCQUFBO0VBQ0EsaUNBQUE7VUFBQSx5QkFBQTtBbkJnd0NaO0FJOTJDUTtFZTRHQTtJQUlRLGtDQUFBO1lBQUEsMEJBQUE7RW5Ca3dDZDtBQUNGO0FtQmh3Q1E7RUFDSSwyQ0FBQTtVQUFBLG1DQUFBO0FuQmt3Q1o7QW1CaHdDUTtFQUNRLGdEQUFBO1VBQUEsd0NBQUE7RUFDQSxxQ0FBQTtVQUFBLDZCQUFBO0FuQmt3Q2hCO0FJMTNDUTtFZXNIQTtJQUlZLHlEQUFBO1lBQUEsaURBQUE7RW5Cb3dDbEI7QUFDRjtBbUJsd0NRO0VBQ1EsOENBQUE7VUFBQSxzQ0FBQTtBbkJvd0NoQjtBSWw0Q1E7RWU2SEE7SUFHWSx1REFBQTtZQUFBLCtDQUFBO0VuQnN3Q2xCO0FBQ0Y7QW1CcHdDUTtFQUNJLHVDQUFBO1VBQUEsK0JBQUE7RUFDQSxpQ0FBQTtVQUFBLHlCQUFBO0FuQnN3Q1o7QUkzNENRO0VlbUlBO0lBSVEsZ0RBQUE7WUFBQSx3Q0FBQTtJQUNBLGlDQUFBO1lBQUEseUJBQUE7RW5Cd3dDZDtBQUNGO0FtQnR3Q1E7RUFDSSwyQ0FBQTtVQUFBLG1DQUFBO0FuQnd3Q1o7QUlwNUNRO0VlMklBO0lBR1Esb0RBQUE7WUFBQSw0Q0FBQTtFbkIwd0NkO0FBQ0Y7QW1CaHpDUTtFQUNJLCtCQUFBO1VBQUEsdUJBQUE7QW5Ca3pDWjtBbUJoekNRO0VBQ0ksdUNBQUE7VUFBQSwrQkFBQTtFQUNBLGlDQUFBO1VBQUEseUJBQUE7QW5Ca3pDWjtBSWg2Q1E7RWU0R0E7SUFJUSxrQ0FBQTtZQUFBLDBCQUFBO0VuQm96Q2Q7QUFDRjtBbUJsekNRO0VBQ0ksMkNBQUE7VUFBQSxtQ0FBQTtBbkJvekNaO0FtQmx6Q1E7RUFDUSxnREFBQTtVQUFBLHdDQUFBO0VBQ0EscUNBQUE7VUFBQSw2QkFBQTtBbkJvekNoQjtBSTU2Q1E7RWVzSEE7SUFJWSx5REFBQTtZQUFBLGlEQUFBO0VuQnN6Q2xCO0FBQ0Y7QW1CcHpDUTtFQUNRLDhDQUFBO1VBQUEsc0NBQUE7QW5Cc3pDaEI7QUlwN0NRO0VlNkhBO0lBR1ksdURBQUE7WUFBQSwrQ0FBQTtFbkJ3ekNsQjtBQUNGO0FtQnR6Q1E7RUFDSSx1Q0FBQTtVQUFBLCtCQUFBO0VBQ0EsaUNBQUE7VUFBQSx5QkFBQTtBbkJ3ekNaO0FJNzdDUTtFZW1JQTtJQUlRLGdEQUFBO1lBQUEsd0NBQUE7SUFDQSxpQ0FBQTtZQUFBLHlCQUFBO0VuQjB6Q2Q7QUFDRjtBbUJ4ekNRO0VBQ0ksMkNBQUE7VUFBQSxtQ0FBQTtBbkIwekNaO0FJdDhDUTtFZTJJQTtJQUdRLG9EQUFBO1lBQUEsNENBQUE7RW5CNHpDZDtBQUNGO0FtQmwyQ1E7RUFDSSwrQkFBQTtVQUFBLHVCQUFBO0FuQm8yQ1o7QW1CbDJDUTtFQUNJLHVDQUFBO1VBQUEsK0JBQUE7RUFDQSxpQ0FBQTtVQUFBLHlCQUFBO0FuQm8yQ1o7QUlsOUNRO0VlNEdBO0lBSVEsa0NBQUE7WUFBQSwwQkFBQTtFbkJzMkNkO0FBQ0Y7QW1CcDJDUTtFQUNJLDJDQUFBO1VBQUEsbUNBQUE7QW5CczJDWjtBbUJwMkNRO0VBQ1EsZ0RBQUE7VUFBQSx3Q0FBQTtFQUNBLHFDQUFBO1VBQUEsNkJBQUE7QW5CczJDaEI7QUk5OUNRO0Vlc0hBO0lBSVkseURBQUE7WUFBQSxpREFBQTtFbkJ3MkNsQjtBQUNGO0FtQnQyQ1E7RUFDUSw4Q0FBQTtVQUFBLHNDQUFBO0FuQncyQ2hCO0FJdCtDUTtFZTZIQTtJQUdZLHVEQUFBO1lBQUEsK0NBQUE7RW5CMDJDbEI7QUFDRjtBbUJ4MkNRO0VBQ0ksdUNBQUE7VUFBQSwrQkFBQTtFQUNBLGlDQUFBO1VBQUEseUJBQUE7QW5CMDJDWjtBSS8rQ1E7RWVtSUE7SUFJUSxnREFBQTtZQUFBLHdDQUFBO0lBQ0EsaUNBQUE7WUFBQSx5QkFBQTtFbkI0MkNkO0FBQ0Y7QW1CMTJDUTtFQUNJLDJDQUFBO1VBQUEsbUNBQUE7QW5CNDJDWjtBSXgvQ1E7RWUySUE7SUFHUSxvREFBQTtZQUFBLDRDQUFBO0VuQjgyQ2Q7QUFDRjtBbUJwNUNRO0VBQ0ksK0JBQUE7VUFBQSx1QkFBQTtBbkJzNUNaO0FtQnA1Q1E7RUFDSSx1Q0FBQTtVQUFBLCtCQUFBO0VBQ0EsaUNBQUE7VUFBQSx5QkFBQTtBbkJzNUNaO0FJcGdEUTtFZTRHQTtJQUlRLGtDQUFBO1lBQUEsMEJBQUE7RW5CdzVDZDtBQUNGO0FtQnQ1Q1E7RUFDSSwyQ0FBQTtVQUFBLG1DQUFBO0FuQnc1Q1o7QW1CdDVDUTtFQUNRLGdEQUFBO1VBQUEsd0NBQUE7RUFDQSxxQ0FBQTtVQUFBLDZCQUFBO0FuQnc1Q2hCO0FJaGhEUTtFZXNIQTtJQUlZLHlEQUFBO1lBQUEsaURBQUE7RW5CMDVDbEI7QUFDRjtBbUJ4NUNRO0VBQ1EsOENBQUE7VUFBQSxzQ0FBQTtBbkIwNUNoQjtBSXhoRFE7RWU2SEE7SUFHWSx1REFBQTtZQUFBLCtDQUFBO0VuQjQ1Q2xCO0FBQ0Y7QW1CMTVDUTtFQUNJLHVDQUFBO1VBQUEsK0JBQUE7RUFDQSxpQ0FBQTtVQUFBLHlCQUFBO0FuQjQ1Q1o7QUlqaURRO0VlbUlBO0lBSVEsZ0RBQUE7WUFBQSx3Q0FBQTtJQUNBLGlDQUFBO1lBQUEseUJBQUE7RW5CODVDZDtBQUNGO0FtQjU1Q1E7RUFDSSwyQ0FBQTtVQUFBLG1DQUFBO0FuQjg1Q1o7QUkxaURRO0VlMklBO0lBR1Esb0RBQUE7WUFBQSw0Q0FBQTtFbkJnNkNkO0FBQ0Y7QW1CdDhDUTtFQUNJLCtCQUFBO1VBQUEsdUJBQUE7QW5CdzhDWjtBbUJ0OENRO0VBQ0ksdUNBQUE7VUFBQSwrQkFBQTtFQUNBLGlDQUFBO1VBQUEseUJBQUE7QW5CdzhDWjtBSXRqRFE7RWU0R0E7SUFJUSxrQ0FBQTtZQUFBLDBCQUFBO0VuQjA4Q2Q7QUFDRjtBbUJ4OENRO0VBQ0ksMkNBQUE7VUFBQSxtQ0FBQTtBbkIwOENaO0FtQng4Q1E7RUFDUSxnREFBQTtVQUFBLHdDQUFBO0VBQ0EscUNBQUE7VUFBQSw2QkFBQTtBbkIwOENoQjtBSWxrRFE7RWVzSEE7SUFJWSx5REFBQTtZQUFBLGlEQUFBO0VuQjQ4Q2xCO0FBQ0Y7QW1CMThDUTtFQUNRLDhDQUFBO1VBQUEsc0NBQUE7QW5CNDhDaEI7QUkxa0RRO0VlNkhBO0lBR1ksdURBQUE7WUFBQSwrQ0FBQTtFbkI4OENsQjtBQUNGO0FtQjU4Q1E7RUFDSSx1Q0FBQTtVQUFBLCtCQUFBO0VBQ0EsaUNBQUE7VUFBQSx5QkFBQTtBbkI4OENaO0FJbmxEUTtFZW1JQTtJQUlRLGdEQUFBO1lBQUEsd0NBQUE7SUFDQSxpQ0FBQTtZQUFBLHlCQUFBO0VuQmc5Q2Q7QUFDRjtBbUI5OENRO0VBQ0ksMkNBQUE7VUFBQSxtQ0FBQTtBbkJnOUNaO0FJNWxEUTtFZTJJQTtJQUdRLG9EQUFBO1lBQUEsNENBQUE7RW5CazlDZDtBQUNGO0FtQi84Q0k7RUFDSSxXQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLGdDQUFBO0VBQ0EsbUJBQUE7RUFDQSxnQkFBQTtFQUNBLDBCQUFBO0tBQUEsdUJBQUE7QW5CaTlDUjtBbUJoOUNRO0VBQ0ksZUFBQTtFQUNBLG1DQUFBO1VBQUEsMkJBQUE7RUFDQSxpQ0FBQTtVQUFBLHlCQUFBO0FuQms5Q1o7QUkvbURRO0VlMEpBO0lBS1EsNENBQUE7WUFBQSxvQ0FBQTtJQUNBLGlDQUFBO1lBQUEseUJBQUE7RW5CbzlDZDtBQUNGO0FtQmw5Q1E7RUFDSSx1Q0FBQTtVQUFBLCtCQUFBO0FuQm85Q1o7QUl4bkRRO0VlbUtBO0lBR1EsZ0RBQUE7WUFBQSx3Q0FBQTtFbkJzOUNkO0FBQ0Y7QW1CbjlDSTtFQUNJLDBCYnhMTTtFYXlMTixlQUFBO0VBQ0EsZ0JBQUE7RUFDQSxtQkFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSwwQkFBQTtLQUFBLHVCQUFBO0FuQnE5Q1I7QUl0b0RRO0VlMEtKO0lBU1EsZUFBQTtFbkJ1OUNWO0FBQ0Y7QW1CcjlDSTtFQUNJLFVBQUE7RUFDQSxxQmJ0TUM7RWF1TUQsZUFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSwwQkFBQTtLQUFBLHVCQUFBO0FuQnU5Q1I7QUlucERRO0Vlc0xKO0lBUVEsZUFBQTtFbkJ5OUNWO0FBQ0Y7QW1CdjlDSTtFQUNJLFVBQUE7RUFDQSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxlQUFBO0VBQ0EsMEJibk5NO0Vhb05OLGNBQUE7RUFDQSxTQUFBO0VBQ0EsV0FBQTtFQUNBLG1CQUFBO0VBQ0EsMkNBQUE7RUFBQSxtQ0FBQTtFQUFBLDhCQUFBO0VBQUEsMkJBQUE7RUFBQSxvREFBQTtBbkJ5OUNSO0FJcHFEUTtFZWlNSjtJQVlRLFdBQUE7SUFDQSxlQUFBO0lBQ0EsU0FBQTtFbkIyOUNWO0FBQ0Y7QW1CejlDSTtFQUNJLCtCQUFBO01BQUEsMkJBQUE7VUFBQSx1QkFBQTtFQUNBLGtCQUFBO0VBQ0EsVUFBQTtFQUNBLG9CQUFBO0VBQUEsb0JBQUE7RUFBQSxhQUFBO0VBQ0EsVUFBQTtFQUNBLFlBQUE7RUFDQSx5QkFBQTtNQUFBLHNCQUFBO1VBQUEsbUJBQUE7RUFDQSx3QkFBQTtNQUFBLHFCQUFBO1VBQUEsdUJBQUE7RUFDQSxtQmJwT1k7RWFxT1osZ0NBQUE7QW5CMjlDUjtBSXZyRFE7RWVrTko7SUFZUSxnQkFBQTtFbkI2OUNWO0FBQ0Y7QW1CNTlDUTtFQUNJLFdBQUE7RUFDQSxZQUFBO0FuQjg5Q1o7QUloc0RRO0VlZ09BO0lBSVEsV0FBQTtJQUNBLFlBQUE7RW5CZytDZDtBQUNGO0FJdHNEUTtFZXdPSTtJQUVRLFdBQUE7SUFDQSxZQUFBO0VuQmcrQ2xCO0FBQ0Y7O0FtQng5Q0E7RUFDUSxZQUFBO0VBQ0EsaUJBQUE7RUFDQSxvQkFBQTtFQUNBLFVBQUE7QW5CMjlDUjtBSW50RFE7RWVvUFI7SUFNWSxVQUFBO0VuQjY5Q1Y7QUFDRjtBSWx0RFE7RWU4T1I7SUFTWSxvQkFBQTtFbkIrOUNWO0FBQ0Y7O0FtQjU5Q0E7RUFDSSxVQUFBO0VBQ0EsWUFBQTtBbkIrOUNKO0FJbHVEUTtFZWlRUjtJQUlRLFVBQUE7SUFDQSxXQUFBO0VuQmkrQ047QUFDRjtBSWx1RFE7RWUyUFI7SUFRUSxTQUFBO0VuQm0rQ047QUFDRiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
