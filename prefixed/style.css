@@ -432,18 +432,17 @@ table {
 
 body, section, header, footer, .global {
   width: 100%;
-}
-@media all and (min-device-width: 1180px) {
-  body, section, header, footer, .global {
-    width: 1180px;
-    position: relative;
-  }
+  position: relative;
 }
 
 @media all and (min-device-width: 1180px) {
-  body {
-    margin: auto;
+  section, header, footer, .global {
+    width: 1180px;
+  }
+
+  .global {
     border: 1px solid black;
+    margin: auto;
   }
 }
 .btn {
