@@ -6,7 +6,7 @@
     @include tablette{
         text-align: center;
         padding-top: 380px;
-        border-top: 1px solid black;
+        //border-top: 1px solid black;
     }
     h1{
         font-family: $police-logo;
@@ -17,8 +17,7 @@
             font-size: 20px;
            margin-top: 50px;
             @include bureau{
-                font-size: 30px;
-                margin-bottom: 100px;
+                font-size: 20px;
             }
         }
     }
@@ -35,7 +34,6 @@
             margin: auto;
             margin-top: 50px;
             padding-bottom: 30px;
-            //text-align: center;
             @include bureau{
                 font-size: 15px;
                 width: 55%;
@@ -92,6 +90,10 @@
     @include tablette{
        top: 0px;
        border-radius: 0px;
+    }
+    @include bureau{
+        top: 0px;
+        
     }
     & + div{
         padding-bottom: 30px;
@@ -245,7 +247,7 @@
         background: $couleur-tertiaire;
         border-radius: 0px 15px 15px 0px;
         @include tablette{
-            max-width: 110px;;
+            max-width: 110px;
         }
         &-logo{
             width: 0px;
@@ -253,7 +255,6 @@
             @include tablette{
                 width: 0px;
                 height: 0px;
-                //border: 1px solid black;
             }
             
         }
