@@ -1033,7 +1033,6 @@ section, header, footer {
   .section1_2 {
     text-align: center;
     padding-top: 380px;
-    border-top: 1px solid black;
   }
 }
 .section1_2 h1 {
@@ -1050,8 +1049,7 @@ section, header, footer {
 }
 @media only screen and (min-width: 480px) and (min-width: 1180px) {
   .section1_2 h1 {
-    font-size: 30px;
-    margin-bottom: 100px;
+    font-size: 20px;
   }
 }
 .section1_2 h2 {
@@ -1139,6 +1137,11 @@ section, header, footer {
   .languette {
     top: 0px;
     border-radius: 0px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .languette {
+    top: 0px;
   }
 }
 .languette + div {
