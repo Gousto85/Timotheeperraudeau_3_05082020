@@ -2,28 +2,31 @@
     display: flex;
     position: absolute;
     font-family: $police;
-    height: 120px;
+    height: 48px;
     border-radius: 60px;
     color: white;
-    font-size: 40px;
+    font-size: 15px;
     justify-content: center;
     align-items: center;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 170px;
     @include tablette{
-        font-size: 25px;
-        height: 80px;
+        font-size: 12px;
+        height: 40px;
+        width: 120px;
     }
     @include bureau{
         font-size: 15px;
         height: 50px;
+        width: 200px;
     }
 }
 
 .btn1{
     z-index: 2;
     background:linear-gradient($couleur-secondaire-lighten, $couleur-primaire-lighten);
-    box-shadow: 5px 15px 30px $btn-shadow-darken;
+    box-shadow: 5px 8px 20px $btn-shadow-darken;
     opacity: 0;
     &:hover{
         opacity: 1;

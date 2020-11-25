@@ -5,15 +5,17 @@
     flex-direction: column;
     @include tablette{
         text-align: center;
+        padding-top: 380px;
+        border-top: 1px solid black;
     }
     h1{
         font-family: $police-logo;
-        font-size: 70px;    
-        margin-left: 50px;
+        font-size: 22px;    
+        margin-left: 20px;
+        margin-top: 35px;
         @include tablette{
-            font-size: 40px;
-            margin-bottom: 330px;
-            margin-top: 80px;
+            font-size: 20px;
+           margin-top: 50px;
             @include bureau{
                 font-size: 30px;
                 margin-bottom: 100px;
@@ -22,11 +24,11 @@
     }
     h2{
         font-family: $police;
-        font-size: 45px;
-        margin-top: 100px;
-        margin-left: 50px;
+        font-size: 18px;
+        margin-top: 40px;
+        margin-left: 20px;
         @include tablette{
-            font-size: 20px;
+            font-size: 15px;
             margin-left: 0px;
             border-bottom: 2px solid $couleur-tertiaire;
             width: 70%;
@@ -41,7 +43,7 @@
             }
         }
         span{
-            border-bottom: 10px solid $couleur-tertiaire;
+            border-bottom: 3px solid $couleur-tertiaire;
             @include tablette{
                 border-bottom: 1px solid white;
             }
@@ -50,13 +52,13 @@
 }
 .image-rest{
     width: 100%;
-    height: 650px;
+    height: 290px;
     @include tablette{
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
         position: absolute;
         top: 150px;
-        left: 30px;
+        left: 20px;
         border-radius: 125px;
     }    
     @include bureau{
@@ -82,13 +84,14 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    border-radius: 100px 100px 0px 0px;
+    border-radius: 40px 40px 0px 0px;
     background: white;
     width: 100%;
-    height: 102px;
-    top: 550px;
+    height: 61px;
+    top: 230px;
     @include tablette{
-        display: none;
+       top: 0px;
+       border-radius: 0px;
     }
     & + div{
         padding-bottom: 30px;
@@ -101,15 +104,15 @@
     position: relative;
     box-shadow: 5px 10px 30px rgb(212, 210, 210);
     width: 95%;
-    height: 165px;
+    height: 65px;
     margin: auto;
-    margin-top: 75px;
-    border-radius: 50px;   
+    margin-top: 35px;
+    border-radius: 15px;   
     animation: apparition-block 1000ms;
     animation-fill-mode: both;
     @include tablette{
-        width: 500px;
-        height: 110px;
+        width: 400px;
+        height: 70px;
         text-align: left;
     }
     @include bureau{
@@ -124,17 +127,22 @@
             animation: progress-check 600ms;
             animation-fill-mode: both;
             @include tablette{
-                animation-duration: 1000ms;
+                animation: progress-check-tablette 600ms;
+                animation-fill-mode: both;
             }
         }
         &:not(:hover) .fonct__anim-val{
             animation: progress-check-not 600ms;
+            @include tablette{
+                animation: progress-check-not-tablette 600ms
+            }
         }
         &:hover .fonct__anim-val-logo{
                 animation: rotate-check-logo 500ms 100ms;
                 animation-fill-mode: forwards;
                 @include tablette{
-                    animation: rotate-check-logo-tablette 300ms 150ms;
+                    animation: rotate-check-logo-tablette 500ms 100ms;
+                    animation-fill-mode: forwards;
                 }
             }
         &:not(:hover) .fonct__anim-val-logo{
@@ -160,12 +168,15 @@
     }       
     &__plat{
         width: 100%;
-        margin-right: 100px;
-        padding-left: 30px;
+        margin-right: 50px;
+        padding-left: 10px;
         border-radius: 50px 0px 0px 50px;        
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        @include tablette{
+            padding-left: 20px;
+        }
         &:hover{
             cursor: pointer;
             animation: width-plat 600ms;
@@ -184,42 +195,42 @@
     }
     &__intitulé{
         font-family: $police-gras;
-        font-size: 45px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 8px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;  
         @include tablette{
-            font-size: 25px;
+            font-size: 18px;
         } 
     }
     &__accompagnement{
         z-index: 1;
         font-family: $police;
-        font-size: 40px;
+        font-size: 12px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         @include tablette{
-            font-size: 20px;
+            font-size: 14px;
         }
     }
     &__prix{
         z-index: 2;
         position: absolute;
-        width: 40px;
-        font-size: 40px;
+        width: 10px;
+        font-size: 12px;
         font-family: $police-gras;
         color: rgb(77, 75, 75);
-        top: 90px;
-        right: 35px;
+        top: 38px;
+        right: 0px;
         padding-right: 20px;
         transition: transform 600ms;
         @include tablette{
-            width: 25px;
-            font-size: 25px;
-            top: 70px;
+            width: 15px;
+            font-size: 15px;
+            top: 38px;
         }
     }
     &__anim-val{
@@ -232,25 +243,19 @@
         align-items: center;
         justify-content: center;
         background: $couleur-tertiaire;
-        border-radius: 0px 50px 50px 0px;
+        border-radius: 0px 15px 15px 0px;
         @include tablette{
             max-width: 110px;;
         }
         &-logo{
-            width: 55px;
-            height: 55px;
+            width: 0px;
+            height: 0px;
             @include tablette{
-                width: 30px;
-                height: 30px;
+                width: 0px;
+                height: 0px;
                 //border: 1px solid black;
             }
-            & img{
-                @include tablette{
-                    width: 30px;
-                    height: 30px;
-                    //border: 1px solid black;
-                }
-            }
+            
         }
             
     }
@@ -258,11 +263,11 @@
 }
 .btn__plat{
         margin: auto;
-        margin-top: 100px;
-        margin-bottom: 250px;
-        width: 31%;
+        margin-top: 20px;
+        margin-bottom: 55px;
+        width: 210px;
         @include tablette{
-            width: 22%;
+            width: 160px;
         }
         @include bureau{
             margin-bottom: 150px;
@@ -270,11 +275,11 @@
     }
 
 .carte__coeur-position{
-    top: 810px;
-    right: 110px;
+    top: 265px;
+    right: 30px;
     @include tablette{
-        top: 120px;
-        right: 40px;
+        top: 20px;
+        right: 20px;
     }
     @include bureau{
         top: 50px;

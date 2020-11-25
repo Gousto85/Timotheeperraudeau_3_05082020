@@ -1,23 +1,24 @@
 .section2{
     
     width: 100%;
-    margin-bottom: 300px;
+    margin-bottom: 180px;
     @include tablette{
         max-width: 680px;
         margin: auto;
+        margin-bottom: 150px;
     }
     @include bureau{
         min-width: 100%;
     }
     h1{
-        font-size: 60px;
+        font-size: 22px;
         font-family: $police-gras;
         text-align: center;
         width: 60%;
         margin: auto;
-        margin-top: 100px;
+        margin-top: 40px;
         @include tablette{
-            font-size: 40px;
+            font-size: 28px;
         }
         @include bureau{
             font-size: 25px;
@@ -27,16 +28,16 @@
     }
     &__description{
         display: flex;
-        width: 80%;
+        width: 90%;
         margin: auto;
-        font-size: 45px;
+        font-size: 17px;
         color: grey;
         font-family: $police;
         justify-content: center;
-        margin-top: 50px;
+        margin-top: 20px;
         text-align: center;
         @include tablette{
-            font-size: 30px;
+            font-size: 20px;
         }
         @include bureau{
             font-size: 18px;
@@ -47,10 +48,13 @@
     }
     .btn__menu{
         margin: auto;
-        margin-top: 80px;
-        width: 52%;
+        margin-top: 30px;
+        width: 210px;
+        @include tablette{
+            width: 220px;
+        }
         @include bureau{
-            width: 20%;
+            width: 240px;
         }
     }
 }

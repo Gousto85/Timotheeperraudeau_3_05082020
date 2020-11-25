@@ -1,8 +1,5 @@
 .section4{
-    margin-top: 300px;
-    @include tablette{
-        margin-top: 100px;
-    }
+    margin-top: 100px;
     a{
         width: 100%;
         text-decoration: none;
@@ -10,12 +7,12 @@
         
     }
     h2,h3{
-        font-size: 60px;
+        font-size: 25px;
         font-family: $police-gras;
-        margin-left: 50px;
-        margin-bottom: 100px;
+        margin-left: 20px;
+        margin-bottom: 20px;
         @include tablette{
-            font-size: 40px;
+            margin-bottom: 40px;
         }
         @include bureau{
             font-size: 25px;
@@ -23,13 +20,13 @@
         }
     }
     h3{
-        font-size: 50px;
+        font-size: 16px;
         margin-bottom: 0px;
-        margin-top: 50px;
+        margin-top: 15px;
+        margin-left: 10px;
         @include tablette{
-            font-size: 35px;
-            margin-top: 20px;
-            margin-left: 20px;
+            font-size: 13px;
+            margin-top: 5px;
         }
         @include bureau{
             font-size: 20px;
@@ -59,12 +56,12 @@
     flex-direction: column;
     width: 90%;
     margin: auto;
-    margin-bottom: 100px;
+    margin-bottom: 15px;
     box-shadow: 5px 10px 30px rgb(212, 210, 210);
-    border-radius: 50px;
+    border-radius: 20px;
     @include tablette{
         width: 42%;
-        margin-bottom: 50px;
+        margin-bottom: 25px;
     }
     @include bureau{
         height: 150px;
@@ -79,10 +76,10 @@
     &__image{
         width: 100%;
         object-fit: cover;
-        border-radius: 50px 50px 0px 0px;
-        height: 450px;
+        border-radius: 20px 20px 0px 0px;
+        height: 150px;
         @include tablette{
-            height: 250px;
+            height: 100px;
         }
         @include bureau{
             border-radius: 30px 0px 0px 30px;
@@ -91,21 +88,24 @@
         }
     }
     &__desc{
-        margin: 10px 0px 50px 50px;
-        font-size: 45px;
+        margin: 5px 0px 15px 10px;
+        font-size: 15px;
         @include tablette{
-            font-size: 25px;
-            margin-left: 20px;
+            font-size: 10px;
+        }
+        @include bureau{
+            font-size: 13px;
+            margin-top: 10px;
         }
         }
     &__coeur{
         position: absolute;
-        right: 50px;
-        top: 510px;
+        right: 20px;
+        top: 168px;
         @include coeurs;
         @include tablette{
-            top: 330px;
-            right: 30px;
+            top: 110px;
+            right: 10px;
         }
         @include bureau{
             top: 20px;
@@ -122,21 +122,21 @@
     &__nouveau{
         display: flex;
         position: absolute;
-        font-size: 35px;
+        font-size: 13px;
         background-color: $couleur-tertiaire;
-        border-radius: 6px;
-        width: 200px;
-        height: 80px;
-        right: 40px;
-        top: 50px;
+        border-radius: 2px;
+        width: 80px;
+        height: 28px;
+        right: 13px;
+        top: 13px;
         justify-content: center;
         align-items: center;
         color: rgb(121, 134, 121);
         font-family: $police-gras;
         @include tablette{
-            font-size: 25px;
-            width: 150px;
-            height: 50px;
+            font-size: 10px;
+            width: 60px;
+            height: 20px;
         }
         @include bureau{
             font-size: 10px;

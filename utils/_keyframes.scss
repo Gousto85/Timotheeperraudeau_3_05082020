@@ -31,7 +31,7 @@
         width: 100%;
     }
     to{
-        width: 580px;
+        width: 200px;
     }
 }
 @keyframes width-plat-tablette{
@@ -39,12 +39,12 @@
         width: 100%;
     }
     100%{
-        width: 270px;
+        width: 225px;
     }
 }
 @keyframes width-plat-not{
     from{
-        width: 580px;
+        width: 200px;
     }
     to{
         width: 100%;
@@ -52,7 +52,7 @@
 }
 @keyframes width-plat-not-tablette{
     from{
-        width: 270px;
+        width: 225px;
     }
     to{
         width: 100%;
@@ -63,29 +63,50 @@
         width: 0px;
     }
     to{
-        width: 180px;
+        width: 60px;
+    }
+}
+@keyframes progress-check-tablette{
+    from{
+        width: 0px;
+    }
+    to{
+        width: 70px;
     }
 }
 
 @keyframes progress-check-not{
     from{
-        width: 180px;
+        width: 60px;
     }
     to{
         width: 0px;
     }
 }
+
+@keyframes progress-check-not-tablette{
+    from{
+        width: 70px;
+    }
+    to{
+        width: 0px;
+    }
+}
+
 @keyframes rotate-check-logo{
     0%{
         transform: rotate(0deg);
         width: 0px;
+        height: 0px;
     }
     10%{
-        width: 55px;
+        width: 20px;
+        height: 20px;
     }
     100%{
         transform: rotate(360deg);
-        width: 55px;
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -93,36 +114,45 @@
     0%{
         transform: rotate(0deg);
         width: 0px;
+        height: 0px;
     }
     10%{
-        width: 30px;
+        width: 22px;
+        height: 22px;
     }
     100%{
         transform: rotate(360deg);
-        width: 30px;
+        width: 22px;
+        height: 22px;
     }
 }
 @keyframes rotate-check-logo-not{
     0%{
-        width: 55px;
+        width: 20px;
+        height: 20px;
     }
     90%{
-        width: 55px;
+        width: 20px;
+        height: 20px
     }
     100%{
         width: 0px;
+        height: 0px;
     }
 }
 
 @keyframes rotate-check-logo-not-tablette{
     0%{
-        width: 30px;
+        width: 22px;
+        height: 22px;
     }
     90%{
-        width: 30px;
+        width: 22px;
+        height: 22px;
     }
     100%{
         width: 0px;
+        height: 0px;
     }
 }
 @keyframes translate-prix{
@@ -130,7 +160,7 @@
         transform: translateX(0px);
     }
     to{
-        transform: translateX(-180px);
+        transform: translateX(-60px);
     }
 }
 @keyframes translate-prix-tablette{
@@ -138,12 +168,12 @@
         transform: translateX(0px);
     }
     to{
-        transform: translateX(-110px)
+        transform: translateX(-70px)
     }
 }
 @keyframes translate-prix-not{
     from{
-        transform: translateX(-180px);
+        transform: translateX(-60px);
     }
     to{
         transform: translateX(0px);
@@ -151,7 +181,7 @@
 }
 @keyframes translate-prix-not-tablette{
     from{
-        transform: translateX(-110px);
+        transform: translateX(-70px);
     }
     to{
         transform: translateX(0px);

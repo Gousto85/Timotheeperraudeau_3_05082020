@@ -1,7 +1,7 @@
 .section1{
-    margin-top: 12px;
-    padding-top: 20px;
-    height: 100px;
+    margin-top: 4px;
+    padding-top: 8px;
+    height: 40px;
     background-color: $background-local;
         @include tablette{
             height: 60px;
@@ -19,13 +19,13 @@
         background-image: url('card-marker.svg');
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 35px;
-        width: 50px;
-        height: 50px;
+        background-size:13px;
+        width: 15px;
+        height: 15px;
             @include tablette{
                 width: 30px;
                 height: 35px;
-                background-size: 28px;
+                background-size: 15px;
                 padding-top: 5px;
             }
             @include bureau{
@@ -35,16 +35,17 @@
             }
     }
     &__barre input{
-        padding-top: 15px;
+        padding-top: 5px;
         border: none;
         background-color: $background-local;
-        font-size: 40px;
-        width: 345px;
-        padding-left: 25px;
+        font-size: 15px;
+        width: 145px;
+        padding-left: 15px;
         font-weight: bold;
             @include tablette{
-                font-size: 30px;
-                width: 270px;
+                font-size: 20px;
+                width: 190px;
+                padding-top: 12px;
             }
             @include bureau{
                 font-size: 20px;

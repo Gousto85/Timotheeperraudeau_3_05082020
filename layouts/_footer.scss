@@ -5,10 +5,11 @@ footer > div{
     display: flex;
     position: relative;
     flex-direction: column;
-    font-size: 50px;
-    padding-bottom: 75px;
+    font-size: 18px;
+    padding-bottom: 30px;
+    margin-top: 50px;
     @include tablette{
-        font-size: 30px;
+        font-size: 20px;
         padding-bottom: 50px;
     }
     @include bureau{
@@ -20,17 +21,13 @@ footer > div{
 
 .footer{
     &__logo{
-        font-size: 48px;
-        padding-bottom: 35px;
-        letter-spacing: 3px;
+        font-size: 18px;
+        padding-bottom: 20px;
         font-family: $police-logo;
-        margin-top: 75px;
-        margin-left: 65px;
+        margin-top: 25px;
+        margin-left: 25px;
         @include tablette{
-            font-size: 35px;
-            padding-bottom: 20px;
-            margin-left: 40px;
-            margin-top: 45px;
+            font-size: 20px;
         }
         @include bureau{
             font-size: 25px;
@@ -38,23 +35,20 @@ footer > div{
         }
     }
     &__paragraphe{
-        padding-left: 115px;
-        @include tablette{
-            padding-left: 80px;
-        }
+        padding-left: 50px;
         @include bureau{
             margin-top: 50px;
             padding-left: 60px;
         }
         & p{
-            padding-bottom: 15px;
+            padding-bottom: 5px;
             @include bureau{
                 padding-bottom: 3px;
             }
         }
         & ~ p{
-            margin-left: 40px;
-            padding-bottom: 15px;
+            margin-left: 25px;
+            padding-bottom: 5px;
             & a{
                 text-decoration: none;
                 color: white;
@@ -67,36 +61,32 @@ footer > div{
     }
     &__icone{
         position: absolute;
-        width: 40px;
-        height: 40px;
-        left: 65px;
-        @include tablette{
-            width: 25px;
-            height: 25px;
-            left: 40px;
-        }
+        width: 14px;
+        height: 14px;
+        left: 25px;
         @include bureau{
             width: 15px;
             height: 15px;
+            left: 200px;
         }
         &-position1{
-            top: 160px;
+            top: 65px;
             @include tablette{
-                top: 100px;
+                top: 67px;
             }
             @include bureau{
                 top: 50px;
-                left: 240px;
+                //left: 240px;
             }
         }
         &-position2{
-            top: 230px;
+            top: 92px;
             @include tablette{
-                top: 145px;
+                top: 94px;
             }
             @include bureau{
                 top: 73px;
-                left: 240px;
+                //left: 240px;
             }
         }
     }
